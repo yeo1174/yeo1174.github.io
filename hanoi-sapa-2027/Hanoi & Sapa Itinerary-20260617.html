@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanoi & Sapa Itinerary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { max-width: 210mm; margin: 0 auto; font-family: 'Inter', 'Helvetica Neue', sans-serif; font-size: 10pt; line-height: 1.5; color: #3E3228; background: #FFFFFF; padding: 20px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .header { border-bottom: 0.5px solid #778873; padding-bottom: 6pt; margin-bottom: 20px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 28pt; font-weight: 400; color: #5C6B5F; text-align: left; margin: 0; }
+    h2 { font-size: 13pt; font-weight: 400; text-transform: uppercase; color: #3E3228; margin: 12pt 0 6pt 0; padding: 0 0 0 12px; border-left: 8px solid #90997F; letter-spacing: 0.05em; }
+    .overview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12pt; margin: 12pt auto; max-width: 90%; }
+    .overview-item { background: #E9EFEB; border: 1px solid #B5C2B7; border-radius: 6px; padding: 10pt; }
+    .overview-label { font-size: 8pt; color: #675C4D; margin-bottom: 4pt; font-weight: 600; }
+    .overview-value { font-size: 10pt; color: #3E3228; font-weight: 600; }
+    .days-container { margin: 15pt auto 20pt auto; max-width: 90%; }
+    .day-card { border: 1px solid #90997F; border-radius: 8px; margin-bottom: 15pt; background: #FFFFFF; overflow: hidden; page-break-inside: avoid; }
+    .day-header { background: linear-gradient(135deg, #93AC98 0%, #90997F 100%); padding: 8pt 15pt; display: flex; align-items: center; gap: 10pt; }
+    .day-number { color: #FFF; font-family: 'Playfair Display', serif; font-size: 20pt; font-weight: 400; }
+    .day-title-area { display: flex; flex-direction: column; align-items: flex-end; margin-left: auto; }
+    .day-title { font-size: 15pt; font-weight: 200; color: #FFF; text-align: right; }
+    .day-date { font-family: 'Inter', sans-serif; font-size: 9pt; font-weight: 400; color: #E8EEF0; display: block; }
+    .day-activities { padding: 12pt 15pt; }
+    .activity-item { display: grid; grid-template-columns: 40% 10% 50%; margin: 4pt 0; padding: 3pt 0; align-items: flex-start; gap: 4pt; border-bottom: 1px solid #D2DCB6; }
+    .activity-image { min-height: 40px; border-radius: 4px; overflow: hidden; }
+    .activity-image img { width: 100%; height: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; filter: brightness(1.05); }
+    .day-activities .activity-item:last-child { border-bottom: none; }
+    .activity-time { font-size: 10pt; font-weight: 700; color: #778873; text-align: center; }
+    .activity-content { flex: 1; }
+    .activity-name { font-size: 10pt; font-weight: 400; color: #3E3228; }
+    .tag { display: inline-block; background: #D2DCB6; color: #3E3228; font-size: 8pt; padding: 2pt 6pt; border-radius: 3px; margin-right: 2pt; }
+    .page-footer-force { margin-top: 40px; padding-top: 15px; border-top: 1px solid #778873; font-size: 8pt; font-style: italic; color: #778873; text-align: center; }
+    .highlight { background: #E9EFEB; border: 1px solid #B5C2B7; border-radius: 6px; padding: 10pt; margin: 12pt auto; max-width: 90%; }
+    table { width: 100%; border-collapse: collapse; margin: 12pt auto; font-size: 10pt; }
+    th { background: #93AC98; color: #FFF; font-weight: 700; border: 0.5px solid #93AC98; padding: 5pt 8pt; text-align: left; }
+    td { color: #3E3228; border: 0.5px solid #ccc; padding: 5pt 8pt; }
+    tr:nth-child(even) { background: #E9EFEB; }
+    tr:nth-child(odd) { background: #FFF; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Vietnam &middot; Hanoi &amp; Sapa</h1>
+  </div>
+
+  <h2>Trip Overview</h2>
+  <div class="overview-grid">
+    <div class="overview-item">
+      <div class="overview-label">Duration</div>
+      <div class="overview-value">10 days / 9 nights (5-14 Mar 2027)</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Route</div>
+      <div class="overview-value">KL &rarr; Hanoi &rarr; Lao Cai &rarr; Bac Ha &rarr; Ta Phin &rarr; Sapa &rarr; Tam Coc &rarr; Hanoi &rarr; KL</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Sapa Nights</div>
+      <div class="overview-value">1 Sapaxa + 3 TIME (late checkout Wed 22:00)</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Outbound</div>
+      <div class="overview-value">VJ906 KLIA1 &rarr; Hanoi, 12:30 &rarr; 14:55 (5 Mar) &mdash; Booked (3T6N9R)</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Return</div>
+      <div class="overview-value">VJ905 Hanoi &rarr; KLIA1, 07:10 &rarr; 11:30 (14 Mar) &mdash; Booked (S5C5HJ)</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-label">Visa</div>
+      <div class="overview-value">Vietnam 30-day visa-free (Malaysian passport)</div>
+    </div>
+  </div>
+
+  <h2>Day-by-Day Itinerary</h2>
+  <div class="days-container">
+
+    <!-- Day 1: Fri 5 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 1</div>
+          <div class="day-title-area">
+            <div class="day-title">KL to Hanoi</div>
+            <span class="day-date">Fri 5 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:30</div>
+          <div class="activity-content"><div class="activity-name">Head to KLIA Terminal 1</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:30</div>
+          <div class="activity-content"><div class="activity-name">VJ906 Vietjet Air Deluxe1 depart KLIA1</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">14:55</div>
+          <div class="activity-content"><div class="activity-name">Arrive Hanoi &mdash; Noi Bai Airport (GMT+7)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">16:00</div>
+          <div class="activity-content"><div class="activity-name">Check into <strong>Bella Premier Hotel &amp; Rooftop Skybar</strong>, Old Quarter</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">16:30</div>
+          <div class="activity-content"><div class="activity-name">Hoan Kiem Lake &mdash; Ngoc Son Temple, The Huc Bridge</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Water Puppet Show (Thang Long Theatre)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">19:30</div>
+          <div class="activity-content"><div class="activity-name">Dinner &mdash; Bun Cha + spring rolls</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">Bella Premier Hotel, Hanoi</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2: Sat 6 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 2</div>
+          <div class="day-title-area">
+            <div class="day-title">Hanoi Old Quarter</div>
+            <span class="day-date">Sat 6 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:00</div>
+          <div class="activity-content"><div class="activity-name">Breakfast &mdash; Pho Bo (beef pho)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:00</div>
+          <div class="activity-content"><div class="activity-name">Long Bien Bridge &mdash; Red River views</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:00</div>
+          <div class="activity-content"><div class="activity-name">Dong Xuan Market &mdash; Hanoi's biggest indoor market</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">11:00</div>
+          <div class="activity-content"><div class="activity-name">Bach Ma Temple &mdash; oldest temple (11th century)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:00</div>
+          <div class="activity-content"><div class="activity-name">Lunch &mdash; Bun Cha</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">13:00</div>
+          <div class="activity-content"><div class="activity-name">Old Quarter streets &mdash; silk, souvenirs, hidden temples</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">15:00</div>
+          <div class="activity-content"><div class="activity-name">Train Street &mdash; coffee next to railway tracks</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">17:00</div>
+          <div class="activity-content"><div class="activity-name">Free time &mdash; pack at hotel</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">21:30</div>
+          <div class="activity-content"><div class="activity-name">Arrive Hanoi Railway Station (120 Le Duan St)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">22:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>SP3 Laman Express</strong> &mdash; overnight to Lao Cai</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3: Sun 7 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 3</div>
+          <div class="day-title-area">
+            <div class="day-title">Bac Ha Market &rarr; Ta Phin</div>
+            <span class="day-date">Sun 7 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">05:55</div>
+          <div class="activity-content"><div class="activity-name">Arrive Lao Cai station (Vietnam)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">06:00</div>
+          <div class="activity-content"><div class="activity-name">Pho breakfast at <strong>Bao Bao Quan</strong> &mdash; station square, 5.0, 24h</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">06:45</div>
+          <div class="activity-content"><div class="activity-name">Drop bags at <strong>Lao Cai Station Luggage Storage</strong> (Ms. Yen, 027 Duong Hop Thanh, 24h)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">07:00</div>
+          <div class="activity-content"><div class="activity-name">Private car: Lao Cai &rarr; Bac Ha Market (1.5h drive)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:30</div>
+          <div class="activity-content"><div class="activity-name"><strong>Bac Ha Sunday Market</strong> &mdash; biggest ethnic market in North Vietnam. Flower H'mong, Black Dao, Tay. Best 07:00-11:00</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:30</div>
+          <div class="activity-content"><div class="activity-name">Drive back to Lao Cai (1.5h)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>Lunch at HAINHI Restaurant</strong> &mdash; station square, 4.8, full meals, card payment</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">13:30</div>
+          <div class="activity-content"><div class="activity-name">Private car: Lao Cai &rarr; Ta Phin (1h)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">14:30</div>
+          <div class="activity-content"><div class="activity-name">Check in <strong>Sapaxa Spring Garden Ecolodge</strong> &mdash; Ta Phin village</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">15:00</div>
+          <div class="activity-content"><div class="activity-name">Explore Ta Phin village, bamboo forest trails</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">17:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>Red Dao Herbal Bath</strong> &mdash; traditional herbal bath</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:30</div>
+          <div class="activity-content"><div class="activity-name">Home-cooked dinner at Sapaxa</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">Sapaxa Spring Garden Ecolodge, Ta Phin</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4: Mon 8 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 4</div>
+          <div class="day-title-area">
+            <div class="day-title">Check Out Ta Phin &rarr; Sapa Town</div>
+            <span class="day-date">Mon 8 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:30</div>
+          <div class="activity-content"><div class="activity-name">Breakfast at Sapaxa, check out</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:30</div>
+          <div class="activity-content"><div class="activity-name">Drive Ta Phin &rarr; Sapa town (30min) + check into <strong>TIME Homestay</strong></div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:30</div>
+          <div class="activity-content"><div class="activity-name">Explore Sapa town &mdash; Stone Church, Sapa Museum, market</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:00</div>
+          <div class="activity-content"><div class="activity-name">Lunch</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Free afternoon &mdash; settle in, cafe with valley views</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Dinner in Sapa town</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">TIME Restaurant &amp; Homestay (Night 1 of 3)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5: Tue 9 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 5</div>
+          <div class="day-title-area">
+            <div class="day-title">Fansipan Cable Car</div>
+            <span class="day-date">Tue 9 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:30</div>
+          <div class="activity-content"><div class="activity-name">Breakfast at TIME</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:30</div>
+          <div class="activity-content"><div class="activity-name"><strong>Fansipan Cable Car</strong> &mdash; 20min up to 3,143m summit</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:00</div>
+          <div class="activity-content"><div class="activity-name">Summit &mdash; temples, giant Buddha, spiritual walkways</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:30</div>
+          <div class="activity-content"><div class="activity-name"><strong>Ban Mong Alpine Coaster</strong> &mdash; 1,095m mountain slide</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">13:30</div>
+          <div class="activity-content"><div class="activity-name">Lunch</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Free time &mdash; Stone Church, Museum, cafe with valley views</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Dinner</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">TIME Restaurant &amp; Homestay (Night 2 of 3)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 6: Wed 10 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 6</div>
+          <div class="day-title-area">
+            <div class="day-title">Muong Hoa Valley Trek</div>
+            <span class="day-date">Wed 10 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:30</div>
+          <div class="activity-content"><div class="activity-name">Breakfast at TIME (keep room, late checkout 22:00)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>Muong Hoa Valley Trek</strong> &mdash; Sapana Cafe to Lo Co Ban (3.2km, flat walk along rice terraces)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">10:00</div>
+          <div class="activity-content"><div class="activity-name">Coffee at Lo Co Ban (4.9 rating) or extend walk</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:00</div>
+          <div class="activity-content"><div class="activity-name">Lunch in Ta Van village</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Return to Sapa, shower at TIME</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Dinner in Sapa town</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">22:00</div>
+          <div class="activity-content"><div class="activity-name">Check out TIME Homestay, collect bags</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">22:30</div>
+          <div class="activity-content"><div class="activity-name">Head to G8 SAPA OPEN TOUR office (N2 Street)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">23:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>G8 SAPA OPEN TOUR</strong> &mdash; VIP Cabin bus to Tam Coc (arrives 07:40)</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">On G8 VIP Cabin sleeper bus</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 7: Thu 11 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 7</div>
+          <div class="day-title-area">
+            <div class="day-title">Tam Coc Day 1</div>
+            <span class="day-date">Thu 11 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">07:40</div>
+          <div class="activity-content"><div class="activity-name">Arrive Tam Coc Office</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:00</div>
+          <div class="activity-content"><div class="activity-name">Breakfast, check into Valley Eco Resort, rent bikes</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:00-11:30</div>
+          <div class="activity-content"><div class="activity-name"><strong>Cycle Tam Coc</strong> &mdash; rice fields, karsts, Bich Dong Pagoda</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">11:30</div>
+          <div class="activity-content"><div class="activity-name">Lunch in Tam Coc</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:30</div>
+          <div class="activity-content"><div class="activity-name">Mua Cave climb (500 steps) or more cycling</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Free time &mdash; cafe, relax, evening river walk</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">Tam Coc Valley Eco Resort (Night 1 of 2)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 8: Fri 12 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 8</div>
+          <div class="day-title-area">
+            <div class="day-title">Tam Coc Day 2</div>
+            <span class="day-date">Fri 12 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:00</div>
+          <div class="activity-content"><div class="activity-name">Breakfast</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:00</div>
+          <div class="activity-content"><div class="activity-name"><strong>Tam Coc boat ride</strong> &mdash; 3 caves, limestone karsts, 2h</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">11:30</div>
+          <div class="activity-content"><div class="activity-name">Lunch</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:30</div>
+          <div class="activity-content"><div class="activity-name">Hang Mua viewpoint or Trang An boat trip</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Free time &mdash; cafe, rice field walks</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Dinner</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">Tam Coc Valley Eco Resort (Night 2 of 2)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 9: Sat 13 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 9</div>
+          <div class="day-title-area">
+            <div class="day-title">Tam Coc to Hanoi</div>
+            <span class="day-date">Sat 13 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">08:00</div>
+          <div class="activity-content"><div class="activity-name">Breakfast, check out Valley Eco Resort</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">09:00-11:00</div>
+          <div class="activity-content"><div class="activity-name">Last morning explore in Tam Coc</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">12:00</div>
+          <div class="activity-content"><div class="activity-name">Bus/train Ninh Binh &rarr; Hanoi</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">14:00</div>
+          <div class="activity-content"><div class="activity-name">Check in Bella Premier Hotel</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">PM</div>
+          <div class="activity-content"><div class="activity-name">Last Hanoi shopping / cafe</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">18:00</div>
+          <div class="activity-content"><div class="activity-name">Farewell dinner + egg coffee</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">Sleep</div>
+          <div class="activity-content"><div class="activity-name">Bella Premier Hotel, Hanoi</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 10: Sun 14 Mar -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-number">Day 10</div>
+          <div class="day-title-area">
+            <div class="day-title">Hanoi to KL</div>
+            <span class="day-date">Sun 14 Mar</span>
+          </div>
+      </div>
+      <div class="day-activities">
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">04:30</div>
+          <div class="activity-content"><div class="activity-name">Quick coffee, check out</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">05:00</div>
+          <div class="activity-content"><div class="activity-name">Head to Noi Bai Airport</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">07:10</div>
+          <div class="activity-content"><div class="activity-name">VJ905 Vietjet Air depart Hanoi</div></div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-image"></div>
+          <div class="activity-time">11:30</div>
+          <div class="activity-content"><div class="activity-name">Arrive KLIA Terminal 1</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Accommodation (8 Nights + 1 Night Bus)</h2>
+  <table>
+    <colgroup>
+      <col style="width:8%">
+      <col style="width:15%">
+      <col style="width:42%">
+      <col style="width:15%">
+      <col style="width:20%">
+    </colgroup>
+    <thead><tr><th>Night</th><th>Date</th><th>Location</th><th>Status</th><th>Est. Cost</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Fri 5 Mar</td><td>Bella Premier Hotel, Hanoi</td><td>Booked</td><td>Paid</td></tr>
+      <tr><td>&mdash;</td><td>Sat 6 Mar</td><td>SP3 Laman Express (night train)</td><td>To book</td><td>$160</td></tr>
+      <tr><td>2</td><td>Sun 7 Mar</td><td>Sapaxa Spring Garden Ecolodge, Ta Phin</td><td>Booked</td><td>Paid</td></tr>
+      <tr><td>3</td><td>Mon 8 Mar</td><td>TIME Homestay, Sapa</td><td>Booked</td><td>$25/night</td></tr>
+      <tr><td>4</td><td>Tue 9 Mar</td><td>TIME Homestay, Sapa</td><td>Booked</td><td>$25/night</td></tr>
+      <tr><td>5</td><td>Wed 10 Mar</td><td>TIME Homestay (late checkout 22:00)</td><td>Booked</td><td>$25/night</td></tr>
+      <tr><td>&mdash;</td><td>Wed 10 Mar</td><td>Night bus Sapa &rarr; Tam Coc (sleeper)</td><td>To book</td><td>$15/person</td></tr>
+      <tr><td>5</td><td>Thu 11 Mar</td><td>Tam Coc Valley Eco Resort</td><td>Booked</td><td>TBC</td></tr>
+      <tr><td>6</td><td>Fri 12 Mar</td><td>Tam Coc Valley Eco Resort</td><td>Booked</td><td>TBC</td></tr>
+      <tr><td>8</td><td>Sat 13 Mar</td><td>Bella Premier Hotel, Hanoi</td><td>Booked</td><td>Paid</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Key Transport</h2>
+  <table>
+    <colgroup>
+      <col style="width:20%">
+      <col style="width:15%">
+      <col style="width:18%">
+      <col style="width:25%">
+      <col style="width:22%">
+    </colgroup>
+    <thead><tr><th>Segment</th><th>Mode</th><th>Time</th><th>Notes</th><th>Cost</th></tr></thead>
+    <tbody>
+      <tr><td>KL &rarr; Hanoi</td><td>VJ906</td><td>12:30 &rarr; 14:55</td><td>Booked (3T6N9R)</td><td>Paid</td></tr>
+      <tr><td>Hanoi &rarr; Lao Cai</td><td>SP3 Laman Express</td><td>22:00 &rarr; 05:55</td><td>Night train, 4-berth</td><td>$160</td></tr>
+      <tr><td>Lao Cai &rarr; Bac Ha</td><td>Private car</td><td>1.5h</td><td>Full day, SUV</td><td>$60-80</td></tr>
+      <tr><td>Bac Ha &rarr; Lao Cai</td><td>Private car</td><td>1.5h</td><td>Same driver</td><td>incl</td></tr>
+      <tr><td>Lao Cai &rarr; Ta Phin</td><td>Private car</td><td>1h</td><td>Same driver</td><td>incl</td></tr>
+      <tr><td>Ta Phin &rarr; Sapa</td><td>Private car</td><td>30min</td><td>Move day</td><td>incl</td></tr>
+      <tr><td>Sapa &rarr; Tam Coc</td><td>G8 SAPA OPEN TOUR</td><td>23:00 &rarr; 07:40</td><td>VIP Cabin (Wed 10 Mar)</td><td>$15/person</td></tr>
+      <tr><td>Ninh Binh &rarr; Hanoi</td><td>Bus / train</td><td>~2h</td><td>Afternoon</td><td>$5-10</td></tr>
+      <tr><td>Hanoi &rarr; KL</td><td>VJ905</td><td>07:10 &rarr; 11:30</td><td>Booked (S5C5HJ)</td><td>Paid</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer-force">
+    Hanoi, Bac Ha &amp; Sapa, Vietnam &bull; 5-14 Mar 2027 &bull; Finalized 2026-06-18
+  </div>
+</body>
+</html>
