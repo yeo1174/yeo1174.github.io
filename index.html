@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Yeo Family Travels</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+ <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #F7F9FA; color: #3E3228; min-height: 100vh; }
+  .hero { background: linear-gradient(135deg, #1f566c 0%, #35667A 50%, #7899A6 100%); padding: 60px 20px 50px; text-align: center; color: #FFF; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 36pt; font-weight: 400; letter-spacing: 0.02em; margin-bottom: 8px; }
+  .hero p { font-size: 12pt; font-weight: 200; opacity: 0.85; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 18pt; font-weight: 400; color: #1f566c; margin: 0 0 20px; }
+  .trip-card { background: #FFF; border: 1px solid #D6E0E4; border-radius: 10px; padding: 24px; margin-bottom: 16px; display: flex; gap: 20px; align-items: center; transition: box-shadow 0.2s, transform 0.2s; text-decoration: none; color: inherit; }
+  .trip-card:hover { box-shadow: 0 4px 16px rgba(31, 86, 108, 0.12); transform: translateY(-2px); }
+  .trip-icon { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24pt; flex-shrink: 0; }
+  .trip-icon.active { background: #E8EEF0; }
+  .trip-icon.soon { background: #F5F0E8; }
+  .trip-info { flex: 1; }
+  .trip-name { font-family: 'Playfair Display', serif; font-size: 15pt; color: #1f566c; margin-bottom: 4px; }
+  .trip-dates { font-size: 9pt; color: #7899A6; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .trip-meta { font-size: 9pt; color: #675C4D; margin-top: 6px; }
+  .trip-arrow { font-size: 14pt; color: #a5bbc4; flex-shrink: 0; }
+  .upcoming-badge { display: inline-block; background: #E8D5B7; color: #675C4D; font-size: 8pt; font-weight: 600; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-left: 8px; vertical-align: middle; }
+  .footer { text-align: center; padding: 20px; font-size: 8pt; color: #a5bbc4; border-top: 1px solid #E8EEF0; }
+  @media (max-width: 500px) {
+   .hero h1 { font-size: 24pt; }
+   .trip-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+ </style>
+</head>
+<body>
+
+<div class="hero">
+ <h1>Yeo Family Travels</h1>
+ <p>Our family adventures, one trip at a time. Itineraries, photos, and notes from the road.</p>
+</div>
+
+<div class="container">
+ <h2>Our Trips</h2>
+
+ <a href="/bali-family-surf-trip-2026/" class="trip-card">
+  <div class="trip-icon active">&#127754;</div>
+  <div class="trip-info">
+   <div class="trip-name">Bali Family Surf Trip</div>
+   <div class="trip-dates">Aug 25 — Sep 1, 2026</div>
+   <div class="trip-meta">Medewi, Sebatu, Ubud &middot; Surf lessons, culture, relaxation</div>
+  </div>
+  <div class="trip-arrow">&#8594;</div>
+ </a>
+
+ <div class="trip-card" style="cursor: default; opacity: 0.65;">
+  <div class="trip-icon soon">&#127965;</div>
+  <div class="trip-info">
+   <div class="trip-name">Hanoi & Sapa <span class="upcoming-badge">Coming Soon</span></div>
+   <div class="trip-dates">2027 &middot; Dates TBC</div>
+   <div class="trip-meta">Northern Vietnam &middot; Rice terraces, culture, street food</div>
+  </div>
+ </div>
+
+</div>
+
+<div class="footer">
+ Yeo Family Travels &middot; GitHub Pages
+</div>
+
+</body>
+</html>
