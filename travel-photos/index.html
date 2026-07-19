@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Travel Photos — Yeo Family</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+ <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; background: #0c0c0c; color: #e8e4e0; min-height: 100vh; }
+  a { color: inherit; text-decoration: none; }
+
+  /* header */
+  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 20pt; letter-spacing: 0.02em; color: #f0ece6; }
+  .header .back-link { font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
+  .header .back-link:hover { color: rgba(255,255,255,0.7); }
+
+  /* intro */
+  .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
+  .intro h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 32pt; color: #f0ece6; margin-bottom: 12px; }
+  .intro p { font-size: 11pt; font-weight: 300; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.8; }
+
+  /* grid */
+  .grid { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; column-count: 3; column-gap: 20px; }
+  .grid-item { display: inline-block; width: 100%; margin-bottom: 20px; break-inside: avoid; position: relative; overflow: hidden; }
+  .grid-item img { width: 100%; height: auto; display: block; transition: opacity .5s; }
+  .grid-item:hover img { opacity: 0.75; }
+  .grid-item .label { padding: 14px 0 20px; }
+  .grid-item .label .title { font-size: 10pt; font-weight: 400; color: #d0ccc6; letter-spacing: 0.02em; }
+  .grid-item .label .meta { font-size: 8pt; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; font-weight: 600; }
+
+  /* album card */
+  .album-card { position: relative; display: block; }
+  .album-card .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%); opacity: 0; transition: opacity .4s; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+  .album-card:hover .overlay { opacity: 1; }
+  .album-card .overlay .title { font-family: 'Playfair Display', serif; font-size: 16pt; font-weight: 400; color: #fff; }
+  .album-card .overlay .meta { font-size: 8pt; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; font-weight: 600; }
+  .album-card img { transition: transform .5s; }
+  .album-card:hover img { transform: scale(1.03); }
+
+  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
+
+  @media (max-width: 800px) { .grid { column-count: 2; } }
+  @media (max-width: 500px) {
+   .header { padding: 28px 20px 16px; flex-direction: column; gap: 6px; }
+   .header h1 { font-size: 16pt; }
+   .intro { padding: 40px 20px 20px; }
+   .intro h2 { font-size: 22pt; }
+   .grid { column-count: 1; padding: 0 20px 60px; }
+  }
+ </style>
+</head>
+<body>
+
+<div class="header">
+ <h1>Travel Photos</h1>
+ <a href="/" class="back-link">&larr; Yeo Family Travels</a>
+</div>
+
+<div class="intro">
+ <h2>Travel Photography</h2>
+ <p>Moments captured across our journeys. Each album is a story told through light, place, and time.</p>
+</div>
+
+<div class="grid">
+
+<!-- Bali Family Surf Trip -->
+<a href="/bali-family-surf-trip-2026/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/images/kelan-beach-sunset.png" alt="Bali" loading="lazy">
+ <div class="overlay">
+  <div class="title">Bali Family Surf Trip</div>
+  <div class="meta">Aug 25 — Sep 1, 2026 · 11 photos</div>
+ </div>
+ <div class="label">
+  <div class="title">Bali Family Surf Trip</div>
+  <div class="meta">Aug 25 — Sep 1, 2026 · 11 photos</div>
+ </div>
+</a>
+
+<!-- Hanoi & Sapa -->
+<a href="/hanoi-sapa-2027/" class="grid-item album-card">
+ <img src="/hanoi-sapa-2027/media/1mc1z12000r4o65jzAC7E_W_1280_853_R5.jpg" alt="Hanoi" loading="lazy">
+ <div class="overlay">
+  <div class="title">Hanoi &amp; Sapa</div>
+  <div class="meta">Mar 5 — Mar 14, 2027 · 3 photos</div>
+ </div>
+ <div class="label">
+  <div class="title">Hanoi &amp; Sapa</div>
+  <div class="meta">Mar 5 — Mar 14, 2027 · 3 photos</div>
+ </div>
+</a>
+
+<!-- Medewi Surf -->
+<a href="/bali-family-surf-trip-2026/See/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/images/suluban-beach-cove.png" alt="Medewi Beach" loading="lazy">
+ <div class="overlay">
+  <div class="title">Surf &amp; Shore</div>
+  <div class="meta">Medewi, Padang Padang, Suluban</div>
+ </div>
+ <div class="label">
+  <div class="title">Surf &amp; Shore</div>
+  <div class="meta">Medewi, Padang Padang, Suluban</div>
+ </div>
+</a>
+
+<!-- Ubud -->
+<a href="/bali-family-surf-trip-2026/See/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/images/monkey-forest-macaques.png" alt="Ubud" loading="lazy">
+ <div class="overlay">
+  <div class="title">Ubud &amp; the Heart of Bali</div>
+  <div class="meta">Monkey Forest, rice terraces, temples</div>
+ </div>
+ <div class="label">
+  <div class="title">Ubud &amp; the Heart of Bali</div>
+  <div class="meta">Monkey Forest, rice terraces, temples</div>
+ </div>
+</a>
+
+<!-- Bali Food -->
+<a href="/bali-family-surf-trip-2026/Eat/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/images/bawang-merah-seafood.png" alt="Bali Food" loading="lazy">
+ <div class="overlay">
+  <div class="title">Island Flavours</div>
+  <div class="meta">Bali's best eats from warung to fine dining</div>
+ </div>
+ <div class="label">
+  <div class="title">Island Flavours</div>
+  <div class="meta">Bali's best eats from warung to fine dining</div>
+ </div>
+</a>
+
+<!-- Sapa -->
+<a href="/hanoi-sapa-2027/activities/" class="grid-item album-card">
+ <img src="/hanoi-sapa-2027/activities/Muong-Hoa-Valley-Trek-Route-2026-06-17.png" alt="Sapa" loading="lazy">
+ <div class="overlay">
+  <div class="title">Sapa &amp; the Highlands</div>
+  <div class="meta">Trekking, terraced fields, mountain views</div>
+ </div>
+ <div class="label">
+  <div class="title">Sapa &amp; the Highlands</div>
+  <div class="meta">Trekking, terraced fields, mountain views</div>
+ </div>
+</a>
+
+<!-- Hanoi -->
+<a href="/hanoi-sapa-2027/See/" class="grid-item album-card">
+ <img src="/hanoi-sapa-2027/media/826474164.jpg" alt="Hanoi" loading="lazy">
+ <div class="overlay">
+  <div class="title">Hanoi</div>
+  <div class="meta">Old Quarter, street life, lakes</div>
+ </div>
+ <div class="label">
+  <div class="title">Hanoi</div>
+  <div class="meta">Old Quarter, street life, lakes</div>
+ </div>
+</a>
+
+<!-- Bali Stays -->
+<a href="/bali-family-surf-trip-2026/Sleep/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/Sleep/Rama-Phala-Pool-Night.png" alt="Bali Stay" loading="lazy">
+ <div class="overlay">
+  <div class="title">Stays &amp; Retreats</div>
+  <div class="meta">Where we slept across Bali</div>
+ </div>
+ <div class="label">
+  <div class="title">Stays &amp; Retreats</div>
+  <div class="meta">Where we slept across Bali</div>
+ </div>
+</a>
+
+<!-- Bali Culture -->
+<a href="/bali-family-surf-trip-2026/See/" class="grid-item album-card">
+ <img src="/bali-family-surf-trip-2026/images/kecak-fire-dance.png" alt="Kecak Dance" loading="lazy">
+ <div class="overlay">
+  <div class="title">Culture &amp; Ceremony</div>
+  <div class="meta">Kecak fire dance, temple rituals, art</div>
+ </div>
+ <div class="label">
+  <div class="title">Culture &amp; Ceremony</div>
+  <div class="meta">Kecak fire dance, temple rituals, art</div>
+ </div>
+</a>
+
+</div>
+
+<footer>
+ Yeo Family Travels &middot; Travel Photos
+</footer>
+
+</body>
+</html>
