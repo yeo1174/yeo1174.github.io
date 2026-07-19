@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>New Zealand 2025 — Travel Photos</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+ <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Inter', sans-serif; background: #0c0c0c; color: #e8e4e0; min-height: 100vh; }
+  a { color: inherit; text-decoration: none; }
+
+  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 20pt; letter-spacing: 0.02em; color: #f0ece6; }
+  .header .back-link { font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
+  .header .back-link:hover { color: rgba(255,255,255,0.7); }
+
+  .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
+  .intro h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 28pt; color: #f0ece6; margin-bottom: 8px; }
+  .intro p { font-size: 10pt; font-weight: 300; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; column-count: 3; column-gap: 16px; }
+  .gallery img { width: 100%; height: auto; display: block; margin-bottom: 16px; break-inside: avoid; border-radius: 2px; transition: opacity .3s; }
+  .gallery img:hover { opacity: 0.8; }
+  .empty-state { text-align: center; padding: 80px 20px; color: rgba(255,255,255,0.15); }
+  .empty-state .icon { font-size: 36pt; margin-bottom: 16px; }
+  .empty-state p { font-size: 10pt; font-weight: 300; letter-spacing: 0.04em; }
+
+  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
+
+  @media (max-width: 800px) { .gallery { column-count: 2; } }
+  @media (max-width: 500px) {
+   .header { padding: 28px 20px 16px; flex-direction: column; gap: 6px; }
+   .header h1 { font-size: 16pt; }
+   .intro { padding: 40px 20px 20px; }
+   .intro h2 { font-size: 22pt; }
+   .gallery { column-count: 1; padding: 0 20px 60px; }
+  }
+ </style>
+</head>
+<body>
+
+<div class="header">
+ <h1>New Zealand 2025</h1>
+ <a href="/travel-photos/" class="back-link">&larr; Travel Photos</a>
+</div>
+
+<div class="intro">
+ <h2>New Zealand 2025</h2>
+ <p>Past trip</p>
+</div>
+
+<div class="gallery">
+ <div class="empty-state">
+  <div class="icon">&#128247;</div>
+  <p>Photos coming soon. Drop them into the album folder and they'll appear here.</p>
+ </div>
+</div>
+
+<footer>
+ Yeo Family Travels &middot; New Zealand 2025
+</footer>
+
+</body>
+</html>
