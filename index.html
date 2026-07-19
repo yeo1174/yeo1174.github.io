@@ -7,31 +7,30 @@
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
  <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; background: #F7F9FA; color: #3E3228; min-height: 100vh; }
-  .hero { background: linear-gradient(to bottom, rgba(31,86,108,0.55) 0%, rgba(31,86,108,0.25) 60%, rgba(31,86,108,0.05) 100%), url('images/hero-bg.png') center/cover no-repeat; padding: 80px 20px 70px; text-align: center; color: #FFF; min-height: 420px; display: flex; flex-direction: column; justify-content: center; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: 36pt; font-weight: 400; letter-spacing: 0.02em; margin-bottom: 8px; }
-  .hero p { font-size: 12pt; font-weight: 200; opacity: 0.85; max-width: 500px; margin: 0 auto; line-height: 1.6; }
-  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
-  h2 { font-family: 'Playfair Display', serif; font-size: 18pt; font-weight: 400; color: #1f566c; margin: 0 0 20px; }
-  .trip-card { background: #FFF; border: 1px solid #D6E0E4; border-radius: 10px; padding: 24px; margin-bottom: 16px; display: flex; gap: 20px; align-items: center; transition: box-shadow 0.2s, transform 0.2s; text-decoration: none; color: inherit; }
-  .trip-card:hover { box-shadow: 0 4px 16px rgba(31, 86, 108, 0.12); transform: translateY(-2px); }
-  .trip-icon { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24pt; flex-shrink: 0; }
-  .trip-icon.active { background: #E8EEF0; }
-  .trip-icon.soon { background: #F5F0E8; }
-  .trip-info { flex: 1; }
-  .trip-name { font-family: 'Playfair Display', serif; font-size: 15pt; color: #1f566c; margin-bottom: 4px; }
-  .trip-dates { font-size: 9pt; color: #7899A6; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-  .trip-meta { font-size: 9pt; color: #675C4D; margin-top: 6px; }
-  .trip-arrow { font-size: 14pt; color: #a5bbc4; flex-shrink: 0; }
-  .upcoming-badge { display: inline-block; background: #E8D5B7; color: #675C4D; font-size: 8pt; font-weight: 600; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-left: 8px; vertical-align: middle; }
-  .footer { text-align: center; padding: 20px; font-size: 8pt; color: #a5bbc4; border-top: 1px solid #E8EEF0; }
+  html, body { height: 100%; }
+  body { font-family: 'Inter', sans-serif; background: #1a1f22 url('images/bg.png') center/cover no-repeat fixed; color: #e8e4e0; min-height: 100vh; display: flex; flex-direction: column; }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(10,8,6,0.35); z-index: 0; pointer-events: none; }
+  #gc { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.4; mix-blend-mode: soft-light; }
+  body > :not(#gc) { position: relative; z-index: 2; }
+  .hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 24px 40px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 42pt; font-weight: 400; letter-spacing: 0.03em; color: #f0ece8; text-shadow: 0 2px 12px rgba(0,0,0,0.3); margin-bottom: 10px; }
+  .hero p { font-size: 13pt; font-weight: 200; opacity: 0.7; max-width: 440px; line-height: 1.7; }
+  .trips { max-width: 640px; margin: 0 auto; padding: 30px 20px 60px; width: 100%; }
+  .trip-card { display: flex; align-items: center; gap: 20px; background: rgba(20,22,20,0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; text-decoration: none; color: inherit; transition: background .3s, transform .2s; }
+  .trip-card:hover { background: rgba(30,32,30,0.55); transform: translateY(-1px); }
+  .trip-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20pt; flex-shrink: 0; background: rgba(255,255,255,0.06); }
+  .trip-info { flex: 1; min-width: 0; }
+  .trip-name { font-family: 'Playfair Display', serif; font-size: 15pt; color: #ece6e0; margin-bottom: 3px; }
+  .trip-dates { font-size: 9pt; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+  .trip-meta { font-size: 9pt; color: rgba(255,255,255,0.4); margin-top: 4px; }
+  .trip-arrow { font-size: 14pt; color: rgba(255,255,255,0.2); flex-shrink: 0; }
+  .footer { text-align: center; padding: 20px; font-size: 8pt; color: rgba(255,255,255,0.15); }
   @media (max-width: 500px) {
-   .hero h1 { font-size: 24pt; }
-   .trip-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+   .hero h1 { font-size: 26pt; }
+   .hero p { font-size: 11pt; }
+   .trip-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px; }
   }
-   #gc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.3;mix-blend-mode:soft-light}
-  body>:not(#gc){position:relative;z-index:1}
-</style>
+ </style>
 </head>
 <body>
 <canvas id="gc"></canvas>
@@ -41,11 +40,10 @@
  <p>Itineraries, photos, and notes from every destination we visit.</p>
 </div>
 
-<div class="container">
- <h2>Our Trips</h2>
+<div class="trips">
 
  <a href="/bali-family-surf-trip-2026/" class="trip-card">
-  <div class="trip-icon active">&#127754;</div>
+  <div class="trip-icon">&#127754;</div>
   <div class="trip-info">
    <div class="trip-name">Bali Family Surf Trip</div>
    <div class="trip-dates">Aug 25 — Sep 1, 2026</div>
@@ -55,11 +53,21 @@
  </a>
 
  <a href="/hanoi-sapa-2027/" class="trip-card">
-  <div class="trip-icon active">&#127956;</div>
+  <div class="trip-icon">&#127956;</div>
   <div class="trip-info">
    <div class="trip-name">Hanoi & Sapa</div>
    <div class="trip-dates">Mar 5 — Mar 14, 2027</div>
    <div class="trip-meta">Hanoi, Sapa, Tam Coc &middot; Culture, nature, relaxed family travel</div>
+  </div>
+  <div class="trip-arrow">&#8594;</div>
+ </a>
+
+ <a href="/Knowlibrary/" class="trip-card">
+  <div class="trip-icon">&#128214;</div>
+  <div class="trip-info">
+   <div class="trip-name">Knowledge Library</div>
+   <div class="trip-dates">Architectural &amp; regulatory reference</div>
+   <div class="trip-meta">Malaysian building standards, contracts, guidelines &middot; With interactive knowledge graph</div>
   </div>
   <div class="trip-arrow">&#8594;</div>
  </a>
@@ -71,7 +79,25 @@
 </div>
 
 <script>
-(function(){const gc=document.getElementById("gc"),cw=window.innerWidth*2,ch=window.innerHeight*2;gc.width=cw;gc.height=ch;const ctx=gc.getContext("2d");let mx=cw/2,my=ch/2,tx=cw/2,ty=ch/2;document.addEventListener("mousemove",e=>{tx=e.clientX*2;ty=e.clientY*2;});function rg(){mx+=(tx-mx)*.04;my+=(ty-my)*.04;ctx.clearRect(0,0,cw,ch);const g=ctx.createRadialGradient(mx,my,0,mx,my,600);g.addColorStop(0,"rgba(200,190,170,.06)");g.addColorStop(.15,"rgba(180,170,150,.025)");g.addColorStop(.4,"rgba(160,150,140,.008)");g.addColorStop(1,"rgba(0,0,0,0)");ctx.fillStyle=g;ctx.fillRect(0,0,cw,ch);requestAnimationFrame(rg)}rg()})();
+(function(){
+ var gc=document.getElementById('gc'),cw=window.innerWidth,ch=window.innerHeight;
+ gc.width=cw*2; gc.height=ch*2; var ctx=gc.getContext('2d');
+ var mx=cw, my=ch, tx=cw, ty=ch;
+ document.addEventListener('mousemove',function(e){ tx=e.clientX*2; ty=e.clientY*2; });
+ function rg(){
+  mx+=(tx-mx)*0.04; my+=(ty-my)*0.04;
+  ctx.clearRect(0,0,cw*2,ch*2);
+  var g=ctx.createRadialGradient(mx,my,0,mx,my,500);
+  g.addColorStop(0,'rgba(220,210,190,0.08)');
+  g.addColorStop(0.15,'rgba(200,190,170,0.035)');
+  g.addColorStop(0.4,'rgba(180,170,160,0.01)');
+  g.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,cw*2,ch*2);
+  requestAnimationFrame(rg);
+ }
+ rg();
+ window.addEventListener('resize',function(){ cw=window.innerWidth; ch=window.innerHeight; gc.width=cw*2; gc.height=ch*2; });
+})();
 </script>
 </body>
 </html>
