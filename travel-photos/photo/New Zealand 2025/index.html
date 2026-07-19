@@ -21,11 +21,11 @@
   .intro p { font-size: 10pt; font-weight: 300; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
 
   .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; column-count: 3; column-gap: 16px; }
-  .gallery img { width: 100%; height: auto; display: block; margin-bottom: 16px; break-inside: avoid; border-radius: 2px; transition: opacity .3s; }
-  .gallery img:hover { opacity: 0.8; }
-  .empty-state { text-align: center; padding: 80px 20px; color: rgba(255,255,255,0.15); }
-  .empty-state .icon { font-size: 36pt; margin-bottom: 16px; }
-  .empty-state p { font-size: 10pt; font-weight: 300; letter-spacing: 0.04em; }
+  .gallery .photo { width: 100%; display: block; margin-bottom: 16px; break-inside: avoid; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; }
+  .gallery .photo img { width: 100%; height: auto; display: block; transition: opacity .4s; }
+  .gallery .photo:hover img { opacity: 0.75; }
+  .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.6); opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .gallery .photo:hover .caption { opacity: 1; }
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
 
@@ -48,14 +48,36 @@
 
 <div class="intro">
  <h2>New Zealand 2025</h2>
- <p>Past trip</p>
+ <p>South Island &mdash; lakes, mountains, fjords</p>
 </div>
 
 <div class="gallery">
- <div class="empty-state">
-  <div class="icon">&#128247;</div>
-  <p>Photos coming soon. Drop them into the album folder and they'll appear here.</p>
- </div>
+
+ <a href="milford%20sound.png" class="photo" target="_blank">
+  <img src="milford%20sound.png" alt="Milford Sound" loading="lazy">
+  <div class="caption">Milford Sound</div>
+ </a>
+
+ <a href="lake%20te%20anau.png" class="photo" target="_blank">
+  <img src="lake%20te%20anau.png" alt="Lake Te Anau" loading="lazy">
+  <div class="caption">Lake Te Anau</div>
+ </a>
+
+ <a href="tutoko%20river.png" class="photo" target="_blank">
+  <img src="tutoko%20river.png" alt="Tutoko River" loading="lazy">
+  <div class="caption">Tutoko River</div>
+ </a>
+
+ <a href="milford%20sound-1.png" class="photo" target="_blank">
+  <img src="milford%20sound-1.png" alt="Milford Sound" loading="lazy">
+  <div class="caption">Milford Sound</div>
+ </a>
+
+ <a href="lake%20hawea.png" class="photo" target="_blank">
+  <img src="lake%20hawea.png" alt="Lake Hawea" loading="lazy">
+  <div class="caption">Lake Hawea</div>
+ </a>
+
 </div>
 
 <footer>
