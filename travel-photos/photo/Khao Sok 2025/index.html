@@ -20,22 +20,22 @@
   .intro h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 28pt; color: #f0ece6; margin-bottom: 8px; }
   .intro p { font-size: 10pt; font-weight: 300; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
 
-  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; column-count: 3; column-gap: 16px; }
-  .gallery .photo { width: 100%; display: block; margin-bottom: 16px; break-inside: avoid; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; }
-  .gallery .photo img { width: 100%; height: auto; display: block; transition: opacity .4s; }
+  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 4/3; background: rgba(255,255,255,0.02); }
+  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s; }
   .gallery .photo:hover img { opacity: 0.75; }
   .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.6); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
 
-  @media (max-width: 800px) { .gallery { column-count: 2; } }
+  @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
    .header { padding: 28px 20px 16px; flex-direction: column; gap: 6px; }
    .header h1 { font-size: 16pt; }
    .intro { padding: 40px 20px 20px; }
    .intro h2 { font-size: 22pt; }
-   .gallery { column-count: 1; padding: 0 20px 60px; }
+   .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
   }
  </style>
 </head>

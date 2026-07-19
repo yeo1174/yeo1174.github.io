@@ -21,8 +21,8 @@
   .intro p { font-size: 11pt; font-weight: 300; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.8; }
 
   .albums { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .album-card { position: relative; display: block; overflow: hidden; border-radius: 4px; background: rgba(255,255,255,0.02); }
-  .album-card img { width: 100%; height: auto; display: block; transition: transform .5s; }
+  .album-card { position: relative; display: block; overflow: hidden; border-radius: 4px; background: rgba(255,255,255,0.02); aspect-ratio: 4/3; }
+  .album-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
   .album-card:hover img { transform: scale(1.03); }
   .album-card .info { padding: 16px 0; }
   .album-card .info .title { font-size: 11pt; font-weight: 400; color: #d0ccc6; letter-spacing: 0.02em; }
