@@ -29,9 +29,12 @@
    .hero h1 { font-size: 24pt; }
    .trip-card { flex-direction: column; align-items: flex-start; gap: 12px; }
   }
- </style>
+   #gc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.3;mix-blend-mode:soft-light}
+  body>:not(#gc){position:relative;z-index:1}
+</style>
 </head>
 <body>
+<canvas id="gc"></canvas>
 
 <div class="hero">
  <h1>Yeo Family Travels</h1>
@@ -67,5 +70,8 @@
  Yeo Family Travels &middot; GitHub Pages
 </div>
 
+<script>
+(function(){const gc=document.getElementById("gc"),cw=window.innerWidth*2,ch=window.innerHeight*2;gc.width=cw;gc.height=ch;const ctx=gc.getContext("2d");let mx=cw/2,my=ch/2,tx=cw/2,ty=ch/2;document.addEventListener("mousemove",e=>{tx=e.clientX*2;ty=e.clientY*2;});function rg(){mx+=(tx-mx)*.04;my+=(ty-my)*.04;ctx.clearRect(0,0,cw,ch);const g=ctx.createRadialGradient(mx,my,0,mx,my,600);g.addColorStop(0,"rgba(200,190,170,.06)");g.addColorStop(.15,"rgba(180,170,150,.025)");g.addColorStop(.4,"rgba(160,150,140,.008)");g.addColorStop(1,"rgba(0,0,0,0)");ctx.fillStyle=g;ctx.fillRect(0,0,cw,ch);requestAnimationFrame(rg)}rg()})();
+</script>
 </body>
 </html>
