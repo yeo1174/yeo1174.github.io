@@ -281,13 +281,13 @@
 
 | Operator | Price/pax | Notes | Contact |
 |----------|-----------|-------|--------|
-| **Kintamani Jeep Tour** | IDR 300K (~RM 90) | Most affordable. Drive to Kedisan base & book on arrival. Black lava + black sand | kintamanijeep.com |
-| **Bagus Bali Sunrise** | From IDR 275K (~RM 83) | Family-friendly, private tour, 4.8 stars | bagusbalisunrise.com |
+| **Kintamani Jeep Tour** | IDR 300K (~RM 90) | Most affordable. Black lava + black sand. WA: +62 812-4666-8370 (kintamanijeep.com). NOTE: Ubud pickup outside Kintamani adds IDR 400-500K/car | kintamanijeep.com |
+| **Bagus Bali Sunrise** | From IDR 275K (~RM 83) | Family-friendly, private tour, 4.8 stars. WA: +62 821-4455-4458 | bagusbalisunrise.com |
 | **Bali Sunrise Tours** | IDR 450K (~RM 136) | English guide, Jeep from Geopark Village | balisunrisetours.com |
-| **Mount Batur Jeep Adventure** | IDR 500-700K (~RM 150-210) | Top-rated professional operator | mountbaturjeepadventure.com |
+| **Mount Batur Jeep Adventure** | IDR 500-700K (~RM 150-210) | Top-rated professional operator. WA: +62 812-3760-0646 | mountbaturjeepadventure.com |
 | **Ubud Center** | From $24 (~IDR 370K) | Standard tour with hotel pickup from Ubud | ubudcenter.com |
 
-**Recommendation:** Drive to Kedisan base yourself and book on arrival (IDR 250-300K/pax). Or contact Kintamani Jeep Tour ahead online. Day 4 (Fri 28 Aug) — Kintamani day.
+**CONFIRMED (22 Aug 2026, WA):** TAMALIA HOUSE & KINTAMANI JEEP TOUR (bli Komang) — private jeep, 2.5h, start on request, English-speaking driver, viewpoint tickets + photo help. **900K total for 2 adults + 2 children.** Pending confirm: Ubud pickup, route stops (lava fields / 1964 site / Lava Ball cave), breakfast. Day 4 (Fri 28 Aug) — Kintamani day.
 
 | Kecak Dance (Peliatan Palace) | 1 hr | IDR 80-150K | 5PM show, Day 5 Ubud |
 | → **Kecak Uluwatu Temple** (option) | 1 hr | ~IDR 150-200K | **6PM sunset show**, Day 6 instead. Cliffside amphitheatre, ocean sunset backdrop. ⭐4.6. Book in advance. Arrive 17:00-17:30 for good seats. 5-10 min drive from Uluwatu Cottages. Beware monkeys at temple entrance. Phone: 0812-3713-8559 |
