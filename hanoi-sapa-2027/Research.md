@@ -188,6 +188,7 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 
 **Pu Hmong Eco Retreat (Y Linh Ho valley) -- ADDED 2026-09-02**
 - Y Linh Ho village, Muong Hoa Valley (~7 km SW of Sapa town, 15-20 min drive; trailhead of Y Linh Ho > Lao Chai > Ta Van trek)
+- **Drive times (checked 2026-09-02):** Bac Ha Market -> Pu Hmong ~100-105 km, ~2.5-3h in private car (OSRM route calc 104 km/~2h baseline, but mountain roads run slower; operator quotes for Sapa <-> Bac Ha leg ~2.5-2.75h + 15-20 min Sapa town down to Y Linh Ho). Via Lao Cai w/ lunch stop = longer (~+1h).
 - Family-run Black Hmong eco retreat; handcrafted wood/stone/bamboo bungalows with valley views, AC, private bath, balcony
 - Google Maps: listed as "Chapa Farmstay - Mountain Retreat" (same property) -- 4.9/188 reviews; Booking.com 9.5/10
 - Facilities: infinity pool, garden, restaurant/bar, outdoor fireplace, children's playground, free WiFi/parking, airport shuttle
