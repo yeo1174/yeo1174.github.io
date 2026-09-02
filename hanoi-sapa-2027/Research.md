@@ -182,9 +182,20 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 - Room with stone feature wall, mountain-view balcony
 - Rating: 4.5+ on Booking/Agoda
 - Est. price: ~$20-30/night for family room
-- 3 nights: Mon 8 - Wed 10 Mar
+- **2 nights: Tue 9 + Wed 10 Mar** (late checkout ~22:00 before G8 night bus; was Mon-Wed, needs rebooking to new dates)
 - Previously pre-booked -- needs rebooking closer to date
 - **Photo:** `Sleep/TIME-Restaurant-Homestay-Sapa-Room.jpg`
+
+**Pu Hmong Eco Retreat (Y Linh Ho valley) -- ADDED 2026-09-02**
+- Y Linh Ho village, Muong Hoa Valley (~7 km SW of Sapa town, 15-20 min drive; trailhead of Y Linh Ho > Lao Chai > Ta Van trek)
+- Family-run Black Hmong eco retreat; handcrafted wood/stone/bamboo bungalows with valley views, AC, private bath, balcony
+- Google Maps: listed as "Chapa Farmstay - Mountain Retreat" (same property) -- 4.9/188 reviews; Booking.com 9.5/10
+- Facilities: infinity pool, garden, restaurant/bar, outdoor fireplace, children's playground, free WiFi/parking, airport shuttle
+- Home-cooked Hmong/Vietnamese meals; arranges guided treks (Y Linh Ho, Lao Chai, Ta Van, Nam Cang)
+- Est. ~$47-90/night; check-in 13:30, check-out 10:30 (early arrival OK for bag drop)
+- Contact: +84 393 195 298 | puhmongecoretreat.com | Booking/Agoda search "Pu Hmong Eco Retreat" / "Chapa Farmstay"
+- **Plan: 2 nights Sun 7 + Mon 8 Mar** (replaces Sapaxa Ta Phin stay -- Sapaxa booking to be cancelled)
+- **Photo:** n/a
 
 ---
 
