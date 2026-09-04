@@ -514,9 +514,17 @@
     color: var(--text-secondary); text-decoration: none;
     border: 1px solid var(--border); background: var(--surface-1);
     padding: 9px 18px; border-radius: 10px; font-size: 13px;
-    transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+    box-shadow: 0 1px 2px var(--shadow);
+    transition: color .18s ease, border-color .18s ease, background-color .18s ease,
+                transform .18s ease, box-shadow .18s ease;
   }
-  .foot-links a:hover { color: var(--text-primary); border-color: var(--text-muted); background: var(--surface-2); }
+  .foot-links a:hover {
+    color: var(--text-primary); border-color: var(--text-muted); background: var(--surface-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px var(--shadow-lift);
+  }
+  .foot-links a:active { transform: translateY(0); box-shadow: 0 1px 2px var(--shadow); }
+  .foot-links a:focus-visible { outline: 2px solid var(--text-muted); outline-offset: 2px; }
 
   /* ---------- Detail view ---------- */
   .hidden { display: none; }
