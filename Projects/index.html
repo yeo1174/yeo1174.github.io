@@ -508,9 +508,15 @@
 
   /* ---------- Footer ---------- */
   footer { margin-top: 70px; padding-top: 26px; border-top: 1px solid var(--gridline); }
-  .foot-links { display: flex; flex-wrap: wrap; gap: 10px 26px; }
-  .foot-links a { color: var(--text-muted); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; font-size: 13px; }
-  .foot-links a:hover { color: var(--text-primary); }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .foot-links a {
+    display: inline-flex; align-items: center;
+    color: var(--text-secondary); text-decoration: none;
+    border: 1px solid var(--border); background: var(--surface-1);
+    padding: 9px 18px; border-radius: 10px; font-size: 13px;
+    transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+  }
+  .foot-links a:hover { color: var(--text-primary); border-color: var(--text-muted); background: var(--surface-2); }
 
   /* ---------- Detail view ---------- */
   .hidden { display: none; }
