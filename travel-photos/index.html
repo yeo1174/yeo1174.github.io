@@ -4,31 +4,39 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Travel Photos — Yeo Family</title>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+ <meta name="description" content="Photo albums from the Yeo family travels: New Zealand, Khao Sok, Western Sichuan, West Sumatra.">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Travel Photos — Yeo Family">
+ <meta property="og:description" content="Photo albums from the Yeo family travels: New Zealand, Khao Sok, Western Sichuan, West Sumatra.">
+ <meta property="og:image" content="https://yeo1174.github.io/images/og-image.jpg">
+ <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+ <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
+  :root{--paper:#FAF7F2;--sand:#EDE3D2;--sage-deep:#77856F;--terra:#C67C5B;--terra-deep:#A9613F;--dusk:#D9A7A1;--ink:#3A3630;--ink-soft:#6F675C;--line:#E4DBCB;}
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-font-smoothing: antialiased; }
-  body { font-family: 'Inter', sans-serif; background: #0c0c0c; color: #e8e4e0; min-height: 100vh; }
+  body { font-family: 'Karla', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; }
   a { color: inherit; text-decoration: none; }
 
-  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 20pt; letter-spacing: 0.02em; color: #f0ece6; }
-  .header .back-link { font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
-  .header .back-link:hover { color: rgba(255,255,255,0.7); }
+  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
+  .header h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20pt; letter-spacing: 0.02em; color: var(--ink); }
+  .header .back-link { font-size: 9pt; font-weight: 600; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
+  .header .back-link:hover { color: var(--terra-deep); }
 
   .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
-  .intro h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 32pt; color: #f0ece6; margin-bottom: 12px; }
-  .intro p { font-size: 11pt; font-weight: 300; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.8; }
+  .intro h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 32pt; color: var(--ink); margin-bottom: 12px; }
+  .intro p { font-size: 11pt; color: var(--ink-soft); max-width: 500px; line-height: 1.8; }
 
   .albums { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .album-card { position: relative; display: block; overflow: hidden; border-radius: 4px; background: rgba(255,255,255,0.02); }
+  .album-card { position: relative; display: block; overflow: hidden; border-radius: 4px; background: var(--sand); border: 1px solid var(--line); }
   .album-card .thumb { width: 100%; aspect-ratio: 4/3; overflow: hidden; }
   .album-card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
   .album-card:hover .thumb img { transform: scale(1.03); }
-  .album-card .info { padding: 16px 0; }
-  .album-card .info .title { font-size: 11pt; font-weight: 400; color: #d0ccc6; letter-spacing: 0.02em; }
-  .album-card .info .meta { font-size: 8pt; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; font-weight: 600; }
-  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
+  .album-card .info { padding: 16px; background: #fff; border-top: 1px solid var(--line); }
+  .album-card .info .title { font-family: 'Fraunces', serif; font-size: 13pt; color: var(--ink); letter-spacing: 0.02em; }
+  .album-card .info .meta { font-size: 8pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; font-weight: 600; }
+  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
+  footer a { border-bottom: 1px solid var(--terra); }
 
   @media (max-width: 800px) { .albums { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
@@ -55,7 +63,7 @@
 <div class="albums">
 
  <a href="/travel-photos/photo/New%20Zealand%202025/" class="album-card">
-  <div class="thumb"><img src="/travel-photos/photo/New%20Zealand%202025/milford%20sound.png" alt="New Zealand 2025" loading="lazy"></div>
+  <div class="thumb"><img src="/travel-photos/photo/New%20Zealand%202025/web/milford%20sound.webp" alt="New Zealand 2025" loading="lazy"></div>
   <div class="info">
    <div class="title">New Zealand 2025</div>
    <div class="meta">South Island &middot; 6 photos</div>
@@ -63,7 +71,7 @@
  </a>
 
  <a href="/travel-photos/photo/Khao%20Sok%202025/" class="album-card">
-  <div class="thumb"><img src="/travel-photos/photo/Khao%20Sok%202025/ratchaprapha%20dam.png" alt="Khao Sok 2025" loading="lazy"></div>
+  <div class="thumb"><img src="/travel-photos/photo/Khao%20Sok%202025/web/ratchaprapha%20dam.webp" alt="Khao Sok 2025" loading="lazy"></div>
   <div class="info">
    <div class="title">Khao Sok 2025</div>
    <div class="meta">Cheow Lan Lake &middot; 6 photos</div>
@@ -71,7 +79,7 @@
  </a>
 
  <a href="/travel-photos/photo/China.chuanxi%202025/" class="album-card">
-  <div class="thumb"><img src="/travel-photos/photo/China.chuanxi%202025/%E7%BA%A2%E7%9F%B3%E6%BB%A9.png" alt="Chuanxi 2025" loading="lazy"></div>
+  <div class="thumb"><img src="/travel-photos/photo/China.chuanxi%202025/web/%E7%BA%A2%E7%9F%B3%E6%BB%A9.webp" alt="Chuanxi 2025" loading="lazy"></div>
   <div class="info">
    <div class="title">Chuanxi 2025</div>
    <div class="meta">Western Sichuan &middot; 5 photos</div>
@@ -89,7 +97,7 @@
 </div>
 
 <footer>
- Yeo Family Travels &middot; Travel Photos
+ <a href="/">Road Travels Together</a> &middot; Travel Photos
 </footer>
 
 </body>

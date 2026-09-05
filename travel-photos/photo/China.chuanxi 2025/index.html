@@ -4,30 +4,37 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Chuanxi 2025 — Travel Photos</title>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+ <meta name="description" content="Western Sichuan (Chuanxi) 2025 — snow peaks, red stone beaches, alpine valleys. Photo album from the Yeo family travels.">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Chuanxi 2025 — Travel Photos">
+ <meta property="og:description" content="Western Sichuan — snow peaks, red stone beaches, alpine valleys. Photo album from the Yeo family travels.">
+ <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/China.chuanxi%202025/%E6%AF%95%E6%A3%9A%E6%B2%9F.png">
+ <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+ <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
+  :root{--paper:#FAF7F2;--sand:#EDE3D2;--sage-deep:#77856F;--terra:#C67C5B;--terra-deep:#A9613F;--ink:#3A3630;--ink-soft:#6F675C;--line:#E4DBCB;}
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-font-smoothing: antialiased; }
-  body { font-family: 'Inter', sans-serif; background: #0c0c0c; color: #e8e4e0; min-height: 100vh; }
+  body { font-family: 'Karla', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; }
   a { color: inherit; text-decoration: none; }
 
-  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 20pt; letter-spacing: 0.02em; color: #f0ece6; }
-  .header .back-link { font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
-  .header .back-link:hover { color: rgba(255,255,255,0.7); }
+  .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
+  .header h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20pt; letter-spacing: 0.02em; color: var(--ink); }
+  .header .back-link { font-size: 9pt; font-weight: 600; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
+  .header .back-link:hover { color: var(--terra-deep); }
 
   .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
-  .intro h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 28pt; color: #f0ece6; margin-bottom: 8px; }
-  .intro p { font-size: 10pt; font-weight: 300; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
+  .intro h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
+  .intro p { font-size: 10pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
   .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 4/3; background: rgba(255,255,255,0.02); }
+  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 4/3; background: var(--sand); }
   .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s; }
-  .gallery .photo:hover img { opacity: 0.75; }
-  .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); font-size: 9pt; font-weight: 300; color: rgba(255,255,255,0.6); opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .gallery .photo:hover img { opacity: 0.88; }
+  .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
 
-  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(255,255,255,0.15); text-align: center; }
+  footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
 
   @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
@@ -55,34 +62,34 @@
 <div class="gallery">
 
  <a href="%E7%BA%A2%E7%9F%B3%E6%BB%A9.png" class="photo" target="_blank">
-  <img src="%E7%BA%A2%E7%9F%B3%E6%BB%A9.png" alt="红石滩" loading="lazy">
+  <img src="web/%E7%BA%A2%E7%9F%B3%E6%BB%A9.webp" alt="红石滩" loading="lazy">
   <div class="caption">红石滩 &middot; Red Stone Beach</div>
  </a>
 
  <a href="%E7%BA%A2%E7%9F%B3%E6%BB%A9-1.png" class="photo" target="_blank">
-  <img src="%E7%BA%A2%E7%9F%B3%E6%BB%A9-1.png" alt="红石滩" loading="lazy">
+  <img src="web/%E7%BA%A2%E7%9F%B3%E6%BB%A9-1.webp" alt="红石滩" loading="lazy">
   <div class="caption">红石滩 &middot; Red Stone Beach</div>
  </a>
 
  <a href="%E7%90%86%E5%B0%8F%E8%B7%AF.png" class="photo" target="_blank">
-  <img src="%E7%90%86%E5%B0%8F%E8%B7%AF.png" alt="理小路" loading="lazy">
+  <img src="web/%E7%90%86%E5%B0%8F%E8%B7%AF.webp" alt="理小路" loading="lazy">
   <div class="caption">理小路 &middot; Lixiao Road</div>
  </a>
 
  <a href="%E7%90%86%E5%B0%8F%E8%B7%AF-1.png" class="photo" target="_blank">
-  <img src="%E7%90%86%E5%B0%8F%E8%B7%AF-1.png" alt="理小路" loading="lazy">
+  <img src="web/%E7%90%86%E5%B0%8F%E8%B7%AF-1.webp" alt="理小路" loading="lazy">
   <div class="caption">理小路 &middot; Lixiao Road</div>
  </a>
 
  <a href="%E6%AF%95%E6%A3%9A%E6%B2%9F.png" class="photo" target="_blank">
-  <img src="%E6%AF%95%E6%A3%9A%E6%B2%9F.png" alt="毕棚沟" loading="lazy">
+  <img src="web/%E6%AF%95%E6%A3%9A%E6%B2%9F.webp" alt="毕棚沟" loading="lazy">
   <div class="caption">毕棚沟 &middot; Bipeng Valley</div>
  </a>
 
 </div>
 
 <footer>
- Yeo Family Travels &middot; Chuanxi 2025
+ <a href="/">Road Travels Together</a> &middot; Chuanxi 2025
 </footer>
 
 </body>

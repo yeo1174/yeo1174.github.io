@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Road Travels Together — A Family Travel Journal</title>
 <meta name="description" content="Slow travel from the Yeo family: photo albums from Khao Sok, New Zealand, Western Sichuan and West Sumatra — plus what's next.">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yeo1174.github.io/">
+<meta property="og:title" content="Road Travels Together — A Family Travel Journal">
+<meta property="og:description" content="Slow miles, well loved. Photo albums and field notes from the Yeo family travels.">
+<meta property="og:image" content="https://yeo1174.github.io/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Road Travels Together — A Family Travel Journal">
+<meta name="twitter:description" content="Slow miles, well loved. Photo albums and field notes from the Yeo family travels.">
+<meta name="twitter:image" content="https://yeo1174.github.io/images/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -141,6 +151,17 @@
   .btn-ghost{border:1px solid rgba(251,248,242,.75);color:#FBF8F2;margin-left:14px;}
   .btn-ghost:hover{background:rgba(251,248,242,.14);}
   .hero-note{margin-top:22px;font-size:14px;opacity:.8;}
+  .cd-chip{
+    display:inline-block;
+    margin-right:12px;
+    font-weight:600;
+    font-size:13px;
+    padding:3px 12px;
+    border-radius:999px;
+    background:rgba(251,248,242,.16);
+    border:1px solid rgba(251,248,242,.3);
+    opacity:1;
+  }
   .scroll-hint{
     position:absolute;
     right:clamp(24px,5vw,56px);
@@ -182,7 +203,9 @@
     width:100%;
     aspect-ratio:4/3;
     object-fit:cover;
+    transition:transform 1.2s ease;
   }
+  .album:hover .a-img img{transform:scale(1.035);}
   .a-word{
     font-family:var(--serif);
     font-style:italic;
@@ -212,10 +235,31 @@
     transition:color .2s;
   }
   .a-link:hover{color:var(--terra);}
+  .album:hover .a-link{color:var(--terra);}
   @media(max-width:860px){
     .album{grid-template-columns:1fr;}
     .album:nth-child(even) .a-img{order:0;}
   }
+
+  /* ---------- Field notes ---------- */
+  .notes-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:clamp(24px,3vw,44px);
+  }
+  .note{
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:3px solid var(--terra);
+    padding:clamp(24px,2.6vw,36px);
+  }
+  .note:nth-child(2){border-top-color:var(--sage);}
+  .note:nth-child(3){border-top-color:var(--dusk);}
+  .note .when{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);}
+  .note h3{font-size:23px;margin:10px 0 12px;}
+  .note p{font-size:16px;color:var(--ink-soft);}
+  .note .n-more{display:inline-block;margin-top:18px;font-weight:600;font-size:14px;color:var(--terra-deep);border-bottom:1px solid var(--terra);}
+  @media(max-width:860px){.notes-grid{grid-template-columns:1fr;}}
 
   /* ---------- Where next ---------- */
   #next{background:var(--sand-2);}
@@ -263,6 +307,15 @@
   }
   .next-note{margin-top:34px;font-size:15px;color:var(--ink-soft);}
   @media(max-width:860px){.next-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Map ---------- */
+  #map .map-wrap{max-width:960px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:clamp(16px,3vw,40px);}
+  #map svg{width:100%;height:auto;display:block;}
+  .map-pin{cursor:pointer;}
+  .map-pin circle{fill:var(--terra);transition:fill .3s;}
+  .map-pin:hover circle{fill:var(--terra-deep);}
+  .map-pin text{font-family:var(--sans);font-size:15px;fill:var(--ink-soft);letter-spacing:.04em;}
+  .map-note{max-width:960px;margin:18px auto 0;font-size:15px;color:var(--ink-soft);}
 
   /* ---------- Postcards ---------- */
   #postcards{background:var(--ink);color:#F3EFE7;}
@@ -355,6 +408,7 @@
   /* ---------- Reveal ---------- */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
   .rv.in{opacity:1;transform:none;}
+  .continent{fill:#EDE3D2;stroke:#E0D5C0;stroke-width:1;}
   @media(prefers-reduced-motion:reduce){
     .hero-img{animation:none;}
     .rv{opacity:1;transform:none;transition:none;}
@@ -368,6 +422,8 @@
   <a class="brand" href="#top">Road Travels Together</a>
   <div class="links">
     <a href="#albums">Albums</a>
+    <a href="#notes">Field notes</a>
+    <a href="#map">Map</a>
     <a href="#next">Where next</a>
     <a class="nav-cta" href="#postcards">Get the postcards</a>
   </div>
@@ -382,7 +438,7 @@
     <p>Slow miles, well loved. Photo albums and field notes from wherever the four of us point the car next.</p>
     <a class="btn btn-primary" href="#albums">Explore the albums</a>
     <a class="btn btn-ghost" href="#next">Where we&rsquo;re going next</a>
-    <div class="hero-note">Four albums live &middot; two trips on the board</div>
+    <div class="hero-note"><span id="countdown-chip" class="cd-chip"></span>Four albums live &middot; field notes inside</div>
   </div>
   <div class="scroll-hint">Keep wandering</div>
 </header>
@@ -395,40 +451,40 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-newzealand.webp" alt="Milford Sound under drifting cloud, New Zealand"></div>
+    <div class="a-img"><img src="images/row-newzealand.webp" alt="Milford Sound under drifting cloud, New Zealand" loading="lazy" decoding="async"></div>
     <div class="a-body">
       <div class="a-word">Wide open</div>
       <h3>New Zealand</h3>
       <p>Fjords, glacial lakes, and roads that go quiet for hours. Milford Sound does not photograph this well by accident &mdash; we just happened to be standing there.</p>
-      <div class="a-meta">2025 &middot; Fiordland &amp; Otago</div>
+      <div class="a-meta">2025 &middot; Fiordland &amp; Otago &middot; 6 photographs</div>
       <a class="a-link" href="/travel-photos/photo/New%20Zealand%202025/">View the album</a>
     </div>
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-khaosok.webp" alt="Emerald water and forested karst peaks at Cheow Lan Lake, Khao Sok"></div>
+    <div class="a-img"><img src="images/row-khaosok.webp" alt="Emerald water and forested karst peaks at Cheow Lan Lake, Khao Sok" loading="lazy" decoding="async"></div>
     <div class="a-body">
       <div class="a-word">Jungle</div>
       <h3>Khao Sok, Thailand</h3>
       <p>Long-tail boats across Cheow Lan Lake, limestone towers rising straight out of green water, and a sunset that ended the day before we were ready.</p>
-      <div class="a-meta">2025 &middot; Surat Thani</div>
+      <div class="a-meta">2025 &middot; Surat Thani &middot; 6 photographs</div>
       <a class="a-link" href="/travel-photos/photo/Khao%20Sok%202025/">View the album</a>
     </div>
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-china.webp" alt="Alpenglow on snow peaks above Bipenggou valley, western Sichuan"></div>
+    <div class="a-img"><img src="images/row-china.webp" alt="Alpenglow on snow peaks above Bipenggou valley, western Sichuan" loading="lazy" decoding="async"></div>
     <div class="a-body">
       <div class="a-word">Highland</div>
       <h3>Western Sichuan, China</h3>
       <p>First light on the Bipenggou peaks, red-stone riverbeds, and mountain passes between Li and Xiao. Thin air, thick silence.</p>
-      <div class="a-meta">2025 &middot; Aba Prefecture</div>
+      <div class="a-meta">2025 &middot; Aba Prefecture &middot; 5 photographs</div>
       <a class="a-link" href="/travel-photos/photo/China.chuanxi%202025/">View the album</a>
     </div>
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-sumatra.webp" alt="Green canyon and mist over Ngarai Sianok, West Sumatra"></div>
+    <div class="a-img"><img src="images/row-sumatra.webp" alt="Green canyon and mist over Ngarai Sianok, West Sumatra" loading="lazy" decoding="async"></div>
     <div class="a-body">
       <div class="a-word">Green</div>
       <h3>West Sumatra</h3>
@@ -439,6 +495,34 @@
   </div>
 
   <p class="sched-note rv" style="margin-top:26px;font-size:15px;color:var(--ink-soft);">Every album, including works in progress: <a href="/travel-photos/" style="border-bottom:1px solid var(--terra);color:var(--terra-deep);">the full photo gallery</a></p>
+</section>
+
+<section id="notes" class="wrap">
+  <div class="sec-head rv">
+    <div class="kicker">Field notes</div>
+    <h2>What the road taught us</h2>
+    <p>Short, honest write-ups from each trip &mdash; what surprised us, what we&rsquo;d do differently next time.</p>
+  </div>
+  <div class="notes-grid">
+    <div class="note rv">
+      <div class="when">Khao Sok &middot; 2025</div>
+      <h3>The lake is the whole point</h3>
+      <p>We visited Cheow Lan on a day trip and left wishing we&rsquo;d slept on the water. First long-tail out beats the crowds to the good light &mdash; and book the floating bungalow.</p>
+      <a class="n-more" href="/travel-photos/photo/Khao%20Sok%202025/">Khao Sok album</a>
+    </div>
+    <div class="note rv">
+      <div class="when">New Zealand &middot; 2025</div>
+      <h3>Distance is the destination</h3>
+      <p>The South Island runs on its own clock. Plan half of what you think fits, stop when the light turns, and give Milford the early, unhurried drive it deserves.</p>
+      <a class="n-more" href="/travel-photos/photo/New%20Zealand%202025/">New Zealand album</a>
+    </div>
+    <div class="note rv">
+      <div class="when">Western Sichuan &middot; 2025</div>
+      <h3>Go high, slowly</h3>
+      <p>Altitude in Chuanxi sneaks up on you. Take the passes slow, eat hot food, and let the red stone beach be a moment &mdash; not a checklist item.</p>
+      <a class="n-more" href="/travel-photos/photo/China.chuanxi%202025/">Chuanxi album</a>
+    </div>
+  </div>
 </section>
 
 <section id="next">
@@ -470,6 +554,45 @@
   </div>
 </section>
 
+<section id="map">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">The map so far</div>
+      <h2>Six places, one family</h2>
+      <p>Everywhere the four of us have pointed the car &mdash; so far.</p>
+    </div>
+    <div class="map-wrap rv">
+      <svg viewBox="0 0 1000 500" role="img" aria-label="World map showing the family's six destinations across Asia and Oceania">
+        <g stroke="#EFE8DA" stroke-width="1">
+          <line x1="0" y1="50" x2="1000" y2="50"/><line x1="0" y1="100" x2="1000" y2="100"/>
+          <line x1="0" y1="150" x2="1000" y2="150"/><line x1="0" y1="200" x2="1000" y2="200"/>
+          <line x1="0" y1="250" x2="1000" y2="250"/><line x1="0" y1="300" x2="1000" y2="300"/>
+          <line x1="0" y1="350" x2="1000" y2="350"/><line x1="0" y1="400" x2="1000" y2="400"/>
+          <line x1="0" y1="450" x2="1000" y2="450"/>
+          <line x1="50" y1="0" x2="50" y2="500"/><line x1="100" y1="0" x2="100" y2="500"/>
+          <line x1="150" y1="0" x2="150" y2="500"/><line x1="200" y1="0" x2="200" y2="500"/>
+          <line x1="250" y1="0" x2="250" y2="500"/><line x1="300" y1="0" x2="300" y2="500"/>
+          <line x1="350" y1="0" x2="350" y2="500"/><line x1="400" y1="0" x2="400" y2="500"/>
+          <line x1="450" y1="0" x2="450" y2="500"/><line x1="500" y1="0" x2="500" y2="500"/>
+          <line x1="550" y1="0" x2="550" y2="500"/><line x1="600" y1="0" x2="600" y2="500"/>
+          <line x1="650" y1="0" x2="650" y2="500"/><line x1="700" y1="0" x2="700" y2="500"/>
+          <line x1="750" y1="0" x2="750" y2="500"/><line x1="800" y1="0" x2="800" y2="500"/>
+          <line x1="850" y1="0" x2="850" y2="500"/><line x1="900" y1="0" x2="900" y2="500"/>
+          <line x1="950" y1="0" x2="950" y2="500"/>
+        </g>
+        <line x1="0" y1="250" x2="1000" y2="250" stroke="#E4DBCB" stroke-width="1.5"/>
+        <a href="/travel-photos/photo/China.chuanxi%202025/" class="map-pin"><circle cx="785" cy="162" r="7"/><text x="771" y="167" text-anchor="end">Western Sichuan</text></a>
+        <a href="/hanoi-sapa-2027/" class="map-pin"><circle cx="794" cy="212" r="7"/><text x="808" y="217">Hanoi &amp; Sapa &mdash; 2027</text></a>
+        <a href="/travel-photos/photo/Khao%20Sok%202025/" class="map-pin"><circle cx="775" cy="248" r="7"/><text x="761" y="253" text-anchor="end">Khao Sok</text></a>
+        <a href="/Photogallery/Sumbar/" class="map-pin"><circle cx="779" cy="285" r="7"/><text x="793" y="290">West Sumatra</text></a>
+        <a href="/bali-family-surf-trip-2026/" class="map-pin"><circle cx="820" cy="308" r="7"/><text x="834" y="313">Bali &mdash; 2026</text></a>
+        <a href="/travel-photos/photo/New%20Zealand%202025/" class="map-pin"><circle cx="955" cy="385" r="7"/><text x="941" y="390" text-anchor="end">New Zealand</text></a>
+      </svg>
+    </div>
+    <p class="map-note rv">Future trips join the map when the itinerary is booked. Pins link to their albums and trip pages.</p>
+  </div>
+</section>
+
 <section id="postcards">
   <div class="wrap pc-grid">
     <div class="rv">
@@ -483,11 +606,11 @@
       </ul>
     </div>
     <div class="form-card rv">
-      <form id="pcForm">
+      <form id="pcForm" action="https://formspree.io/f/xzzvdqko" method="POST">
         <label for="p-name">Name</label>
-        <input id="p-name" type="text" required autocomplete="name" placeholder="Your name">
+        <input id="p-name" type="text" name="name" required autocomplete="name" placeholder="Your name">
         <label for="p-email">Email</label>
-        <input id="p-email" type="email" required autocomplete="email" placeholder="you@example.com">
+        <input id="p-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
         <button class="btn btn-primary" type="submit">Send me the next one</button>
         <small>A few emails a year. Unsubscribe anytime.</small>
       </form>
@@ -537,16 +660,31 @@
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
 
-  // Postcards signup: opens a pre-filled email to Yeo, then shows the thanks card
-  document.getElementById('pcForm').addEventListener('submit',function(e){
+  // Days-to-go chip for the next trip (Hanoi & Sapa, Mar 5 2027)
+  (function(){
+    var el=document.getElementById('countdown-chip');
+    if(!el)return;
+    var d=Math.ceil((new Date('2027-03-05T00:00:00+08:00')-new Date())/86400000);
+    el.textContent=d>0?d+' days to Hanoi & Sapa':'Hanoi & Sapa \u2014 on the road';
+  })();
+
+  // Postcards signup via Formspree
+  var pcForm=document.getElementById('pcForm');
+  pcForm.addEventListener('submit',function(e){
     e.preventDefault();
-    var n=document.getElementById('p-name').value.trim();
-    var m=document.getElementById('p-email').value.trim();
-    var body='Add me ('+n+', '+m+') to the Road Travels Together postcards list.';
-    window.location.href='mailto:yeo.skysb@gmail.com?subject='+encodeURIComponent('Postcards list signup')+'&body='+encodeURIComponent(body);
-    this.style.display='none';
-    document.getElementById('thanks').style.display='block';
+    var btn=pcForm.querySelector('button');
+    btn.disabled=true;btn.textContent='Sending\u2026';
+    fetch(pcForm.action,{method:'POST',body:new FormData(pcForm),headers:{Accept:'application/json'}})
+      .then(function(r){
+        if(r.ok){pcForm.style.display='none';document.getElementById('thanks').style.display='block';}
+        else{throw new Error('bad status');}
+      })
+      .catch(function(){
+        btn.disabled=false;btn.textContent='Send me the next one';
+        alert('Something went wrong \u2014 please email yeo.skysb@gmail.com directly.');
+      });
   });
 </script>
+<script data-goatcounter="https://yeo1174.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
