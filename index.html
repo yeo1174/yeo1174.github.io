@@ -606,7 +606,7 @@
       </ul>
     </div>
     <div class="form-card rv">
-      <form id="pcForm" action="https://formspree.io/f/xzzvdqko" method="POST">
+      <form id="pcForm">
         <label for="p-name">Name</label>
         <input id="p-name" type="text" name="name" required autocomplete="name" placeholder="Your name">
         <label for="p-email">Email</label>
@@ -668,23 +668,16 @@
     el.textContent=d>0?d+' days to Hanoi & Sapa':'Hanoi & Sapa \u2014 on the road';
   })();
 
-  // Postcards signup via Formspree
-  var pcForm=document.getElementById('pcForm');
-  pcForm.addEventListener('submit',function(e){
+  // Postcards signup: opens a pre-filled email to Yeo, then shows the thanks card
+  document.getElementById('pcForm').addEventListener('submit',function(e){
     e.preventDefault();
-    var btn=pcForm.querySelector('button');
-    btn.disabled=true;btn.textContent='Sending\u2026';
-    fetch(pcForm.action,{method:'POST',body:new FormData(pcForm),headers:{Accept:'application/json'}})
-      .then(function(r){
-        if(r.ok){pcForm.style.display='none';document.getElementById('thanks').style.display='block';}
-        else{throw new Error('bad status');}
-      })
-      .catch(function(){
-        btn.disabled=false;btn.textContent='Send me the next one';
-        alert('Something went wrong \u2014 please email yeo.skysb@gmail.com directly.');
-      });
+    var n=document.getElementById('p-name').value.trim();
+    var m=document.getElementById('p-email').value.trim();
+    var body='Add me ('+n+', '+m+') to the Road Travels Together postcards list.';
+    window.location.href='mailto:yeo.skysb@gmail.com?subject='+encodeURIComponent('Postcards list signup')+'&body='+encodeURIComponent(body);
+    this.style.display='none';
+    document.getElementById('thanks').style.display='block';
   });
 </script>
-<script data-goatcounter="https://yeo1174.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
