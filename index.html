@@ -1,78 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Road Travels Together</title>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
- <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body { font-family: 'Inter', sans-serif; background: #1a1f22 url('images/bg-2.avif') center/cover no-repeat fixed; color: #e8e4e0; min-height: 100vh; display: flex; flex-direction: column; }
-.hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 24px 40px; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: 48pt; font-weight: 400; letter-spacing: 0.03em; color: #ffffff; -webkit-font-smoothing: antialiased; text-shadow: 0 0 8px rgba(255,255,255,0.15); margin-bottom: 10px; }
-  .hero p { font-size: 13pt; font-weight: 200; opacity: 0.7; max-width: 440px; line-height: 1.7; }
-  .trips { max-width: 640px; margin: 0 auto; padding: 30px 20px 60px; width: 100%; }
-  .trip-card { display: flex; align-items: center; gap: 20px; background: rgba(20,22,20,0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; text-decoration: none; color: inherit; transition: background .3s, transform .2s; }
-  .trip-card:hover { background: transparent; transform: translateY(-1px); }
-  .trip-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20pt; flex-shrink: 0; background: rgba(255,255,255,0.06); }
-  .trip-info { flex: 1; min-width: 0; }
-  .trip-name { font-family: 'Playfair Display', serif; font-size: 15pt; color: #ece6e0; margin-bottom: 3px; }
-  .trip-dates { font-size: 9pt; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
-  .trip-meta { font-size: 9pt; color: rgba(255,255,255,0.4); margin-top: 4px; }
-  .trip-arrow { font-size: 14pt; color: rgba(255,255,255,0.2); flex-shrink: 0; }
-  .footer { text-align: center; padding: 20px; font-size: 8pt; color: rgba(255,255,255,0.15); }
-  @media (max-width: 500px) {
-   body { background-size: contain; background-position: center top; background-attachment: scroll; }
-   .hero h1 { font-size: 24pt; }
-   .hero p { font-size: 11pt; }
-   .trip-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road Travels Together — A Family Travel Journal</title>
+<meta name="description" content="Slow travel from the Yeo family: photo albums from Khao Sok, New Zealand, Western Sichuan and West Sumatra — plus what's next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF7F2;
+    --sand:#EDE3D2;
+    --sand-2:#F2EADC;
+    --sage:#A9B6A2;
+    --sage-deep:#77856F;
+    --terra:#C67C5B;
+    --terra-deep:#A9613F;
+    --dusk:#D9A7A1;
+    --ink:#3A3630;
+    --ink-soft:#6F675C;
+    --line:#E4DBCB;
+    --serif:'Fraunces', Georgia, serif;
+    --sans:'Karla', 'Helvetica Neue', sans-serif;
   }
- </style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    font-size:18px;
+    line-height:1.75;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    pointer-events:none;
+    opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;}
+  .kicker{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--terra-deep);
+  }
+  .wrap{padding-left:clamp(24px,9vw,150px);padding-right:clamp(24px,9vw,150px);}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px clamp(24px,5vw,56px);
+    transition:background .4s ease, box-shadow .4s ease;
+  }
+  nav.solid{background:rgba(250,247,242,.94);box-shadow:0 1px 0 var(--line);}
+  nav .brand{font-family:var(--serif);font-size:19px;letter-spacing:.03em;}
+  nav .links{display:flex;gap:36px;align-items:center;font-size:15px;}
+  nav .links a{opacity:.85;transition:opacity .2s;}
+  nav .links a:hover{opacity:1;}
+  nav .nav-cta{
+    border:1px solid var(--ink);
+    padding:8px 20px;
+    border-radius:999px;
+    font-size:14px;
+    transition:background .25s,color .25s;
+  }
+  nav .nav-cta:hover{background:var(--ink);color:var(--paper);}
+  @media(max-width:820px){nav .links a:not(.nav-cta){display:none;}}
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    position:relative;
+    height:100svh;
+    min-height:640px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+  }
+  .hero-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform-origin:50% 60%;
+    animation:breathe 9s ease-in-out infinite;
+  }
+  @keyframes breathe{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.045);}
+  }
+  .hero-beam{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(28,22,16,.6), rgba(28,22,16,.08) 48%, rgba(28,22,16,0) 65%);
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    color:#FBF8F2;
+    padding-bottom:clamp(56px,9vh,110px);
+    max-width:860px;
+  }
+  .hero-inner .kicker{color:#F6DFC9;}
+  .hero-inner h1{
+    font-size:clamp(52px,8.2vw,116px);
+    font-weight:400;
+    letter-spacing:.01em;
+    margin:14px 0 18px;
+  }
+  .hero-inner p{
+    font-size:clamp(18px,1.6vw,22px);
+    max-width:34em;
+    opacity:.94;
+    margin-bottom:40px;
+  }
+  .btn{
+    display:inline-block;
+    font-size:16px;
+    font-weight:600;
+    padding:16px 38px;
+    border-radius:999px;
+    transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s;
+  }
+  .btn-primary{background:var(--terra);color:#FFF9F4;}
+  .btn-primary:hover{background:var(--terra-deep);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid rgba(251,248,242,.75);color:#FBF8F2;margin-left:14px;}
+  .btn-ghost:hover{background:rgba(251,248,242,.14);}
+  .hero-note{margin-top:22px;font-size:14px;opacity:.8;}
+  .scroll-hint{
+    position:absolute;
+    right:clamp(24px,5vw,56px);
+    bottom:clamp(56px,9vh,110px);
+    z-index:2;
+    color:#FBF8F2;
+    font-size:12px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    writing-mode:vertical-rl;
+    opacity:.75;
+  }
+  @media(max-width:720px){.scroll-hint{display:none;}.btn-ghost{margin-left:0;margin-top:12px;}}
+
+  /* ---------- Section scaffolding ---------- */
+  section{
+    padding-top:clamp(96px,15vh,170px);
+    padding-bottom:clamp(96px,15vh,170px);
+  }
+  .sec-head{max-width:720px;margin-bottom:clamp(56px,8vh,96px);}
+  .sec-head h2{
+    font-size:clamp(36px,4.6vw,58px);
+    margin:16px 0 20px;
+  }
+  .sec-head p{color:var(--ink-soft);font-size:19px;}
+
+  /* ---------- Albums ---------- */
+  .album{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(40px,7vw,110px);
+    align-items:center;
+    padding:clamp(48px,7vh,84px) 0;
+    border-top:1px solid var(--line);
+  }
+  .album:last-child{border-bottom:1px solid var(--line);}
+  .album:nth-child(even) .a-img{order:2;}
+  .a-img img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+  }
+  .a-word{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:19px;
+    color:var(--terra);
+    letter-spacing:.06em;
+  }
+  .a-body h3{
+    font-size:clamp(30px,3.2vw,44px);
+    margin:10px 0 18px;
+  }
+  .a-body p{color:var(--ink-soft);max-width:32em;}
+  .a-meta{
+    margin-top:14px;
+    font-size:14px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--sage-deep);
+  }
+  .a-link{
+    display:inline-block;
+    margin-top:24px;
+    font-weight:600;
+    border-bottom:1px solid var(--terra);
+    padding-bottom:2px;
+    color:var(--terra-deep);
+    transition:color .2s;
+  }
+  .a-link:hover{color:var(--terra);}
+  @media(max-width:860px){
+    .album{grid-template-columns:1fr;}
+    .album:nth-child(even) .a-img{order:0;}
+  }
+
+  /* ---------- Where next ---------- */
+  #next{background:var(--sand-2);}
+  .next-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(28px,3.5vw,56px);
+  }
+  .trip{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:3px solid var(--sage);
+    padding:clamp(26px,3vw,40px);
+  }
+  .trip.t-terra{border-left-color:var(--dusk);}
+  .trip .when{
+    font-size:13px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--sage-deep);
+  }
+  .trip h3{
+    font-size:clamp(26px,2.6vw,36px);
+    margin:10px 0 12px;
+  }
+  .trip p{color:var(--ink-soft);font-size:17px;}
+  .trip .pill{
+    display:inline-block;
+    margin-top:20px;
+    font-size:12.5px;
+    font-weight:600;
+    padding:5px 14px;
+    border-radius:999px;
+    background:rgba(169,182,162,.22);
+    color:var(--sage-deep);
+  }
+  .trip .pill.p-dusk{background:rgba(217,167,161,.28);color:#9A5A50;}
+  .trip .t-link{
+    display:inline-block;
+    margin-left:16px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--terra-deep);
+    border-bottom:1px solid var(--terra);
+  }
+  .next-note{margin-top:34px;font-size:15px;color:var(--ink-soft);}
+  @media(max-width:860px){.next-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Postcards ---------- */
+  #postcards{background:var(--ink);color:#F3EFE7;}
+  #postcards .kicker{color:var(--dusk);}
+  .pc-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(48px,7vw,120px);
+    align-items:start;
+  }
+  #postcards h2{font-size:clamp(40px,5vw,64px);margin:16px 0 22px;color:#FAF7F2;}
+  #postcards .lede{color:rgba(243,239,231,.82);font-size:19px;max-width:30em;}
+  .pc-points{margin-top:36px;list-style:none;}
+  .pc-points li{
+    padding:14px 0;
+    border-top:1px solid rgba(250,247,242,.16);
+    font-size:16px;
+  }
+  .pc-points li:last-child{border-bottom:1px solid rgba(250,247,242,.16);}
+  .form-card{
+    background:#FBF8F2;
+    color:var(--ink);
+    padding:clamp(28px,3.5vw,48px);
+  }
+  .form-card label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:22px 0 6px;
+  }
+  .form-card label:first-child{margin-top:0;}
+  .form-card input{
+    width:100%;
+    font-family:var(--sans);
+    font-size:16px;
+    color:var(--ink);
+    background:#fff;
+    border:1px solid var(--line);
+    padding:13px 14px;
+    border-radius:2px;
+  }
+  .form-card input:focus{outline:none;border-color:var(--sage-deep);}
+  .form-card .btn{width:100%;text-align:center;margin-top:28px;border:none;cursor:pointer;}
+  .form-card small{display:block;margin-top:16px;font-size:13.5px;color:var(--ink-soft);text-align:center;}
+  .thanks{display:none;padding:44px 8px;text-align:center;}
+  .thanks h3{font-size:30px;margin-bottom:10px;}
+  .thanks p{color:var(--ink-soft);}
+  @media(max-width:860px){.pc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);
+    color:rgba(243,239,231,.66);
+    padding:64px clamp(24px,9vw,150px) 40px;
+    border-top:1px solid rgba(250,247,242,.12);
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:48px;
+    padding-bottom:44px;
+  }
+  .foot-grid .brand{font-family:var(--serif);font-size:22px;color:#FAF7F2;}
+  .foot-grid p{font-size:15px;margin-top:10px;max-width:26em;}
+  .foot-grid h5{
+    font-family:var(--sans);
+    font-size:12px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:rgba(243,239,231,.5);
+    margin-bottom:12px;
+  }
+  .foot-grid ul{list-style:none;}
+  .foot-grid li{font-size:15px;padding:3px 0;}
+  .foot-grid a{border-bottom:1px solid rgba(250,247,242,.25);}
+  .foot-bottom{
+    border-top:1px solid rgba(250,247,242,.12);
+    padding-top:22px;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  @media(max-width:720px){.foot-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Reveal ---------- */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .rv.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){
+    .hero-img{animation:none;}
+    .rv{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
-<div class="hero">
- <h1>Road Travels Together</h1>
- <p>Itineraries, photos, and notes from every destination we visit.</p>
-</div>
 
-<div class="trips">
-
- <a href="/travel-photos/" class="trip-card">
-  <div class="trip-icon">&#128247;</div>
-  <div class="trip-info">
-   <div class="trip-name">Travel Photos</div>
-   <div class="trip-dates">Photo gallery</div>
-   <div class="trip-meta">Photo albums from past trips &middot; Real moments, real places</div>
+<nav id="nav">
+  <a class="brand" href="#top">Road Travels Together</a>
+  <div class="links">
+    <a href="#albums">Albums</a>
+    <a href="#next">Where next</a>
+    <a class="nav-cta" href="#postcards">Get the postcards</a>
   </div>
-  <div class="trip-arrow">&#8594;</div>
- </a>
+</nav>
 
- <a href="/bali-family-surf-trip-2026/" class="trip-card">
-  <div class="trip-icon">&#127754;</div>
-  <div class="trip-info">
-   <div class="trip-name">Bali Family Surf Trip</div>
-   <div class="trip-dates">Aug 25 — Sep 1, 2026</div>
-   <div class="trip-meta">Medewi, Sebatu, Ubud &middot; Surf lessons, culture, relaxation</div>
+<header class="hero" id="top">
+  <img class="hero-img" src="images/hero-khao-sok.webp" alt="Sunset over the limestone karsts of Cheow Lan Lake, Khao Sok, Thailand">
+  <div class="hero-beam"></div>
+  <div class="wrap hero-inner">
+    <div class="kicker">A family travel journal</div>
+    <h1>Road Travels Together</h1>
+    <p>Slow miles, well loved. Photo albums and field notes from wherever the four of us point the car next.</p>
+    <a class="btn btn-primary" href="#albums">Explore the albums</a>
+    <a class="btn btn-ghost" href="#next">Where we&rsquo;re going next</a>
+    <div class="hero-note">Four albums live &middot; two trips on the board</div>
   </div>
-  <div class="trip-arrow">&#8594;</div>
- </a>
+  <div class="scroll-hint">Keep wandering</div>
+</header>
 
- <a href="/hanoi-sapa-2027/" class="trip-card">
-  <div class="trip-icon">&#127956;</div>
-  <div class="trip-info">
-   <div class="trip-name">Hanoi & Sapa</div>
-   <div class="trip-dates">Mar 5 — Mar 14, 2027</div>
-   <div class="trip-meta">Hanoi, Sapa, Tam Coc &middot; Culture, nature, relaxed family travel</div>
+<section id="albums" class="wrap">
+  <div class="sec-head rv">
+    <div class="kicker">Albums</div>
+    <h2>Places we have been</h2>
+    <p>No bucket lists, no checkpoints &mdash; just the places that asked us to stay a little longer.</p>
   </div>
-  <div class="trip-arrow">&#8594;</div>
- </a>
 
-</div>
+  <div class="album rv">
+    <div class="a-img"><img src="images/row-newzealand.webp" alt="Milford Sound under drifting cloud, New Zealand"></div>
+    <div class="a-body">
+      <div class="a-word">Wide open</div>
+      <h3>New Zealand</h3>
+      <p>Fjords, glacial lakes, and roads that go quiet for hours. Milford Sound does not photograph this well by accident &mdash; we just happened to be standing there.</p>
+      <div class="a-meta">2025 &middot; Fiordland &amp; Otago</div>
+      <a class="a-link" href="/travel-photos/photo/New%20Zealand%202025/">View the album</a>
+    </div>
+  </div>
 
-<div class="footer">
- Road Travels Together &middot; GitHub Pages
-</div>
+  <div class="album rv">
+    <div class="a-img"><img src="images/row-khaosok.webp" alt="Emerald water and forested karst peaks at Cheow Lan Lake, Khao Sok"></div>
+    <div class="a-body">
+      <div class="a-word">Jungle</div>
+      <h3>Khao Sok, Thailand</h3>
+      <p>Long-tail boats across Cheow Lan Lake, limestone towers rising straight out of green water, and a sunset that ended the day before we were ready.</p>
+      <div class="a-meta">2025 &middot; Surat Thani</div>
+      <a class="a-link" href="/travel-photos/photo/Khao%20Sok%202025/">View the album</a>
+    </div>
+  </div>
 
+  <div class="album rv">
+    <div class="a-img"><img src="images/row-china.webp" alt="Alpenglow on snow peaks above Bipenggou valley, western Sichuan"></div>
+    <div class="a-body">
+      <div class="a-word">Highland</div>
+      <h3>Western Sichuan, China</h3>
+      <p>First light on the Bipenggou peaks, red-stone riverbeds, and mountain passes between Li and Xiao. Thin air, thick silence.</p>
+      <div class="a-meta">2025 &middot; Aba Prefecture</div>
+      <a class="a-link" href="/travel-photos/photo/China.chuanxi%202025/">View the album</a>
+    </div>
+  </div>
+
+  <div class="album rv">
+    <div class="a-img"><img src="images/row-sumatra.webp" alt="Green canyon and mist over Ngarai Sianok, West Sumatra"></div>
+    <div class="a-body">
+      <div class="a-word">Green</div>
+      <h3>West Sumatra</h3>
+      <p>Canyon mist at Ngarai Sianok, village rooftops under a single towering tree, and the slow rhythm of West Sumatran hills.</p>
+      <div class="a-meta">Sumatra Barat &middot; 16 photographs</div>
+      <a class="a-link" href="/Photogallery/Sumbar/">View the album</a>
+    </div>
+  </div>
+
+  <p class="sched-note rv" style="margin-top:26px;font-size:15px;color:var(--ink-soft);">Every album, including works in progress: <a href="/travel-photos/" style="border-bottom:1px solid var(--terra);color:var(--terra-deep);">the full photo gallery</a></p>
+</section>
+
+<section id="next">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">Where next</div>
+      <h2>On the board</h2>
+      <p>Trips move from idea to itinerary to airport. These are the ones taking shape.</p>
+    </div>
+
+    <div class="next-grid">
+      <div class="trip t-terra rv">
+        <div class="when">Aug 25 &ndash; Sep 1, 2026</div>
+        <h3>Bali Family Surf Trip</h3>
+        <p>Medewi&rsquo;s long slow lefts, Sebatu&rsquo;s reef, and a Ubud finish. Itineraries, restaurants, contacts and transport notes are all packed.</p>
+        <span class="pill p-dusk">Just returned &mdash; album coming soon</span>
+        <a class="t-link" href="/bali-family-surf-trip-2026/">Trip page</a>
+      </div>
+      <div class="trip rv">
+        <div class="when">Mar 5 &ndash; 14, 2027</div>
+        <h3>Hanoi &amp; Sapa</h3>
+        <p>Hanoi&rsquo;s old quarter, the cable car to Fansipan, and slow days in Tam Coc. Research notes are already three pages deep.</p>
+        <span class="pill">Planning &mdash; itinerary drafting</span>
+        <a class="t-link" href="/hanoi-sapa-2027/">Trip page</a>
+      </div>
+    </div>
+
+    <p class="next-note rv">Trip pages carry the practical load: day-by-day itinerary, food guides, key contacts, and transport routes.</p>
+  </div>
+</section>
+
+<section id="postcards">
+  <div class="wrap pc-grid">
+    <div class="rv">
+      <div class="kicker">Postcards</div>
+      <h2>Postcards, rarely</h2>
+      <p class="lede">One letter per trip, sent when the photos are sorted. The good light, the wrong turns, and what we&rsquo;d do differently.</p>
+      <ul class="pc-points">
+        <li>One letter per trip &mdash; never more</li>
+        <li>Photos first, words second</li>
+        <li>No ads, no algorithms, no noise</li>
+      </ul>
+    </div>
+    <div class="form-card rv">
+      <form id="pcForm">
+        <label for="p-name">Name</label>
+        <input id="p-name" type="text" required autocomplete="name" placeholder="Your name">
+        <label for="p-email">Email</label>
+        <input id="p-email" type="email" required autocomplete="email" placeholder="you@example.com">
+        <button class="btn btn-primary" type="submit">Send me the next one</button>
+        <small>A few emails a year. Unsubscribe anytime.</small>
+      </form>
+      <div class="thanks" id="thanks">
+        <h3>You&rsquo;re on the list.</h3>
+        <p>The next postcard finds you when the road does. Until then &mdash; safe travels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="brand">Road Travels Together</div>
+      <p>Itineraries, photos, and notes from every destination we visit. Slow miles, well loved.</p>
+    </div>
+    <div>
+      <h5>Albums</h5>
+      <ul>
+        <li><a href="/travel-photos/">Photo gallery</a></li>
+        <li><a href="/Photogallery/">yeo@photos</a></li>
+        <li><a href="/Journal/">AL Street Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Trips</h5>
+      <ul>
+        <li><a href="/bali-family-surf-trip-2026/">Bali 2026</a></li>
+        <li><a href="/hanoi-sapa-2027/">Hanoi &amp; Sapa 2027</a></li>
+        <li><a href="#postcards">Postcards</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 Road Travels Together</span>
+    <span>Collect moments, not things.</span>
+  </div>
+</footer>
+
+<script>
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>innerHeight*0.7);},{passive:true});
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  // Postcards signup: opens a pre-filled email to Yeo, then shows the thanks card
+  document.getElementById('pcForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('p-name').value.trim();
+    var m=document.getElementById('p-email').value.trim();
+    var body='Add me ('+n+', '+m+') to the Road Travels Together postcards list.';
+    window.location.href='mailto:yeo.skysb@gmail.com?subject='+encodeURIComponent('Postcards list signup')+'&body='+encodeURIComponent(body);
+    this.style.display='none';
+    document.getElementById('thanks').style.display='block';
+  });
+</script>
 </body>
 </html>
