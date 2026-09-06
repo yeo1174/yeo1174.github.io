@@ -19,12 +19,14 @@
   a { color: inherit; text-decoration: none; }
 
   .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
-  .header h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20pt; letter-spacing: 0.02em; color: var(--ink); }
-  .header .back-link { font-size: 9pt; font-weight: 600; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
-  .header .back-link:hover { color: var(--terra-deep); }
+  .crumbs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-size: 9pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage-deep); }
+  .crumbs a { transition: color .25s; }
+  .crumbs a:hover { color: var(--terra-deep); }
+  .crumbs .sep { color: rgba(58,54,48,.25); }
+  .crumbs .here { color: var(--ink); }
 
   .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
-  .intro h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 32pt; color: var(--ink); margin-bottom: 12px; }
+  .intro h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 32pt; color: var(--ink); margin-bottom: 12px; }
   .intro p { font-size: 11pt; color: var(--ink-soft); max-width: 500px; line-height: 1.8; }
 
   .albums { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -40,10 +42,9 @@
 
   @media (max-width: 800px) { .albums { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
-   .header { padding: 28px 20px 16px; flex-direction: column; gap: 6px; }
-   .header h1 { font-size: 16pt; }
+   .header { padding: 28px 20px 16px; }
    .intro { padding: 40px 20px 20px; }
-   .intro h2 { font-size: 22pt; }
+   .intro h1 { font-size: 22pt; }
    .albums { grid-template-columns: 1fr; padding: 0 20px 60px; }
   }
  </style>
@@ -51,12 +52,11 @@
 <body>
 
 <div class="header">
- <h1>Travel Photos</h1>
- <a href="/" class="back-link">&larr; Home</a>
+ <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">Travel Photos</span></nav>
 </div>
 
 <div class="intro">
- <h2>Memories</h2>
+ <h1>Memories</h1>
  <p>Photo albums from journeys we've taken.</p>
 </div>
 
@@ -66,7 +66,7 @@
   <div class="thumb"><img src="/travel-photos/photo/Bali%202026/web/bali-01.webp" alt="Bali 2026" loading="lazy"></div>
   <div class="info">
    <div class="title">Bali 2026</div>
-   <div class="meta">Medewi &amp; Ubud &middot; 10 photos</div>
+   <div class="meta">Medewi &amp; Ubud &middot; 13 photos</div>
   </div>
  </a>
 
