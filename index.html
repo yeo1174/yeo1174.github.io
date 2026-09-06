@@ -175,6 +175,21 @@
     opacity:.75;
   }
   @media(max-width:720px){.scroll-hint{display:none;}.btn-ghost{margin-left:0;margin-top:12px;}}
+  /* Mobile hero: content can exceed 100svh, so let the hero grow and keep the
+     stack clear of the fixed nav instead of clipping under it */
+  @media(max-width:720px){
+    header.hero{height:auto;min-height:100svh;}
+    .hero-inner{padding-top:112px;padding-bottom:60px;}
+    .hero-inner h1{font-size:clamp(42px,11vw,58px);margin:12px 0 14px;}
+    .hero-inner p{font-size:17px;margin-bottom:28px;}
+    nav{padding:16px 20px;}
+    nav .brand{font-size:16px;white-space:nowrap;}
+    nav .nav-cta{padding:7px 14px;font-size:13px;}
+  }
+  @media(max-width:380px){
+    nav .brand{font-size:14.5px;}
+    nav .nav-cta{padding:6px 10px;font-size:12px;white-space:nowrap;}
+  }
 
   /* ---------- Section scaffolding ---------- */
   section{
