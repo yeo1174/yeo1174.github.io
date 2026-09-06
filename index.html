@@ -332,56 +332,50 @@
   .map-pin text{font-family:var(--sans);font-size:15px;fill:var(--ink-soft);letter-spacing:.04em;}
   .map-note{max-width:960px;margin:18px auto 0;font-size:15px;color:var(--ink-soft);}
 
-  /* ---------- Postcards ---------- */
-  #postcards{background:var(--ink);color:#F3EFE7;}
-  #postcards .kicker{color:var(--dusk);}
-  .pc-grid{
+  /* ---------- Say hello ---------- */
+  #hello{background:var(--ink);color:#F3EFE7;}
+  #hello .kicker{color:var(--dusk);}
+  .hello-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:clamp(48px,7vw,120px);
-    align-items:start;
+    align-items:center;
   }
-  #postcards h2{font-size:clamp(40px,5vw,64px);margin:16px 0 22px;color:#FAF7F2;}
-  #postcards .lede{color:rgba(243,239,231,.82);font-size:19px;max-width:30em;}
-  .pc-points{margin-top:36px;list-style:none;}
-  .pc-points li{
+  #hello h2{font-size:clamp(40px,5vw,64px);margin:16px 0 22px;color:#FAF7F2;}
+  #hello .lede{color:rgba(243,239,231,.82);font-size:19px;max-width:30em;}
+  .hello-points{margin-top:36px;list-style:none;}
+  .hello-points li{
     padding:14px 0;
     border-top:1px solid rgba(250,247,242,.16);
     font-size:16px;
   }
-  .pc-points li:last-child{border-bottom:1px solid rgba(250,247,242,.16);}
-  .form-card{
+  .hello-points li:last-child{border-bottom:1px solid rgba(250,247,242,.16);}
+  .hello-card{
     background:#FBF8F2;
     color:var(--ink);
     padding:clamp(28px,3.5vw,48px);
   }
-  .form-card label{
-    display:block;
-    font-size:13px;
+  .hello-card h3{font-size:28px;}
+  .hello-card .card-note{color:var(--ink-soft);font-size:15.5px;margin:8px 0 12px;}
+  .hello-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    padding:15px 0;
+    border-top:1px solid var(--line);
+    font-size:15.5px;
+  }
+  .hello-row .what{
+    font-size:12.5px;
     font-weight:600;
-    letter-spacing:.18em;
+    letter-spacing:.16em;
     text-transform:uppercase;
     color:var(--ink-soft);
-    margin:22px 0 6px;
   }
-  .form-card label:first-child{margin-top:0;}
-  .form-card input{
-    width:100%;
-    font-family:var(--sans);
-    font-size:16px;
-    color:var(--ink);
-    background:#fff;
-    border:1px solid var(--line);
-    padding:13px 14px;
-    border-radius:2px;
-  }
-  .form-card input:focus{outline:none;border-color:var(--sage-deep);}
-  .form-card .btn{width:100%;text-align:center;margin-top:28px;border:none;cursor:pointer;}
-  .form-card small{display:block;margin-top:16px;font-size:13.5px;color:var(--ink-soft);text-align:center;}
-  .thanks{display:none;padding:44px 8px;text-align:center;}
-  .thanks h3{font-size:30px;margin-bottom:10px;}
-  .thanks p{color:var(--ink-soft);}
-  @media(max-width:860px){.pc-grid{grid-template-columns:1fr;}}
+  .hello-row a{font-weight:600;color:var(--terra-deep);border-bottom:1px solid var(--terra);padding-bottom:2px;}
+  .hello-row a:hover{color:var(--terra);}
+  @media(max-width:860px){.hello-grid{grid-template-columns:1fr;}}
 
   /* ---------- Footer ---------- */
   footer{
@@ -440,7 +434,7 @@
     <a href="#notes">Field notes</a>
     <a href="#map">Map</a>
     <a href="#next">Where next</a>
-    <a class="nav-cta" href="#postcards">Get the postcards</a>
+    <a class="nav-cta" href="#hello">Say hello</a>
   </div>
 </nav>
 
@@ -620,31 +614,24 @@
   </div>
 </section>
 
-<section id="postcards">
-  <div class="wrap pc-grid">
+<section id="hello">
+  <div class="wrap hello-grid">
     <div class="rv">
-      <div class="kicker">Postcards</div>
-      <h2>Postcards, rarely</h2>
-      <p class="lede">One letter per trip, sent when the photos are sorted. The good light, the wrong turns, and what we&rsquo;d do differently.</p>
-      <ul class="pc-points">
-        <li>One letter per trip &mdash; never more</li>
-        <li>Photos first, words second</li>
-        <li>No ads, no algorithms, no noise</li>
+      <div class="kicker">Say hello</div>
+      <h2>Drop us a line</h2>
+      <p class="lede">A wrong turn we should know about, a food stall that belongs on the next itinerary, or a hello from somewhere on the map &mdash; we read everything, and we answer.</p>
+      <ul class="hello-points">
+        <li>Route tips for Hanoi &amp; Sapa &mdash; especially wanted</li>
+        <li>Corrections, better food stalls, kinder campsites</li>
+        <li>No forms, no lists &mdash; just a reply</li>
       </ul>
     </div>
-    <div class="form-card rv">
-      <form id="pcForm">
-        <label for="p-name">Name</label>
-        <input id="p-name" type="text" name="name" required autocomplete="name" placeholder="Your name">
-        <label for="p-email">Email</label>
-        <input id="p-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-        <button class="btn btn-primary" type="submit">Send me the next one</button>
-        <small>A few emails a year. Unsubscribe anytime.</small>
-      </form>
-      <div class="thanks" id="thanks">
-        <h3>You&rsquo;re on the list.</h3>
-        <p>The next postcard finds you when the road does. Until then &mdash; safe travels.</p>
-      </div>
+    <div class="hello-card rv">
+      <h3>The family inbox</h3>
+      <p class="card-note">One email, straight to us. No forms, no sign-ups.</p>
+      <div class="hello-row"><span class="what">Write to</span><a href="mailto:yeo.skysb@gmail.com?subject=Hello%20from%20the%20road">yeo.skysb@gmail.com</a></div>
+      <div class="hello-row"><span class="what">Replies</span><span>Usually within the week</span></div>
+      <div class="hello-row"><span class="what">Best for</span><span>Trip tips, corrections, hellos</span></div>
     </div>
   </div>
 </section>
@@ -668,7 +655,7 @@
       <ul>
         <li><a href="/bali-family-surf-trip-2026/">Bali 2026</a></li>
         <li><a href="/hanoi-sapa-2027/">Hanoi &amp; Sapa 2027</a></li>
-        <li><a href="#postcards">Postcards</a></li>
+        <li><a href="#hello">Say hello</a></li>
       </ul>
     </div>
   </div>
@@ -694,17 +681,6 @@
     var d=Math.ceil((new Date('2027-03-05T00:00:00+08:00')-new Date())/86400000);
     el.textContent=d>0?d+' days to Hanoi & Sapa':'Hanoi & Sapa \u2014 on the road';
   })();
-
-  // Postcards signup: opens a pre-filled email to Yeo, then shows the thanks card
-  document.getElementById('pcForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=document.getElementById('p-name').value.trim();
-    var m=document.getElementById('p-email').value.trim();
-    var body='Add me ('+n+', '+m+') to the Road Travels Together postcards list.';
-    window.location.href='mailto:yeo.skysb@gmail.com?subject='+encodeURIComponent('Postcards list signup')+'&body='+encodeURIComponent(body);
-    this.style.display='none';
-    document.getElementById('thanks').style.display='block';
-  });
 </script>
 </body>
 </html>
