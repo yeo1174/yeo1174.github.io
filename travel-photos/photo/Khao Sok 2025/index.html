@@ -19,12 +19,14 @@
   a { color: inherit; text-decoration: none; }
 
   .header { max-width: 1200px; margin: 0 auto; padding: 36px 32px 20px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
-  .header h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20pt; letter-spacing: 0.02em; color: var(--ink); }
-  .header .back-link { font-size: 9pt; font-weight: 600; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.1em; transition: color .25s; }
-  .header .back-link:hover { color: var(--terra-deep); }
+  .crumbs { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font-size: 9pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage-deep); }
+  .crumbs a { transition: color .25s; }
+  .crumbs a:hover { color: var(--terra-deep); }
+  .crumbs .sep { color: rgba(58,54,48,.25); }
+  .crumbs .here { color: var(--ink); }
 
   .intro { max-width: 1200px; margin: 0 auto; padding: 60px 32px 30px; }
-  .intro h2 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
+  .intro h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
   .intro p { font-size: 10pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
   .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -38,10 +40,9 @@
 
   @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
-   .header { padding: 28px 20px 16px; flex-direction: column; gap: 6px; }
-   .header h1 { font-size: 16pt; }
+   .header { padding: 28px 20px 16px; }
    .intro { padding: 40px 20px 20px; }
-   .intro h2 { font-size: 22pt; }
+   .intro h1 { font-size: 22pt; }
    .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
    .gallery .photo .caption { opacity: 1; }
   }
@@ -50,12 +51,11 @@
 <body>
 
 <div class="header">
- <h1>Khao Sok 2025</h1>
- <a href="/travel-photos/" class="back-link">&larr; Travel Photos</a>
+ <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/travel-photos/">Travel Photos</a><span class="sep">/</span><span class="here">Khao Sok 2025</span></nav>
 </div>
 
 <div class="intro">
- <h2>Khao Sok 2025</h2>
+ <h1>Khao Sok 2025</h1>
  <p>Cheow Lan Lake &mdash; limestone karsts, floating bungalows</p>
 </div>
 
