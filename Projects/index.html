@@ -624,6 +624,8 @@
   /* p2a unit schedule: Type Desc Units % UnitArea TotalArea */
   .p2amix { grid-template-columns: 56px minmax(160px, 1.3fr) 64px 70px 92px 110px; column-gap: 12px; align-items: baseline; }
   .p2amix .p2a-note { grid-column: 2 / 7; }
+  /* saffron unit schedule: Type Units NFA Garden TotalNFA */
+  .sfnmix { grid-template-columns: 84px 56px 104px 104px 118px; column-gap: 12px; align-items: baseline; }
   .builtup-group {
     display: grid; grid-template-columns: 1fr 150px 150px; align-items: baseline; column-gap: 16px;
     padding: 13px 24px; background: var(--surface-2); border-bottom: 1px solid var(--gridline);
@@ -659,6 +661,7 @@
     /* wide mix tables: keep columns intact, scroll horizontally instead of clipping */
     .tbl { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .unitmix, .configmix, .p2amix { min-width: 820px; }
+    .sfnmix { min-width: 640px; }
     .tbl-head, .tbl-row, .tbl-total { padding-left: 16px; padding-right: 16px; }
   }
 </style>
@@ -947,20 +950,36 @@
       <div class="fg-cell"><div class="fg-label">Number of storeys</div><div class="fg-value">35</div></div>
     </div>
 
-    <div class="dt-section max620">
-      <div class="dt-title"><span class="t">Unit sizes</span><span class="rule"></span></div>
+    <div class="dt-section">
+      <div class="dt-title"><span class="t">Unit type schedule</span><span class="rule"></span></div>
+      <p class="dt-note">Total of 329 units · 422,616 sq ft total NFA. NFA (net floor area) excludes garden area, which is shown separately for terrace units.</p>
       <div class="tbl">
-        <div class="tbl-head sizemix"><span>Type</span><span class="num">Size</span></div>
-        <div class="tbl-row sizemix"><span class="bold" style="font-size:14px;">A / A1</span><span class="num strong" style="font-size:14px;">1,145 sq ft</span></div>
-        <div class="tbl-row sizemix"><span class="bold" style="font-size:14px;">B</span><span class="num strong" style="font-size:14px;">1,367 sq ft</span></div>
-        <div class="tbl-row sizemix"><span class="bold" style="font-size:14px;">B1</span><span class="num strong" style="font-size:14px;">1,350 sq ft</span></div>
-        <div class="tbl-row sizemix"><span class="bold" style="font-size:14px;">C</span><span class="num strong" style="font-size:14px;">1,375 sq ft</span></div>
-        <div class="tbl-row sizemix"><span class="bold" style="font-size:14px;">C1</span><span class="num strong" style="font-size:14px;">1,619 sq ft</span></div>
+        <div class="tbl-head sfnmix"><span>Type</span><span class="num">No.</span><span class="num">NFA (sq ft)</span><span class="num">Garden (sq ft)</span><span class="num">Total NFA (sq ft)</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">A/A1</span><span class="num strong" style="font-size:13px;">146</span><span class="num strong" style="font-size:13px;">1,145</span><span class="num dim" style="font-size:12.5px;">—</span><span class="num strong dim" style="font-size:13px;">167,170</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B</span><span class="num strong" style="font-size:13px;">58</span><span class="num strong" style="font-size:13px;">1,367</span><span class="num dim" style="font-size:12.5px;">—</span><span class="num strong dim" style="font-size:13px;">79,286</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B1</span><span class="num strong" style="font-size:13px;">58</span><span class="num strong" style="font-size:13px;">1,350</span><span class="num dim" style="font-size:12.5px;">—</span><span class="num strong dim" style="font-size:13px;">78,300</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">C</span><span class="num strong" style="font-size:13px;">29</span><span class="num strong" style="font-size:13px;">1,375</span><span class="num dim" style="font-size:12.5px;">—</span><span class="num strong dim" style="font-size:13px;">39,875</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">C1</span><span class="num strong" style="font-size:13px;">29</span><span class="num strong" style="font-size:13px;">1,619</span><span class="num dim" style="font-size:12.5px;">—</span><span class="num strong dim" style="font-size:13px;">46,951</span></div>
+        <div class="tbl-total sfnmix"><span></span><span class="it bold num" style="font-size:12.5px;">320</span><span class="it bold num" style="font-size:12.5px;">Main NFA</span><span></span><span class="bold num" style="font-size:14px;">411,582</span></div>
       </div>
-      <p style="margin: 16px 0 0; font-size: 12px; color: var(--text-secondary); line-height: 1.6;">Note: A(M), B(M), and B1(M) are mirrored layouts of A, B, and B1 respectively (same sizes). Range overall: 1,145 to 1,619 sq ft.</p>
+      <div class="dt-title" style="margin-top:28px;"><span class="t">Terrace units</span><span class="rule"></span></div>
+      <div class="tbl">
+        <div class="tbl-head sfnmix"><span>Type</span><span class="num">No.</span><span class="num">NFA (sq ft)</span><span class="num">Garden (sq ft)</span><span class="num">Total NFA (sq ft)</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">A-G1</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,066</span><span class="num strong dim" style="font-size:13px;">452</span><span class="num strong dim" style="font-size:13px;">1,066</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">A-G2</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,066</span><span class="num strong dim" style="font-size:13px;">452</span><span class="num strong dim" style="font-size:13px;">1,066</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">A-G3</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,066</span><span class="num strong dim" style="font-size:13px;">233</span><span class="num strong dim" style="font-size:13px;">1,066</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">A1-G1</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,066</span><span class="num strong dim" style="font-size:13px;">452</span><span class="num strong dim" style="font-size:13px;">1,066</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B-G1</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,305</span><span class="num strong dim" style="font-size:13px;">702</span><span class="num strong dim" style="font-size:13px;">1,305</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B-G2</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,385</span><span class="num strong dim" style="font-size:13px;">170</span><span class="num strong dim" style="font-size:13px;">1,385</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B1-G1</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,287</span><span class="num strong dim" style="font-size:13px;">678</span><span class="num strong dim" style="font-size:13px;">1,287</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">B1-G2</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,287</span><span class="num strong dim" style="font-size:13px;">711</span><span class="num strong dim" style="font-size:13px;">1,287</span></div>
+        <div class="tbl-row sfnmix"><span class="bold" style="font-size:13px;">C1-G</span><span class="num strong" style="font-size:13px;">1</span><span class="num strong" style="font-size:13px;">1,506</span><span class="num strong dim" style="font-size:13px;">339</span><span class="num strong dim" style="font-size:13px;">1,506</span></div>
+        <div class="tbl-total sfnmix"><span></span><span class="it bold num" style="font-size:12.5px;">9</span><span class="it bold num" style="font-size:12.5px;">Terrace NFA</span><span></span><span class="bold num" style="font-size:14px;">11,034</span></div>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 12px; color: var(--text-secondary); line-height: 1.6;">Grand total: 329 units · 422,616 sq ft total NFA. Note: A(M), B(M), and B1(M) are mirrored layouts of A, B, and B1 respectively (same sizes).</p>
     </div>
 
-    <p class="src-note">Source: Saffron Project Data.pdf (SKY Project Team files).</p>
+    <p class="src-note">Source: Saffron Summary of Units (SKY Project Team files).</p>
     </div>
   </div>
 
