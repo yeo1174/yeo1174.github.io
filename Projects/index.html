@@ -656,6 +656,10 @@
     .head-side { align-items: flex-start; }
     .cards { grid-template-columns: 1fr; }
     .detail-name { font-size: 36px; }
+    /* wide mix tables: keep columns intact, scroll horizontally instead of clipping */
+    .tbl { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .unitmix, .configmix, .p2amix { min-width: 820px; }
+    .tbl-head, .tbl-row, .tbl-total { padding-left: 16px; padding-right: 16px; }
   }
 </style>
 </head>
