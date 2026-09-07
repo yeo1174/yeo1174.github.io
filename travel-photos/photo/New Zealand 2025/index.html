@@ -31,7 +31,7 @@
 
   .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 4/3; background: var(--sand); }
-  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 1.2s ease; }
+  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 3s ease; }
   .gallery .photo:hover img { opacity: 0.88; transform: scale(1.035); }
   .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
