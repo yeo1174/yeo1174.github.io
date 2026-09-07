@@ -621,6 +621,9 @@
   .sizemix { grid-template-columns: 1fr 1fr; padding: 13px 24px; }
   /* built-up: 1fr 150px 150px */
   .builtup { grid-template-columns: 1fr 150px 150px; column-gap: 16px; }
+  /* p2a unit schedule: Type Desc Units % UnitArea TotalArea */
+  .p2amix { grid-template-columns: 56px minmax(160px, 1.3fr) 64px 70px 92px 110px; column-gap: 12px; align-items: baseline; }
+  .p2amix .p2a-note { grid-column: 2 / 7; }
   .builtup-group {
     display: grid; grid-template-columns: 1fr 150px 150px; align-items: baseline; column-gap: 16px;
     padding: 13px 24px; background: var(--surface-2); border-bottom: 1px solid var(--gridline);
@@ -674,14 +677,14 @@
       </div>
       <div class="head-side">
         <button type="button" class="theme-btn" onclick="toggleTheme()"><span id="themeLabel">Dark mode</span></button>
-        <span class="data-as-of">Data as of 19 Aug 2026</span>
+        <span class="data-as-of">Data as of 07 Sep 2026</span>
       </div>
     </header>
 
     <div class="stats">
-      <div class="stat"><div class="stat-value">5</div><div class="stat-label">Total projects</div></div>
+      <div class="stat"><div class="stat-value">6</div><div class="stat-label">Total projects</div></div>
       <div class="stat"><div class="stat-value">3</div><div class="stat-label">Categories active</div></div>
-      <div class="stat"><div class="stat-value">1,455</div><div class="stat-label">Highrise units tracked</div></div>
+      <div class="stat"><div class="stat-value">2,008</div><div class="stat-label">Highrise units tracked</div></div>
       <div class="stat"><div class="stat-value">316</div><div class="stat-label">Landed units tracked</div></div>
     </div>
 
@@ -736,7 +739,7 @@
         <span class="cat-dot" style="background: var(--cat-2);"></span>
         <span class="cat-name">Highrise</span>
         <span class="cat-rule"></span>
-        <span class="cat-meta">2 projects · Sg Long &amp; Kiara Bay</span>
+        <span class="cat-meta">3 projects · Sg Long, Kiara Bay &amp; Salak South</span>
       </div>
       <div class="cards">
 
@@ -768,6 +771,21 @@
           <div class="field"><span class="field-label">Number of units</span><span class="field-value">1,126</span></div>
           <div class="field"><span class="field-label">Unit size range</span><span class="field-value">450 – 1,198 sq ft</span></div>
           <div class="field"><span class="field-label">Number of storeys</span><span class="field-value">57 levels</span></div>
+        </article>
+
+        <article class="card" style="border-top-color: var(--cat-2);" onclick="openDetail('p2a')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openDetail('p2a')">
+          <div class="card-top">
+            <div>
+              <p class="card-name">Parcel 2A</p>
+              <p class="card-owner">Salak South · Paradigma Berkat Sdn Bhd</p>
+            </div>
+            <div class="card-badge" style="background: var(--cat-2);">P2A</div>
+          </div>
+          <div class="field"><span class="field-label">Type of development</span><span class="field-value">Highrise Residential Development</span></div>
+          <div class="field"><span class="field-label">Land size</span><span class="field-value">2.50 acres</span></div>
+          <div class="field"><span class="field-label">Number of units</span><span class="field-value">553</span></div>
+          <div class="field"><span class="field-label">Unit size range</span><span class="field-value">861 – 1,338 sq ft</span></div>
+          <div class="field"><span class="field-label">Number of storeys</span><span class="field-value">48 + 8-storey podium</span></div>
         </article>
 
       </div>
@@ -995,6 +1013,63 @@
   </div>
 
   <!-- ============================================================
+       DETAIL VIEW — Parcel 2A
+       ============================================================ -->
+  <div id="view-p2a" class="hidden detail-view">
+    <div class="accent-bar" style="background: var(--cat-2);"></div>
+    <div class="detail-inner">
+    <button type="button" class="back-btn" onclick="closeDetail()">← Back to dashboard</button>
+    <div class="detail-head">
+      <div>
+        <div class="detail-kicker"><span class="dot" style="background: var(--cat-2);"></span><span>02</span><span>·</span><span>Highrise</span></div>
+        <h2 class="detail-name">Parcel 2A</h2>
+        <p class="detail-owner">Salak South · Paradigma Berkat Sdn Bhd</p>
+      </div>
+      <div class="detail-badge" style="background: var(--cat-2);">P2A</div>
+    </div>
+    <div class="detail-meta"><span>6 of 6 fields complete</span><span class="rule"></span><span>Data as of 07 Sep 2026</span></div>
+
+    <div class="fieldgrid">
+      <div class="fg-cell"><div class="fg-label">Type of development</div><div class="fg-value">Highrise Residential Development</div></div>
+      <div class="fg-cell"><div class="fg-label">Land size</div><div class="fg-value">2.50 acres</div></div>
+      <div class="fg-cell"><div class="fg-label">Number of units</div><div class="fg-value">553</div></div>
+      <div class="fg-cell"><div class="fg-label">Net saleable area</div><div class="fg-value">549,348 sq ft</div></div>
+      <div class="fg-cell"><div class="fg-label">Unit size range</div><div class="fg-value">861 – 1,338 sq ft</div></div>
+      <div class="fg-cell"><div class="fg-label">Number of storeys</div><div class="fg-value">48 + 8-storey podium car park</div></div>
+    </div>
+
+    <div class="dt-section">
+      <div class="dt-title"><span class="t">Unit type schedule</span><span class="rule"></span></div>
+      <p class="dt-note">Total of 553 units · 13 units per typical floor · avg. 993 sq ft per unit.</p>
+      <div class="tbl">
+        <div class="tbl-head p2amix"><span>Type</span><span>Description</span><span class="num">Units</span><span class="num">%</span><span class="num">Unit area</span><span class="num">Total area</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">A</span><span class="dim" style="font-size:12.5px;">Typical Unit</span><span class="num strong" style="font-size:13px;">154</span><span class="num dim" style="font-size:12.5px;">27.8%</span><span class="num strong" style="font-size:13px;">861</span><span class="num strong dim" style="font-size:13px;">132,594</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">A-T</span><span class="dim" style="font-size:12.5px;">Typical Unit with terrace</span><span class="num strong" style="font-size:13px;">4</span><span class="num dim" style="font-size:12.5px;">0.7%</span><span class="num strong" style="font-size:13px;">1,098</span><span class="num strong dim" style="font-size:13px;">4,392</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">B</span><span class="dim" style="font-size:12.5px;">Typical Unit with balcony</span><span class="num strong" style="font-size:13px;">225</span><span class="num dim" style="font-size:12.5px;">40.7%</span><span class="num strong" style="font-size:13px;">917</span><span class="num strong dim" style="font-size:13px;">206,325</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">C</span><span class="dim" style="font-size:12.5px;">Corner Unit with balcony</span><span class="num strong" style="font-size:13px;">78</span><span class="num dim" style="font-size:12.5px;">14.1%</span><span class="num strong" style="font-size:13px;">1,109</span><span class="num strong dim" style="font-size:13px;">86,502</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">C-T</span><span class="dim" style="font-size:12.5px;">Corner Unit with terrace</span><span class="num strong" style="font-size:13px;">2</span><span class="num dim" style="font-size:12.5px;">0.4%</span><span class="num strong" style="font-size:13px;">1,335</span><span class="num strong dim" style="font-size:13px;">2,670</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">D</span><span class="dim" style="font-size:12.5px;">Corner Unit with balcony</span><span class="num strong" style="font-size:13px;">45</span><span class="num dim" style="font-size:12.5px;">8.1%</span><span class="num strong" style="font-size:13px;">1,259</span><span class="num strong dim" style="font-size:13px;">56,655</span></div>
+        <div class="tbl-row p2amix"><span class="bold" style="font-size:13px;">E</span><span class="dim" style="font-size:12.5px;">Corner Unit (dual key) with balcony</span><span class="num strong" style="font-size:13px;">45</span><span class="num dim" style="font-size:12.5px;">8.1%</span><span class="num strong" style="font-size:13px;">1,338</span><span class="num strong dim" style="font-size:13px;">60,210</span></div>
+        <div class="tbl-total p2amix"><span></span><span class="it bold" style="font-size:12.5px;">Total</span><span class="bold num" style="font-size:14px;">553</span><span class="bold num" style="font-size:14px;">100%</span><span></span><span class="bold num" style="font-size:14px;">549,348</span></div>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 12px; color: var(--text-secondary); line-height: 1.6;">Note: areas exclude the 2 BT bays shown separately on the distribution chart, which are not residential units. Source: Parcel 2A Unit Distribution Chart, dated 02 Jan 2018.</p>
+    </div>
+
+    <div class="dt-section">
+      <div class="dt-title"><span class="t">View orientation &amp; car park</span><span class="rule"></span></div>
+      <div class="specgrid">
+        <div class="spec-cell"><div class="spec-label">KLCC view</div><div class="spec-value">57% · 315 units (Types B, D, E)</div></div>
+        <div class="spec-cell"><div class="spec-label">KL South view</div><div class="spec-value">43% · 238 units (Types A, A-T, C, C-T)</div></div>
+        <div class="spec-cell"><div class="spec-label">Car park bays</div><div class="spec-value">1,171 · 921 single + 248 tandem + 2 OKU</div></div>
+        <div class="spec-cell"><div class="spec-label">Density</div><div class="spec-value">221 units/acre · 885 persons/acre</div></div>
+      </div>
+    </div>
+
+    <p class="src-note">Source: Parcel 2A Project Data.pdf (SKY Project Team files).</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
        DETAIL VIEW — Avant
        ============================================================ -->
   <div id="view-avant" class="hidden detail-view">
@@ -1076,7 +1151,7 @@
   }
 
   // View switching: dashboard <-> detail
-  var VIEW_IDS = ['er5', 'eef1', 'saffron', 'zig', 'avant'];
+  var VIEW_IDS = ['er5', 'eef1', 'saffron', 'zig', 'p2a', 'avant'];
   function openDetail(key) {
     document.getElementById('view-dashboard').classList.add('hidden');
     VIEW_IDS.forEach(function (k) {
@@ -1093,7 +1168,7 @@
   }
   // Deep-link: #er5 opens that detail on load
   (function () {
-    var m = location.hash.match(/^#(er5|eef1|saffron|zig|avant)$/);
+    var m = location.hash.match(/^#(er5|eef1|saffron|zig|p2a|avant)$/);
     if (m) openDetail(m[1]);
   })();
 </script>
