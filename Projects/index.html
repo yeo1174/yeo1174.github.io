@@ -470,6 +470,7 @@
   .cat-name { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
   .cat-rule { flex: 1; height: 1px; background: var(--gridline); min-width: 20px; }
   .cat-meta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-muted); white-space: nowrap; letter-spacing: 0.04em; }
+  .cat-loc { white-space: nowrap; }
 
   /* ---------- Cards ---------- */
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
@@ -658,6 +659,7 @@
     .head-side { align-items: flex-start; }
     .cards { grid-template-columns: 1fr; }
     .detail-name { font-size: 36px; }
+    .cat-loc { display: none; }
     /* wide mix tables: keep columns intact, scroll horizontally instead of clipping */
     .tbl { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .unitmix, .configmix, .p2amix { min-width: 820px; }
@@ -702,7 +704,7 @@
         <span class="cat-dot" style="background: var(--cat-1);"></span>
         <span class="cat-name">Landed</span>
         <span class="cat-rule"></span>
-        <span class="cat-meta">2 projects · Elmina</span>
+        <span class="cat-meta">2 projects<span class="cat-loc"> · Elmina</span></span>
       </div>
       <div class="cards">
 
@@ -746,7 +748,7 @@
         <span class="cat-dot" style="background: var(--cat-2);"></span>
         <span class="cat-name">Highrise</span>
         <span class="cat-rule"></span>
-        <span class="cat-meta">3 projects · Sg Long, Kiara Bay &amp; Salak South</span>
+        <span class="cat-meta">3 projects<span class="cat-loc"> · Sg Long, Kiara Bay &amp; Salak South</span></span>
       </div>
       <div class="cards">
 
@@ -805,7 +807,7 @@
         <span class="cat-dot" style="background: var(--cat-4);"></span>
         <span class="cat-name">Industrial</span>
         <span class="cat-rule"></span>
-        <span class="cat-meta">1 project · Shah Alam</span>
+        <span class="cat-meta">1 project<span class="cat-loc"> · Shah Alam</span></span>
       </div>
       <div class="cards">
 
