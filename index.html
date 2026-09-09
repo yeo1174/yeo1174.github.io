@@ -444,7 +444,7 @@
   .menu-btn[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg);}
   .menu-btn[aria-expanded="true"] span:nth-child(2){transform:rotate(-45deg);}
   .menu-overlay{
-    position:fixed;inset:0;z-index:1100;
+    position:fixed;inset:0;z-index:999;
     background:rgba(250,247,242,.97);
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     gap:6px;opacity:0;visibility:hidden;
@@ -832,6 +832,7 @@
       document.body.classList.toggle('no-scroll',open);
     }
     btn.addEventListener('click',function(){set(!ov.classList.contains('open'));});
+    ov.addEventListener('click',function(e){if(e.target===ov)set(false);});
     [].slice.call(ov.querySelectorAll('a')).forEach(function(a){a.addEventListener('click',function(){set(false);});});
     addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
     addEventListener('resize',function(){if(innerWidth>820)set(false);});
