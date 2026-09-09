@@ -107,8 +107,10 @@
     height:100%;
     object-fit:cover;
     transform-origin:50% 60%;
-    animation:breathe 6s ease-in-out infinite;
+    opacity:0;
+    transition:opacity 1.3s ease;
   }
+  .hero-img.active{opacity:1;animation:breathe 7s ease-in-out infinite;}
   @keyframes breathe{
     0%,100%{transform:scale(1);}
     50%{transform:scale(1.045);}
@@ -214,13 +216,17 @@
   }
   .album:last-child{border-bottom:1px solid var(--line);}
   .album:nth-child(even) .a-img{order:2;}
+  .a-frame{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--sand);}
   .a-img img{
     width:100%;
-    aspect-ratio:4/3;
+    height:118%;
     object-fit:cover;
-    transition:transform 3s ease;
+    translate:0 0;
+    transform-origin:50% 42%;
+    transition:scale 3s ease;
+    will-change:translate;
   }
-  .album:hover .a-img img{transform:scale(1.035);}
+  .album:hover .a-img img{scale:1.05;}
   .a-word{
     font-family:var(--serif);
     font-style:italic;
@@ -414,13 +420,103 @@
   }
   @media(max-width:720px){.foot-grid{grid-template-columns:1fr;}}
 
+  /* ---------- Hero slideshow dots ---------- */
+  .hero-dots{display:flex;gap:10px;margin-top:28px;}
+  .hero-dots button{
+    width:9px;height:9px;padding:0;border-radius:999px;cursor:pointer;
+    border:1px solid rgba(251,248,242,.9);background:transparent;
+    transition:background .3s ease,width .3s ease;
+  }
+  .hero-dots button.on{background:#FBF8F2;width:26px;}
+  .hero-dots button:focus-visible{outline:2px solid #F6DFC9;outline-offset:2px;}
+
+  /* ---------- Mobile menu ---------- */
+  .menu-btn{
+    display:none;position:relative;z-index:1200;
+    width:44px;height:44px;border:0;background:transparent;cursor:pointer;
+  }
+  .menu-btn span{
+    position:absolute;left:50%;top:50%;width:22px;height:2px;margin-left:-11px;margin-top:-1px;
+    background:var(--ink);transition:transform .3s ease;
+  }
+  .menu-btn span:nth-child(1){transform:translateY(-5px);}
+  .menu-btn span:nth-child(2){transform:translateY(5px);}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg);}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){transform:rotate(-45deg);}
+  .menu-overlay{
+    position:fixed;inset:0;z-index:1100;
+    background:rgba(250,247,242,.97);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:6px;opacity:0;visibility:hidden;
+    transition:opacity .32s ease,visibility .32s ease;
+  }
+  .menu-overlay.open{opacity:1;visibility:visible;}
+  .menu-overlay a{
+    font-family:var(--serif);font-size:clamp(30px,7vw,40px);color:var(--ink);
+    padding:8px 0;opacity:0;transform:translateY(16px);
+    transition:opacity .32s ease,transform .32s ease;
+  }
+  .menu-overlay a:nth-child(2){transition-delay:.05s;}
+  .menu-overlay a:nth-child(3){transition-delay:.1s;}
+  .menu-overlay a:nth-child(4){transition-delay:.15s;}
+  .menu-overlay a:nth-child(5){transition-delay:.2s;}
+  .menu-overlay.open a{opacity:1;transform:none;}
+  .menu-overlay .menu-cta{
+    margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;
+    border:1px solid var(--ink);border-radius:999px;padding:12px 34px;
+  }
+  .menu-overlay .menu-cta:hover{background:var(--ink);color:var(--paper);}
+  body.no-scroll{overflow:hidden;}
+  @media(min-width:821px){.menu-overlay{visibility:hidden!important;opacity:0!important;}}
+  @media(max-width:820px){
+    .menu-btn{display:block;}
+    nav .links{display:none;}
+  }
+
+  /* ---------- Map: route + tooltips ---------- */
+  #map .map-wrap{position:relative;}
+  .pin-tip{
+    position:absolute;z-index:6;pointer-events:none;
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:10px 14px;box-shadow:0 10px 26px rgba(58,54,48,.16);
+    transform:translate(-50%,calc(-100% - 16px));
+    opacity:0;visibility:hidden;
+    transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  }
+  .pin-tip.show{opacity:1;visibility:visible;}
+  .pin-tip.flip{transform:translate(-50%,10px);}
+  .pin-tip .t-name{font-family:var(--serif);font-weight:600;font-size:16px;color:var(--ink);line-height:1.25;white-space:nowrap;}
+  .pin-tip .t-sub{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);margin-top:3px;white-space:nowrap;}
+  .pin-pulse{
+    transform-box:fill-box;transform-origin:center;
+    animation:pinPulse 2.6s ease-out infinite;
+  }
+  .map-pin circle.pin-pulse,.map-pin:hover circle.pin-pulse{fill:none;}
+  @keyframes pinPulse{
+    0%{transform:scale(.22);opacity:.85;}
+    70%{opacity:.25;}
+    100%{transform:scale(3);opacity:0;}
+  }
+  #routeDraw{
+    stroke-dasharray:1;stroke-dashoffset:1;opacity:0;
+    transition:opacity .5s ease .1s,stroke-dashoffset 3.6s ease .25s;
+  }
+  #routeDraw.on{opacity:.55;}
+  #routeDraw.dotted{stroke-dasharray:.016 .05;}
+
   /* ---------- Reveal ---------- */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
   .rv.in{opacity:1;transform:none;}
   .continent{fill:#EDE3D2;stroke:#E0D5C0;stroke-width:1;}
   @media(prefers-reduced-motion:reduce){
-    .hero-img{animation:none;}
+    .hero-img{opacity:0;transition:none;}
+    .hero-img.active{opacity:1;animation:none;}
     .rv{opacity:1;transform:none;transition:none;}
+    .pin-pulse{display:none;}
+    #routeDraw{transition:none;opacity:0;}
+    #routeDraw.on{opacity:0;}
+    .a-img img{transition:none;}
+    .album:hover .a-img img{scale:1;}
     html{scroll-behavior:auto;}
   }
 </style>
@@ -436,10 +532,20 @@
     <a href="#next">Where next</a>
     <a class="nav-cta" href="#hello">Say hello</a>
   </div>
+  <button id="menuBtn" class="menu-btn" aria-expanded="false" aria-controls="menuOverlay" aria-label="Open menu"><span></span><span></span></button>
 </nav>
 
+<div id="menuOverlay" class="menu-overlay" aria-hidden="true">
+  <a href="#albums">Albums</a>
+  <a href="#notes">Field notes</a>
+  <a href="#map">Map</a>
+  <a href="#next">Where next</a>
+  <a class="menu-cta" href="#hello">Say hello</a>
+</div>
+
 <header class="hero" id="top">
-  <img class="hero-img" src="images/hero-yeh-sumbul.webp" alt="Yeh Sumbul sunset">
+  <img class="hero-img active" src="images/hero-yeh-sumbul.webp" alt="Yeh Sumbul sunset">
+  <img class="hero-img" src="images/hero-yeh-sumbul-2.webp" alt="Golden hour on Yeh Sumbul">
   <div class="hero-beam"></div>
   <div class="wrap hero-inner">
     <div class="kicker">A family travel journal</div>
@@ -448,6 +554,7 @@
     <a class="btn btn-primary" href="#albums">Explore the albums</a>
     <a class="btn btn-ghost" href="#next">Where we&rsquo;re going next</a>
     <div class="hero-note"><span id="countdown-chip" class="cd-chip"></span>Five albums live &middot; field notes inside</div>
+    <div class="hero-dots" id="heroDots" role="group" aria-label="Hero photo selection"></div>
   </div>
   <div class="scroll-hint">Keep wandering</div>
 </header>
@@ -460,7 +567,7 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-bali.webp" alt="Green surf at Medewi, Bali" loading="lazy" decoding="async"></div>
+    <div class="a-img"><div class="a-frame"><img src="images/row-bali.webp" alt="Green surf at Medewi, Bali" loading="lazy" decoding="async"></div></div>
     <div class="a-body">
       <div class="a-word">Salt</div>
       <h3>Bali</h3>
@@ -471,7 +578,7 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-newzealand.webp" alt="Milford Sound under drifting cloud, New Zealand" loading="lazy" decoding="async"></div>
+    <div class="a-img"><div class="a-frame"><img src="images/row-newzealand.webp" alt="Milford Sound under drifting cloud, New Zealand" loading="lazy" decoding="async"></div></div>
     <div class="a-body">
       <div class="a-word">Wide open</div>
       <h3>New Zealand</h3>
@@ -482,7 +589,7 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-khaosok.webp" alt="Emerald water and forested karst peaks at Cheow Lan Lake, Khao Sok" loading="lazy" decoding="async"></div>
+    <div class="a-img"><div class="a-frame"><img src="images/row-khaosok.webp" alt="Emerald water and forested karst peaks at Cheow Lan Lake, Khao Sok" loading="lazy" decoding="async"></div></div>
     <div class="a-body">
       <div class="a-word">Jungle</div>
       <h3>Khao Sok, Thailand</h3>
@@ -493,7 +600,7 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-china.webp" alt="Alpenglow on snow peaks above Bipenggou valley, western Sichuan" loading="lazy" decoding="async"></div>
+    <div class="a-img"><div class="a-frame"><img src="images/row-china.webp" alt="Alpenglow on snow peaks above Bipenggou valley, western Sichuan" loading="lazy" decoding="async"></div></div>
     <div class="a-body">
       <div class="a-word">Highland</div>
       <h3>Western Sichuan, China</h3>
@@ -504,7 +611,7 @@
   </div>
 
   <div class="album rv">
-    <div class="a-img"><img src="images/row-sumatra.webp" alt="Green canyon and mist over Ngarai Sianok, West Sumatra" loading="lazy" decoding="async"></div>
+    <div class="a-img"><div class="a-frame"><img src="images/row-sumatra.webp" alt="Green canyon and mist over Ngarai Sianok, West Sumatra" loading="lazy" decoding="async"></div></div>
     <div class="a-body">
       <div class="a-word">Green</div>
       <h3>West Sumatra</h3>
@@ -592,13 +699,18 @@
           <line x1="0" y1="400" x2="930" y2="400" stroke="#E4DBCB" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round"/>
           <text x="16" y="388" font-size="10" letter-spacing="4" fill="#B9AD98">EQUATOR</text>
         </g>
-        <a href="/travel-photos/photo/China.chuanxi%202025/" class="map-pin"><circle cx="129" cy="82" r="7"/><text x="143" y="87">Western Sichuan</text></a>
-        <a href="/hanoi-sapa-2027/" class="map-pin"><circle cx="158" cy="190" r="7"/><text x="172" y="195">Hanoi &amp; Sapa &mdash; 2027</text></a>
-        <a href="/travel-photos/photo/Khao%20Sok%202025/" class="map-pin"><circle cx="89" cy="311" r="7"/><text x="103" y="316">Khao Sok</text></a>
-        <a href="/travel-photos/photo/Sumbar%202025/" class="map-pin"><circle cx="104" cy="403" r="7"/><text x="118" y="408">West Sumatra</text></a>
-        <a href="/bali-family-surf-trip-2026/" class="map-pin"><circle cx="249" cy="484" r="7"/><text x="263" y="489">Bali &mdash; 2026</text></a>
-        <a href="/travel-photos/photo/New%20Zealand%202025/" class="map-pin"><circle cx="778" cy="846" r="7"/><text x="764" y="851" text-anchor="end">New Zealand</text></a>
+        <path id="routeDraw" d="M129 82 L158 190 L89 311 L104 403 L249 484 L778 846" pathLength="1" fill="none" stroke="#C67C5B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <a href="/travel-photos/photo/China.chuanxi%202025/" class="map-pin" data-when="2025 &middot; 5 photographs"><circle cx="129" cy="82" r="7"/><text x="143" y="87">Western Sichuan</text></a>
+        <a href="/hanoi-sapa-2027/" class="map-pin" data-when="Mar 5 &ndash; 14, 2027 &middot; coming soon"><circle class="pin-pulse" cx="158" cy="190" r="7" fill="none" stroke="#C67C5B" stroke-width="1.5"/><circle cx="158" cy="190" r="7"/><text x="172" y="195">Hanoi &amp; Sapa &mdash; 2027</text></a>
+        <a href="/travel-photos/photo/Khao%20Sok%202025/" class="map-pin" data-when="2025 &middot; 6 photographs"><circle cx="89" cy="311" r="7"/><text x="103" y="316">Khao Sok</text></a>
+        <a href="/travel-photos/photo/Sumbar%202025/" class="map-pin" data-when="13 photographs"><circle cx="104" cy="403" r="7"/><text x="118" y="408">West Sumatra</text></a>
+        <a href="/bali-family-surf-trip-2026/" class="map-pin" data-when="2026 &middot; 15 photographs"><circle cx="249" cy="484" r="7"/><text x="263" y="489">Bali &mdash; 2026</text></a>
+        <a href="/travel-photos/photo/New%20Zealand%202025/" class="map-pin" data-when="2025 &middot; 6 photographs"><circle cx="778" cy="846" r="7"/><text x="764" y="851" text-anchor="end">New Zealand</text></a>
       </svg>
+      <div class="pin-tip" id="pinTip" role="tooltip" aria-hidden="true">
+        <div class="t-name"></div>
+        <div class="t-sub"></div>
+      </div>
     </div>
     <p class="map-note rv">Future trips join the map when the itinerary is booked. Pins link to their albums and trip pages.</p>
   </div>
@@ -670,6 +782,138 @@
     if(!el)return;
     var d=Math.ceil((new Date('2027-03-05T00:00:00+08:00')-new Date())/86400000);
     el.textContent=d>0?d+' days to Hanoi & Sapa':'Hanoi & Sapa \u2014 on the road';
+  })();
+
+  // Hero slideshow: crossfade + dot indicators, pauses on hover
+  (function(){
+    var slides=[].slice.call(document.querySelectorAll('header.hero .hero-img'));
+    var dotsWrap=document.getElementById('heroDots');
+    if(slides.length<2||!dotsWrap)return;
+    var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var idx=0,timer=null,i,dots=[],hero=document.querySelector('header.hero');
+    for(i=0;i<slides.length;i++){(function(n){
+      var b=document.createElement('button');
+      b.type='button';
+      b.setAttribute('aria-label','Slide '+(n+1)+' of '+slides.length);
+      if(n===0)b.classList.add('on');
+      b.addEventListener('click',function(){go(n);restart();});
+      dotsWrap.appendChild(b);
+      dots.push(b);
+    })(i);}
+    function go(n){
+      slides[idx].classList.remove('active');
+      if(dots[idx])dots[idx].classList.remove('on');
+      idx=(n+slides.length)%slides.length;
+      slides[idx].classList.add('active');
+      if(dots[idx])dots[idx].classList.add('on');
+    }
+    function restart(){
+      if(timer){clearInterval(timer);timer=null;}
+      if(!reduced)timer=setInterval(function(){go(idx+1);},6500);
+    }
+    hero.addEventListener('mouseenter',function(){if(timer){clearInterval(timer);timer=null;}});
+    hero.addEventListener('mouseleave',restart);
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){if(timer){clearInterval(timer);timer=null;}}
+      else{restart();}
+    });
+    restart();
+  })();
+
+  // Mobile menu
+  (function(){
+    var btn=document.getElementById('menuBtn'),ov=document.getElementById('menuOverlay');
+    if(!btn||!ov)return;
+    function set(open){
+      ov.classList.toggle('open',open);
+      ov.setAttribute('aria-hidden',open?'false':'true');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+      document.body.classList.toggle('no-scroll',open);
+    }
+    btn.addEventListener('click',function(){set(!ov.classList.contains('open'));});
+    [].slice.call(ov.querySelectorAll('a')).forEach(function(a){a.addEventListener('click',function(){set(false);});});
+    addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+    addEventListener('resize',function(){if(innerWidth>820)set(false);});
+  })();
+
+  // Map: pin tooltips + animated route draw
+  (function(){
+    var wrap=document.querySelector('#map .map-wrap');
+    var tip=document.getElementById('pinTip');
+    if(!wrap||!tip)return;
+    var tName=tip.querySelector('.t-name'),tSub=tip.querySelector('.t-sub');
+    function fill(pin){
+      var t=pin.querySelector('text');
+      tName.textContent=t?t.textContent.trim():'';
+      tSub.textContent=pin.getAttribute('data-when')||'';
+    }
+    function place(pin){
+      var cs=pin.querySelectorAll('circle');
+      var c=cs.length?cs[cs.length-1]:pin; // last circle = solid pin (not the pulse ring)
+      var cr=c.getBoundingClientRect(),wr=wrap.getBoundingClientRect();
+      var x=cr.left-wr.left+cr.width/2,y=cr.top-wr.top+cr.height/2;
+      var half=tip.offsetWidth/2,minL=half+10,maxL=wrap.clientWidth-half-10;
+      tip.style.left=Math.max(minL,Math.min(maxL,x))+'px';
+      tip.classList.toggle('flip',y<80);
+      tip.style.top=(y<80?y+18:y)+'px';
+    }
+    function show(pin){fill(pin);place(pin);tip.classList.add('show');}
+    function hide(){tip.classList.remove('show');}
+    [].slice.call(wrap.querySelectorAll('.map-pin')).forEach(function(pin){
+      pin.addEventListener('mouseenter',function(){show(pin);});
+      pin.addEventListener('mouseleave',hide);
+      pin.addEventListener('focus',function(){show(pin);});
+      pin.addEventListener('blur',hide);
+    });
+    addEventListener('scroll',hide,{passive:true});
+    addEventListener('resize',hide);
+
+    var r=document.getElementById('routeDraw');
+    if(r){
+      var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var drawn=false;
+      function draw(){
+        if(drawn)return;
+        drawn=true;
+        r.classList.add('on');
+        if(reduced)return;
+        r.addEventListener('transitionend',function(e){
+          if(e.propertyName==='stroke-dashoffset')r.classList.add('dotted');
+        });
+      }
+      if('IntersectionObserver' in window){
+        var sec=document.getElementById('map');
+        var io=new IntersectionObserver(function(es){
+          es.forEach(function(e){if(e.isIntersecting){io.disconnect();draw();}});
+        },{threshold:.3});
+        io.observe(sec);
+      }else{draw();}
+    }
+  })();
+
+  // Album image parallax (desktop, fine pointers only)
+  (function(){
+    var imgs=[].slice.call(document.querySelectorAll('.a-frame img'));
+    if(!imgs.length)return;
+    var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+    if(!fine)return;
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var ticking=false;
+    function update(){
+      ticking=false;
+      var vh=innerHeight;
+      imgs.forEach(function(img){
+        var fr=img.parentNode.getBoundingClientRect();
+        var mid=(fr.top+fr.bottom)/2-vh/2;
+        var max=fr.height*0.08;
+        var py=Math.max(-max,Math.min(max,-mid*0.12));
+        img.style.translate='0 '+py+'px';
+      });
+    }
+    addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(update);ticking=true;}},{passive:true});
+    addEventListener('resize',update);
+    update();
   })();
 </script>
 </body>
