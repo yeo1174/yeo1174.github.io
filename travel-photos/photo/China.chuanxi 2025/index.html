@@ -8,7 +8,7 @@
  <meta property="og:type" content="website">
  <meta property="og:title" content="Chuanxi 2025 — Travel Photos">
  <meta property="og:description" content="Western Sichuan — snow peaks, red stone beaches, alpine valleys. Photo album from the Yeo family travels.">
- <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/China.chuanxi%202025/%E6%AF%95%E6%A3%9A%E6%B2%9F.png">
+ <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/China.chuanxi%202025/chuanxi-01.webp">
  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
@@ -29,21 +29,21 @@
   .intro h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
   .intro p { font-size: 10pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; columns: 3; column-gap: 16px; }
-  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; margin-bottom: 16px; break-inside: avoid; background: var(--sand); }
-  .gallery .photo img { width: 100%; height: auto; display: block; transition: opacity .4s, transform 3s ease; }
+  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 3/4; background: var(--sand); }
+  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 3s ease; }
   .gallery .photo:hover img { opacity: 0.88; transform: scale(1.035); }
   .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
 
-  @media (max-width: 800px) { .gallery { columns: 2; } }
+  @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
    .header { padding: 28px 20px 16px; }
    .intro { padding: 40px 20px 20px; }
    .intro h1 { font-size: 22pt; }
-   .gallery { columns: 1; padding: 0 20px 60px; }
+   .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
    .gallery .photo .caption { opacity: 1; }
   }
  </style>
@@ -61,29 +61,49 @@
 
 <div class="gallery">
 
- <a href="%E7%BA%A2%E7%9F%B3%E6%BB%A9.png" class="photo" target="_blank">
-  <img src="web/%E7%BA%A2%E7%9F%B3%E6%BB%A9.webp" alt="红石滩" width="1200" height="886" loading="lazy">
-  <div class="caption">红石滩 &middot; Red Stone Beach</div>
+ <a href="chuanxi-01.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-01.webp" alt="雪峰暮色 · Snow peaks at dusk" width="900" height="1200" loading="lazy">
+  <div class="caption">雪峰暮色 &middot; Snow peaks at dusk</div>
  </a>
 
- <a href="%E7%BA%A2%E7%9F%B3%E6%BB%A9-1.png" class="photo" target="_blank">
-  <img src="web/%E7%BA%A2%E7%9F%B3%E6%BB%A9-1.webp" alt="红石滩" width="846" height="912" loading="lazy">
-  <div class="caption">红石滩 &middot; Red Stone Beach</div>
+ <a href="chuanxi-02.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-02.webp" alt="枝头雪山 · Peaks through bare branches" width="900" height="1200" loading="lazy">
+  <div class="caption">枝头雪山 &middot; Peaks through bare branches</div>
  </a>
 
- <a href="%E7%90%86%E5%B0%8F%E8%B7%AF.png" class="photo" target="_blank">
-  <img src="web/%E7%90%86%E5%B0%8F%E8%B7%AF.webp" alt="理小路" width="602" height="608" loading="lazy">
-  <div class="caption">理小路 &middot; Lixiao Road</div>
+ <a href="chuanxi-03.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-03.webp" alt="蓝天雪岭 · Snow range under a blue sky" width="979" height="1200" loading="lazy">
+  <div class="caption">蓝天雪岭 &middot; Snow range under a blue sky</div>
  </a>
 
- <a href="%E7%90%86%E5%B0%8F%E8%B7%AF-1.png" class="photo" target="_blank">
-  <img src="web/%E7%90%86%E5%B0%8F%E8%B7%AF-1.webp" alt="理小路" width="906" height="710" loading="lazy">
-  <div class="caption">理小路 &middot; Lixiao Road</div>
+ <a href="chuanxi-04.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-04.webp" alt="山下炊烟 · Village smoke below the peak" width="900" height="1200" loading="lazy">
+  <div class="caption">山下炊烟 &middot; Village smoke below the peak</div>
  </a>
 
- <a href="%E6%AF%95%E6%A3%9A%E6%B2%9F.png" class="photo" target="_blank">
-  <img src="web/%E6%AF%95%E6%A3%9A%E6%B2%9F.webp" alt="毕棚沟" width="844" height="810" loading="lazy">
-  <div class="caption">毕棚沟 &middot; Bipeng Valley</div>
+ <a href="chuanxi-05.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-05.webp" alt="手心的雪 · Snow in hand" width="900" height="1200" loading="lazy">
+  <div class="caption">手心的雪 &middot; Snow in hand</div>
+ </a>
+
+ <a href="chuanxi-06.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-06.webp" alt="红石滩 · Red stones in the snow" width="1013" height="1200" loading="lazy">
+  <div class="caption">红石滩 &middot; Red stones in the snow</div>
+ </a>
+
+ <a href="chuanxi-07.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-07.webp" alt="路遇小狗 · A puppy met on the street" width="900" height="1200" loading="lazy">
+  <div class="caption">路遇小狗 &middot; A puppy met on the street</div>
+ </a>
+
+ <a href="chuanxi-08.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-08.webp" alt="红墙留影 · Posed at the red wall" width="900" height="1200" loading="lazy">
+  <div class="caption">红墙留影 &middot; Posed at the red wall</div>
+ </a>
+
+ <a href="chuanxi-09.webp" class="photo" target="_blank">
+  <img src="web/chuanxi-09.webp" alt="湖边的猫 · A cat by the lake" width="900" height="1200" loading="lazy">
+  <div class="caption">湖边的猫 &middot; A cat by the lake</div>
  </a>
 
 </div>
