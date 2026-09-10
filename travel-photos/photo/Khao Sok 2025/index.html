@@ -8,7 +8,7 @@
  <meta property="og:type" content="website">
  <meta property="og:title" content="Khao Sok 2025 — Travel Photos">
  <meta property="og:description" content="Cheow Lan Lake — limestone karsts, floating bungalows, long-tail sunsets. Photo album from the Yeo family travels.">
- <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/Khao%20Sok%202025/sunset%20ban%20chiao%20lan.png">
+ <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/Khao%20Sok%202025/ks-01.webp">
  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
@@ -29,21 +29,21 @@
   .intro h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
   .intro p { font-size: 10pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; columns: 3; column-gap: 16px; }
-  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; margin-bottom: 16px; break-inside: avoid; background: var(--sand); }
-  .gallery .photo img { width: 100%; height: auto; display: block; transition: opacity .4s, transform 3s ease; }
+  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 3/4; background: var(--sand); }
+  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 3s ease; }
   .gallery .photo:hover img { opacity: 0.88; transform: scale(1.035); }
   .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
 
-  @media (max-width: 800px) { .gallery { columns: 2; } }
+  @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
    .header { padding: 28px 20px 16px; }
    .intro { padding: 40px 20px 20px; }
    .intro h1 { font-size: 22pt; }
-   .gallery { columns: 1; padding: 0 20px 60px; }
+   .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
    .gallery .photo .caption { opacity: 1; }
   }
  </style>
@@ -61,34 +61,44 @@
 
 <div class="gallery">
 
- <a href="Ban%20Chiao%20Lan.png" class="photo" target="_blank">
-  <img src="web/Ban%20Chiao%20Lan.webp" alt="Ban Chiao Lan" width="962" height="874" loading="lazy">
-  <div class="caption">Ban Chiao Lan</div>
+ <a href="ks-01.webp" class="photo" target="_blank">
+  <img src="web/ks-01.webp" alt="Dawn over the hills" width="900" height="1200" loading="lazy">
+  <div class="caption">Dawn over the hills</div>
  </a>
 
- <a href="sunset%20ban%20chiao%20lan.png" class="photo" target="_blank">
-  <img src="web/sunset%20ban%20chiao%20lan.webp" alt="Sunset Ban Chiao Lan" width="1254" height="980" loading="lazy">
-  <div class="caption">Sunset at Ban Chiao Lan</div>
+ <a href="ks-02.webp" class="photo" target="_blank">
+  <img src="web/ks-02.webp" alt="Kayaks on Cheow Lan Lake" width="900" height="1200" loading="lazy">
+  <div class="caption">Kayaks on Cheow Lan Lake</div>
  </a>
 
- <a href="ratchaprapha%20dam.png" class="photo" target="_blank">
-  <img src="web/ratchaprapha%20dam.webp" alt="Ratchaprapha Dam" width="966" height="914" loading="lazy">
-  <div class="caption">Ratchaprapha Dam</div>
+ <a href="ks-03.webp" class="photo" target="_blank">
+  <img src="web/ks-03.webp" alt="Dock jump, Cheow Lan" width="900" height="1200" loading="lazy">
+  <div class="caption">Dock jump, Cheow Lan</div>
  </a>
 
- <a href="ratchaprapha%20dam%201.png" class="photo" target="_blank">
-  <img src="web/ratchaprapha%20dam%201.webp" alt="Ratchaprapha Dam" width="1200" height="908" loading="lazy">
-  <div class="caption">Ratchaprapha Dam</div>
+ <a href="ks-04.webp" class="photo" target="_blank">
+  <img src="web/ks-04.webp" alt="Karst walls of Cheow Lan" width="900" height="1200" loading="lazy">
+  <div class="caption">Karst walls of Cheow Lan</div>
  </a>
 
- <a href="ratchaprapha%20dam%202.png" class="photo" target="_blank">
-  <img src="web/ratchaprapha%20dam%202.webp" alt="Ratchaprapha Dam" width="1200" height="1024" loading="lazy">
-  <div class="caption">Ratchaprapha Dam</div>
+ <a href="ks-05.webp" class="photo" target="_blank">
+  <img src="web/ks-05.webp" alt="At the bow" width="900" height="1200" loading="lazy">
+  <div class="caption">At the bow</div>
  </a>
 
- <a href="ratchaprapha%203.png" class="photo" target="_blank">
-  <img src="web/ratchaprapha%203.webp" alt="Ratchaprapha" width="1200" height="1062" loading="lazy">
-  <div class="caption">Ratchaprapha</div>
+ <a href="ks-06.webp" class="photo" target="_blank">
+  <img src="web/ks-06.webp" alt="Cliffs in low cloud" width="900" height="1200" loading="lazy">
+  <div class="caption">Cliffs in low cloud</div>
+ </a>
+
+ <a href="ks-07.webp" class="photo" target="_blank">
+  <img src="web/ks-07.webp" alt="Longtail at rest" width="900" height="1200" loading="lazy">
+  <div class="caption">Longtail at rest</div>
+ </a>
+
+ <a href="ks-08.webp" class="photo" target="_blank">
+  <img src="web/ks-08.webp" alt="Elephant sanctuary" width="900" height="1200" loading="lazy">
+  <div class="caption">Elephant sanctuary</div>
  </a>
 
 </div>

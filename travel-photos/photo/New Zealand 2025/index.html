@@ -8,7 +8,7 @@
  <meta property="og:type" content="website">
  <meta property="og:title" content="New Zealand 2025 — Travel Photos">
  <meta property="og:description" content="South Island — lakes, mountains, fjords. Photo album from the Yeo family travels.">
- <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/New%20Zealand%202025/milford%20sound.png">
+ <meta property="og:image" content="https://yeo1174.github.io/travel-photos/photo/New%20Zealand%202025/nz-01.webp">
  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
  <style>
@@ -29,9 +29,9 @@
   .intro h1 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 28pt; color: var(--ink); margin-bottom: 8px; }
   .intro p { font-size: 10pt; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 
-  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; columns: 3; column-gap: 16px; }
-  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; margin-bottom: 16px; break-inside: avoid; background: var(--sand); }
-  .gallery .photo img { width: 100%; height: auto; display: block; transition: opacity .4s, transform 3s ease; }
+  .gallery { max-width: 1200px; margin: 0 auto; padding: 0 32px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 3/4; background: var(--sand); }
+  .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 3s ease; }
   .gallery .photo:hover img { opacity: 0.88; transform: scale(1.035); }
   .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
   .gallery .photo:hover .caption { opacity: 1; }
@@ -39,12 +39,12 @@
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
 
-  @media (max-width: 800px) { .gallery { columns: 2; } }
+  @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 500px) {
    .header { padding: 28px 20px 16px; }
    .intro { padding: 40px 20px 20px; }
    .intro h1 { font-size: 22pt; }
-   .gallery { columns: 1; padding: 0 20px 60px; }
+   .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
    .gallery .photo .caption { opacity: 1; }
   }
  </style>
@@ -62,34 +62,64 @@
 
 <div class="gallery">
 
- <a href="milford%20sound.png" class="photo" target="_blank">
-  <img src="web/milford%20sound.webp" alt="Milford Sound" width="964" height="828" loading="lazy">
+ <a href="nz-01.webp" class="photo" target="_blank">
+  <img src="web/nz-01.webp" alt="Lakefront walk, snow peaks" width="900" height="1200" loading="lazy">
+  <div class="caption">Lakefront walk, snow peaks</div>
+ </a>
+
+ <a href="nz-02.webp" class="photo" target="_blank">
+  <img src="web/nz-02.webp" alt="Peaks above the valley" width="900" height="1200" loading="lazy">
+  <div class="caption">Peaks above the valley</div>
+ </a>
+
+ <a href="nz-03.webp" class="photo" target="_blank">
+  <img src="web/nz-03.webp" alt="A dip at the lake beach" width="900" height="1200" loading="lazy">
+  <div class="caption">A dip at the lake beach</div>
+ </a>
+
+ <a href="nz-04.webp" class="photo" target="_blank">
+  <img src="web/nz-04.webp" alt="Tree by the lakeshore" width="900" height="1200" loading="lazy">
+  <div class="caption">Tree by the lakeshore</div>
+ </a>
+
+ <a href="nz-05.webp" class="photo" target="_blank">
+  <img src="web/nz-05.webp" alt="Milford Sound" width="900" height="1200" loading="lazy">
   <div class="caption">Milford Sound</div>
  </a>
 
- <a href="lake%20te%20anau.png" class="photo" target="_blank">
-  <img src="web/lake%20te%20anau.webp" alt="Lake Te Anau" width="958" height="958" loading="lazy">
-  <div class="caption">Lake Te Anau</div>
- </a>
-
- <a href="queenstown%20fernhill.png" class="photo" target="_blank">
-  <img src="web/queenstown%20fernhill.webp" alt="Queenstown Fernhill" width="954" height="922" loading="lazy">
-  <div class="caption">Queenstown Fernhill</div>
- </a>
-
- <a href="tutoko%20river.png" class="photo" target="_blank">
-  <img src="web/tutoko%20river.webp" alt="Tutoko River" width="962" height="1018" loading="lazy">
+ <a href="nz-06.webp" class="photo" target="_blank">
+  <img src="web/nz-06.webp" alt="Tutoko River" width="900" height="1200" loading="lazy">
   <div class="caption">Tutoko River</div>
  </a>
 
- <a href="milford%20sound-1.png" class="photo" target="_blank">
-  <img src="web/milford%20sound-1.webp" alt="Milford Sound" width="954" height="920" loading="lazy">
-  <div class="caption">Milford Sound</div>
+ <a href="nz-07.webp" class="photo" target="_blank">
+  <img src="web/nz-07.webp" alt="Wildflowers by the road" width="900" height="1200" loading="lazy">
+  <div class="caption">Wildflowers by the road</div>
  </a>
 
- <a href="lake%20hawea.png" class="photo" target="_blank">
-  <img src="web/lake%20hawea.webp" alt="Lake Hawea" width="1200" height="870" loading="lazy">
-  <div class="caption">Lake Hawea</div>
+ <a href="nz-08.webp" class="photo" target="_blank">
+  <img src="web/nz-08.webp" alt="Stone from the shore" width="900" height="1200" loading="lazy">
+  <div class="caption">Stone from the shore</div>
+ </a>
+
+ <a href="nz-09.webp" class="photo" target="_blank">
+  <img src="web/nz-09.webp" alt="Sunset on the lake beach" width="900" height="1200" loading="lazy">
+  <div class="caption">Sunset on the lake beach</div>
+ </a>
+
+ <a href="nz-10.webp" class="photo" target="_blank">
+  <img src="web/nz-10.webp" alt="Light over the lake" width="900" height="1200" loading="lazy">
+  <div class="caption">Light over the lake</div>
+ </a>
+
+ <a href="nz-11.webp" class="photo" target="_blank">
+  <img src="web/nz-11.webp" alt="Night by the water" width="900" height="1200" loading="lazy">
+  <div class="caption">Night by the water</div>
+ </a>
+
+ <a href="nz-12.webp" class="photo" target="_blank">
+  <img src="web/nz-12.webp" alt="Queenstown Fernhill" width="900" height="1200" loading="lazy">
+  <div class="caption">Queenstown Fernhill</div>
  </a>
 
 </div>
