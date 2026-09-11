@@ -19,6 +19,7 @@
     --line:#E0E0E0;
     --line-strong:#CCCCCC;
     --accent:#0052CC;
+    --accent-hover:#266CD4;
     --accent-ink:#ffffff;
     --accent-soft:#EEF2FB;
     --accent-soft-line:#D8E2F5;
@@ -89,8 +90,8 @@
     font-weight:600;
     letter-spacing:.07em;
     text-transform:uppercase;
-    color:var(--accent);
-    background:var(--accent-soft);
+    color:var(--accent-ink);
+    background:var(--accent);
     border:1px solid var(--accent);
     border-radius:999px;
     padding:6px 12px;
@@ -99,9 +100,9 @@
     transition:color .18s ease,border-color .18s ease,background-color .18s ease,transform .18s ease,box-shadow .18s ease;
   }
   .back-pill:hover{
-    color:var(--accent);
-    background:var(--accent-soft-line);
-    border-color:var(--accent);
+    color:var(--accent-ink);
+    background:var(--accent-hover);
+    border-color:var(--accent-hover);
     transform:translateY(-2px);
     box-shadow:0 6px 18px var(--shadow-lift);
   }
