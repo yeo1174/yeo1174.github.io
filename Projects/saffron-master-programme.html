@@ -1,0 +1,519 @@
+<title>Saffron Master Programme</title>
+<style>
+  .viz-root {
+    --surface-1:      #fcfcfb;
+    --surface-2:      #f2f1ed;
+    --border:         #e2e0d8;
+    --text-primary:   #17181a;
+    --text-secondary: #55564f;
+    --text-muted:     #8a897f;
+    --series-lead:    #1baf7a;  /* Pre-construction / lead-in */
+    --series-main:    #2a78d6;  /* Main Building Works */
+    --series-ccc:     #eb6834;  /* CCC */
+    --series-strata:  #eda100;  /* Strata Title application & issuance */
+    --buffer-line:    #b7b5a8;
+    --milestone:      #e34948;  /* VP commitment */
+    --warn:           #e34948;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .viz-root {
+      --surface-1:      #17181a;
+      --surface-2:      #202124;
+      --border:         #35363a;
+      --text-primary:   #f4f3ef;
+      --text-secondary: #b9b8b0;
+      --text-muted:     #85847c;
+      --series-lead:    #199e70;
+      --series-main:    #3987e5;
+      --series-ccc:     #d95926;
+      --series-strata:  #c98500;
+      --buffer-line:    #4a4b46;
+      --milestone:      #e66767;
+      --warn:           #e66767;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    --surface-1:      #17181a;
+    --surface-2:      #202124;
+    --border:         #35363a;
+    --text-primary:   #f4f3ef;
+    --text-secondary: #b9b8b0;
+    --text-muted:     #85847c;
+    --series-lead:    #199e70;
+    --series-main:    #3987e5;
+    --series-ccc:     #d95926;
+    --series-strata:  #c98500;
+    --buffer-line:    #4a4b46;
+    --milestone:      #e66767;
+    --warn:           #e66767;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--surface-1);
+    color: var(--text-primary);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 32px 56px;
+  }
+
+  .viz-root { max-width: 1000px; margin: 0 auto; }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    margin: 0;
+  }
+
+  .keyfacts {
+    display: flex;
+    gap: 24px;
+  }
+
+  .keyfact { text-align: right; }
+
+  .keyfact .label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+
+  .keyfact .value {
+    font-size: 15px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .keyfact .value.warn { color: var(--warn); }
+
+  .alert {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: color-mix(in srgb, var(--warn) 10%, var(--surface-1));
+    border: 1px solid color-mix(in srgb, var(--warn) 35%, var(--border));
+    border-radius: 8px;
+    padding: 11px 14px;
+    margin-bottom: 26px;
+    font-size: 12.5px;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  .alert b { color: var(--warn); }
+
+  /* --- chart --- */
+  .chart-wrap { overflow-x: auto; overflow-y: visible; }
+  .chart { min-width: 800px; }
+
+  .axis-row {
+    display: grid;
+    grid-template-columns: 188px 1fr;
+    margin-bottom: 34px;
+  }
+
+  .axis-track {
+    position: relative;
+    height: 28px;
+  }
+
+  .axis-tick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--border);
+    padding-left: 5px;
+    font-size: 10.5px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .axis-tick .d { display: block; font-variant-numeric: tabular-nums; }
+
+  .rows { position: relative; margin-bottom: 48px; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 188px 1fr;
+    align-items: center;
+    height: 52px;
+  }
+  .row + .row { border-top: 1px solid var(--border); }
+
+  .row-label {
+    font-size: 13px;
+    font-weight: 600;
+    padding-right: 14px;
+  }
+  .row-label .sub {
+    display: block;
+    font-weight: 400;
+    font-size: 10.5px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .track {
+    position: relative;
+    height: 100%;
+  }
+
+  .gridlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .gridline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--border);
+    opacity: 0.6;
+  }
+
+  .bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 9px;
+    min-width: 4px;
+  }
+  .bar .bar-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bar.lead   { background: var(--series-lead); }
+  .bar.lead .bar-label { color: #fff; }
+  .bar.main   { background: var(--series-main); }
+  .bar.main .bar-label { color: #fff; }
+  .bar.ccc    { background: var(--series-ccc); }
+  .bar.ccc .bar-label { color: #fff; }
+  .bar.strata { background: var(--series-strata); }
+  .bar.strata .bar-label { color: #292100; }
+
+  .bar.buffer {
+    background: var(--warn);
+    padding: 0;
+  }
+  .bar.buffer .bar-label {
+    position: absolute;
+    left: 6px;
+    color: var(--warn);
+    white-space: nowrap;
+  }
+
+  .milestone {
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    width: 0;
+    border-left: 2px dashed var(--text-secondary);
+    z-index: 2;
+  }
+  .milestone.critical { border-left-color: var(--milestone); }
+
+  .milestone .flag {
+    position: absolute;
+    top: -30px;
+    left: 6px;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+  .milestone.critical .flag { color: var(--milestone); }
+  .milestone .flag .date {
+    display: block;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  .milestone .flag.flag-end {
+    left: auto;
+    right: 4px;
+    top: auto;
+    bottom: -34px;
+    text-align: right;
+  }
+
+  .top-pad { height: 30px; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 34px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+  .swatch.lead { background: var(--series-lead); }
+  .swatch.main { background: var(--series-main); }
+  .swatch.ccc { background: var(--series-ccc); }
+  .swatch.strata { background: var(--series-strata); }
+  .swatch.line { width: 14px; height: 0; border-top: 2px dashed var(--text-secondary); border-radius: 0; }
+  .swatch.line.critical { border-top-color: var(--milestone); }
+
+  .footnote {
+    margin-top: 14px;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+</style>
+
+<div class="viz-root">
+
+  <header>
+    <div>
+      <h1>Saffron — Overall Master Programme</h1>
+      <p class="subtitle">SPA signed 5 Sep 2026 &nbsp;·&nbsp; MBW commences 2 Jan 2027 &nbsp;·&nbsp; VP commitment 42 months from SPA</p>
+    </div>
+    <div class="keyfacts">
+      <div class="keyfact">
+        <div class="label">Main Building Works</div>
+        <div class="value">33 months</div>
+      </div>
+      <div class="keyfact">
+        <div class="label">CCC</div>
+        <div class="value">5 months</div>
+      </div>
+      <div class="keyfact">
+        <div class="label">VP due</div>
+        <div class="value">5 Mar 2030</div>
+      </div>
+      <div class="keyfact">
+        <div class="label">Float to VP</div>
+        <div class="value warn" id="floatValue">–</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="alert" id="alertBox" hidden>
+    <span>⚠️</span>
+    <span><b>Near-zero float on CCC:</b> Sub-Structure Works run 5 Sep 2026 – 2 Jan 2027 (<span id="leadDaysText">–</span> from SPA), after which Main Building Works commences — this consumes almost the entire 42-month VP window. CCC is projected to complete only <b><span id="bufferDaysText">–</span></b> before the VP commitment date, with essentially no contingency left. Strata Title (SSS completion + min 15 months) is projected to be issued <b><span id="strataFloatText">–</span></b> before VP, so CCC — not Strata — is the binding constraint on the current dates.</span>
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart" id="chart">
+      <div class="top-pad"></div>
+
+      <div class="axis-row">
+        <div></div>
+        <div class="axis-track" id="axisTrack"></div>
+      </div>
+
+      <div class="rows" id="rows">
+        <div class="row">
+          <div class="row-label">Sub-Structure Works<span class="sub" id="leadSub"></span></div>
+          <div class="track" id="trackLead"></div>
+        </div>
+        <div class="row">
+          <div class="row-label">Main Building Works<span class="sub" id="mainSub"></span></div>
+          <div class="track" id="trackMain"></div>
+        </div>
+        <div class="row">
+          <div class="row-label">CCC<span class="sub" id="cccSub"></span></div>
+          <div class="track" id="trackCCC"></div>
+        </div>
+        <div class="row">
+          <div class="row-label">Strata Title<span class="sub" id="strataSub"></span></div>
+          <div class="track" id="trackStrata"></div>
+        </div>
+        <div class="row">
+          <div class="row-label">Float to VP<span class="sub" id="bufferSub"></span></div>
+          <div class="track" id="trackBuffer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch lead"></span>Sub-Structure Works</div>
+    <div class="legend-item"><span class="swatch main"></span>Main Building Works</div>
+    <div class="legend-item"><span class="swatch ccc"></span>CCC (Certificate of Completion &amp; Compliance)</div>
+    <div class="legend-item"><span class="swatch strata"></span>Strata Title application &amp; issuance (min 15 mth)</div>
+    <div class="legend-item"><span class="swatch line"></span>Milestone (SPA / MBW start / SSS)</div>
+    <div class="legend-item"><span class="swatch line critical"></span>VP commitment deadline</div>
+  </div>
+
+  <p class="footnote">
+    SPA signed 5 Sep 2026. Sub-Structure Works run from SPA signing to 2 Jan 2027, after which Main Building Works commences and runs 33 months to CPC; CCC follows for 5 months. Superstructure Stage (SSS) completion — the prerequisite for Strata Title application — falls 12 months before MBW's CPC; Strata Title application &amp; issuance requires a minimum 15 months from SSS completion, and issuance is itself a condition for VP alongside CCC. VP commitment is 42 months measured from the SPA date. Dates are indicative, computed on calendar months from the stated start/reference dates.
+  </p>
+
+</div>
+
+<script>
+(function () {
+  var MS_DAY = 86400000;
+
+  var SPA = new Date(Date.UTC(2026, 8, 5));
+  var MBW_START = new Date(Date.UTC(2027, 0, 2));
+  var MBW_MONTHS = 33;
+  var CCC_MONTHS = 5;
+  var VP_MONTHS = 42;
+
+  function addMonths(date, m) {
+    var d = new Date(date.getTime());
+    d.setUTCMonth(d.getUTCMonth() + m);
+    return d;
+  }
+  function addDays(date, n) {
+    return new Date(date.getTime() + n * MS_DAY);
+  }
+  function diffDays(a, b) {
+    return Math.round((b.getTime() - a.getTime()) / MS_DAY);
+  }
+  function fmt(d) {
+    var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return d.getUTCDate() + ' ' + months[d.getUTCMonth()] + ' ' + d.getUTCFullYear();
+  }
+  function fmtShort(d) {
+    var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return months[d.getUTCMonth()] + " " + d.getUTCFullYear();
+  }
+
+  var MBW_END = addMonths(MBW_START, MBW_MONTHS);       // MBW CPC
+  var CCC_END = addMonths(MBW_END, CCC_MONTHS);
+  var VP_DUE = addMonths(SPA, VP_MONTHS);
+
+  var SSS_LEAD_MONTHS = 12;
+  var STRATA_MIN_MONTHS = 15;
+  var SSS_COMPLETION = addMonths(MBW_END, -SSS_LEAD_MONTHS);
+  var STRATA_DONE = addMonths(SSS_COMPLETION, STRATA_MIN_MONTHS);
+
+  var TIMELINE_START = SPA;
+  var TIMELINE_END_RAW = CCC_END > VP_DUE ? CCC_END : VP_DUE;
+  if (STRATA_DONE > TIMELINE_END_RAW) TIMELINE_END_RAW = STRATA_DONE;
+  var TIMELINE_END = addDays(TIMELINE_END_RAW, 140); // trailing pad so end labels aren't clipped
+  var TOTAL_DAYS = diffDays(TIMELINE_START, TIMELINE_END);
+
+  function pct(date) { return (diffDays(TIMELINE_START, date) / TOTAL_DAYS) * 100; }
+
+  var bufferDays = diffDays(CCC_END, VP_DUE);
+  var leadDays = diffDays(SPA, MBW_START);
+  var strataFloatDays = diffDays(STRATA_DONE, VP_DUE);
+
+  function dayWord(n) { return Math.abs(n) === 1 ? ' day' : ' days'; }
+
+  document.getElementById('floatValue').textContent = bufferDays + dayWord(bufferDays);
+  document.getElementById('leadDaysText').textContent = '~' + Math.round(leadDays / 30.44 * 10) / 10 + '-month';
+  document.getElementById('bufferDaysText').textContent = bufferDays + dayWord(bufferDays);
+  document.getElementById('strataFloatText').textContent = '~' + Math.round(strataFloatDays / 30.44 * 10) / 10 + ' months';
+  if (bufferDays <= 30) {
+    document.getElementById('alertBox').hidden = false;
+  }
+
+  document.getElementById('leadSub').textContent = fmt(SPA) + ' – ' + fmt(MBW_START);
+  document.getElementById('mainSub').textContent = fmt(MBW_START) + ' – ' + fmt(MBW_END) + ' (CPC)';
+  document.getElementById('cccSub').textContent = fmt(MBW_END) + ' – ' + fmt(CCC_END);
+  document.getElementById('strataSub').textContent = fmt(SSS_COMPLETION) + ' – ' + fmt(STRATA_DONE) + ' (min 15 mth from SSS)';
+  document.getElementById('bufferSub').textContent = bufferDays + dayWord(bufferDays) + ' to VP (CCC-driven)';
+
+  // axis ticks every 3 months from SPA
+  var axisTrack = document.getElementById('axisTrack');
+  var totalMonths = Math.ceil(diffDays(SPA, TIMELINE_END) / 30.44);
+  for (var m = 0; m <= totalMonths; m += 3) {
+    var d = addMonths(SPA, m);
+    if (pct(d) > 100) continue;
+    var tick = document.createElement('div');
+    tick.className = 'axis-tick';
+    tick.style.left = pct(d) + '%';
+    tick.innerHTML = '<span class="d">' + fmtShort(d) + '</span>';
+    axisTrack.appendChild(tick);
+  }
+
+  function gridlinesInto(track) {
+    var g = document.createElement('div');
+    g.className = 'gridlines';
+    for (var m = 0; m <= totalMonths; m += 3) {
+      var d = addMonths(SPA, m);
+      if (pct(d) > 100) continue;
+      var line = document.createElement('div');
+      line.className = 'gridline';
+      line.style.left = pct(d) + '%';
+      g.appendChild(line);
+    }
+    track.appendChild(g);
+  }
+
+  function addBar(track, cls, startD, endD, label) {
+    var bar = document.createElement('div');
+    bar.className = 'bar ' + cls;
+    var left = pct(startD);
+    var width = Math.max(pct(endD) - left, 0.3);
+    bar.style.left = left + '%';
+    bar.style.width = width + '%';
+    var lab = document.createElement('span');
+    lab.className = 'bar-label';
+    lab.textContent = label;
+    bar.appendChild(lab);
+    track.appendChild(bar);
+  }
+
+  function addMilestone(track, atD, opts) {
+    var el = document.createElement('div');
+    el.className = 'milestone' + (opts.critical ? ' critical' : '');
+    el.style.left = pct(atD) + '%';
+    var flag = document.createElement('div');
+    flag.className = 'flag' + (opts.below ? ' flag-end' : '');
+    flag.innerHTML = opts.title + '<span class="date">' + fmt(atD) + '</span>';
+    el.appendChild(flag);
+    track.appendChild(el);
+  }
+
+  var trackLead = document.getElementById('trackLead');
+  var trackMain = document.getElementById('trackMain');
+  var trackCCC = document.getElementById('trackCCC');
+  var trackStrata = document.getElementById('trackStrata');
+  var trackBuffer = document.getElementById('trackBuffer');
+
+  [trackLead, trackMain, trackCCC, trackStrata, trackBuffer].forEach(gridlinesInto);
+
+  addBar(trackLead, 'lead', SPA, MBW_START, leadDays + ' days');
+  addBar(trackMain, 'main', MBW_START, MBW_END, MBW_MONTHS + ' months');
+  addBar(trackCCC, 'ccc', MBW_END, CCC_END, CCC_MONTHS + ' months');
+  addBar(trackStrata, 'strata', SSS_COMPLETION, STRATA_DONE, STRATA_MIN_MONTHS + ' months (min)');
+  if (bufferDays > 0) {
+    addBar(trackBuffer, 'buffer', CCC_END, VP_DUE, bufferDays + dayWord(bufferDays) + ' float');
+  }
+
+  addMilestone(trackLead, SPA, { title: 'SPA signed' });
+  addMilestone(trackMain, MBW_START, { title: 'MBW commences' });
+  addMilestone(trackMain, SSS_COMPLETION, { title: 'SSS completion' });
+  addMilestone(trackBuffer, VP_DUE, { title: 'VP commitment due', critical: true, below: true });
+})();
+</script>
