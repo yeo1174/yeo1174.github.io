@@ -210,6 +210,15 @@ header .sub{
 .theme-btn svg{width:13px;height:13px;display:block;}
 .theme-btn:hover{color:var(--text-primary);border-color:var(--text-muted);box-shadow:0 2px 10px var(--shadow);}
 .gen-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.04em;text-align:right;}
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-secondary);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;padding:7px 14px;border-radius:100px;white-space:nowrap;
+  margin-bottom:18px;
+  transition:color .15s ease,border-color .15s ease,box-shadow .15s ease;
+}
+.back-link:hover{color:var(--text-primary);border-color:var(--text-muted);box-shadow:0 2px 10px var(--shadow);}
 
 /* ---------- search / controls row (zig pills, below header) ---------- */
 .search-row{
@@ -659,6 +668,7 @@ header .sub{
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
     </button>
     <div class="head-inner">
+      <a class="back-link" href="/Projects/">&larr; Project Dashboard</a>
       <div class="head-row">
         <div class="head-main">
           <div class="kicker">PAM 2018 &middot; With Quantities</div>
