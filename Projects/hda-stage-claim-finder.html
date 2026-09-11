@@ -74,6 +74,25 @@
   }
   .meta-block strong{color:var(--ink-soft);font-weight:600;}
 
+  /* ---------- back link ---------- */
+  .back-pill{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;
+    font-weight:600;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    background:var(--surface);
+    border:1px solid var(--line-strong);
+    border-radius:999px;
+    padding:6px 12px;
+    text-decoration:none;
+    margin-bottom:10px;
+    transition:border-color .12s,color .12s;
+  }
+  .back-pill:hover{border-color:var(--accent);color:var(--accent);}
+
   /* ---------- controls ---------- */
   .controls{
     display:flex;
@@ -385,6 +404,7 @@
       <div class="sub">What must be built — and what can wait — before an architect certifies each payment stage.</div>
     </div>
     <div class="meta-block">
+      <a class="back-pill" href="/Projects/">&larr; Project Dashboard</a><br>
       Lembaga Arkitek Malaysia<br>
       <strong>General Circular 2/2017</strong> · 25 May 2017<br>
       Sch. G — Land &amp; Building · Sch. H — Sub-Divided Building
