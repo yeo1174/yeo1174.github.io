@@ -19,12 +19,14 @@
     --accent:#2c5aa0;
     --accent-ink:#ffffff;
     --accent-soft:#e4ecf7;
+    --accent-soft-line:#cddcf2;
     --must:#a8431f;
     --must-soft:#faeae3;
     --neednot:#3c7f5e;
     --neednot-soft:#e6f3ec;
     --mark:#ffe08a;
     --shadow:0 1px 2px rgba(22,35,43,.06),0 8px 24px -12px rgba(22,35,43,.18);
+    --shadow-lift:rgba(22,35,43,.18);
   }
   /* Bright by design — this page always renders in the light palette above,
      regardless of system or app theme. */
@@ -86,16 +88,24 @@
     font-weight:600;
     letter-spacing:.07em;
     text-transform:uppercase;
-    color:var(--ink-soft);
-    background:var(--surface);
-    border:1px solid var(--line-strong);
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid var(--accent);
     border-radius:999px;
     padding:6px 12px;
     text-decoration:none;
     margin-bottom:18px;
-    transition:border-color .12s,color .12s;
+    transition:color .18s ease,border-color .18s ease,background-color .18s ease,transform .18s ease,box-shadow .18s ease;
   }
-  .back-pill:hover{border-color:var(--accent);color:var(--accent);}
+  .back-pill:hover{
+    color:var(--accent);
+    background:var(--accent-soft-line);
+    border-color:var(--accent);
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px var(--shadow-lift);
+  }
+  .back-pill:active{transform:translateY(0);box-shadow:0 1px 2px rgba(22,35,43,.08);}
+  .back-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 
   /* ---------- controls ---------- */
   .controls{
