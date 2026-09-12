@@ -388,6 +388,9 @@
     --cat-2: #d63f0c;   /* Highrise */
     --cat-3: #007a4d;   /* Commercial (unused) */
     --cat-4: #b26a00;   /* Industrial */
+    --cat-1-tint: #e8edfb;   /* Landed pill fill */
+    --cat-2-tint: #fbe7dc;   /* Highrise pill fill */
+    --cat-ink: #ffffff;      /* label on a solid pill */
     color-scheme: light;
     font-family: "Libre Franklin", system-ui, sans-serif;
     background: var(--page-plane);
@@ -411,6 +414,9 @@
     --cat-2: #ff8a52;
     --cat-3: #24c48d;
     --cat-4: #ecb43a;
+    --cat-1-tint: #18213a;
+    --cat-2-tint: #301d14;
+    --cat-ink: #0e1418;
     color-scheme: dark;
   }
   a { color: var(--cat-1); text-decoration: none; }
@@ -512,20 +518,23 @@
   .foot-links { display: flex; flex-wrap: wrap; gap: 10px; }
   .foot-links a {
     display: inline-flex; align-items: center;
-    color: var(--text-secondary); text-decoration: none;
-    border: 1px solid var(--border); background: var(--surface-1);
+    color: var(--cat-1); text-decoration: none;
+    border: 1px solid var(--cat-1); background: var(--cat-1-tint);
     padding: 9px 18px; border-radius: 10px; font-size: 13px;
     box-shadow: 0 1px 2px var(--shadow);
     transition: color .18s ease, border-color .18s ease, background-color .18s ease,
                 transform .18s ease, box-shadow .18s ease;
   }
   .foot-links a:hover {
-    color: var(--text-primary); border-color: var(--text-muted); background: var(--surface-2);
+    color: var(--cat-ink); border-color: var(--cat-1); background: var(--cat-1);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px var(--shadow-lift);
   }
+  .foot-links a.kl { color: var(--cat-2); border-color: var(--cat-2); background: var(--cat-2-tint); }
+  .foot-links a.kl:hover { color: var(--cat-ink); border-color: var(--cat-2); background: var(--cat-2); }
   .foot-links a:active { transform: translateY(0); box-shadow: 0 1px 2px var(--shadow); }
-  .foot-links a:focus-visible { outline: 2px solid var(--text-muted); outline-offset: 2px; }
+  .foot-links a:focus-visible { outline: 2px solid var(--cat-1); outline-offset: 2px; }
+  .foot-links a.kl:focus-visible { outline-color: var(--cat-2); }
 
   /* ---------- Detail view ---------- */
   .hidden { display: none; }
@@ -831,7 +840,7 @@
 
     <footer>
       <div class="foot-links">
-        <a href="/Knowlibrary/">Knowledge Library &middot; Content Index</a>
+        <a class="kl" href="/Knowlibrary/">Knowledge Library &middot; Content Index</a>
         <a href="/Projects/pam2018-navigator.html">PAM Contract 2018 &middot; Navigator</a>
         <a href="/Projects/ubbl-navigator.html">UBBL 1984 &middot; Navigator</a>
         <a href="/Projects/hda-stage-claim-finder.html">HDA Stage Claim &middot; Finder</a>
