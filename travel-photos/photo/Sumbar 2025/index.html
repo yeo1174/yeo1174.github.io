@@ -33,6 +33,8 @@
   .gallery .photo { display: block; border-radius: 2px; overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 3/4; background: var(--sand); }
   .gallery .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s, transform 3s ease; }
   .gallery .photo:hover img { opacity: 0.88; transform: scale(1.035); }
+  .gallery .photo .caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 16px 14px; background: linear-gradient(to top, rgba(38,32,24,.55), transparent); font-size: 9pt; color: rgba(250,247,242,.85); opacity: 0; transition: opacity .3s; pointer-events: none; }
+  .gallery .photo:hover .caption { opacity: 1; }
 
   footer { max-width: 1200px; margin: 0 auto; padding: 10px 32px 40px; font-size: 8pt; color: rgba(58,54,48,.4); text-align: center; }
 
@@ -42,6 +44,7 @@
    .intro { padding: 40px 20px 20px; }
    .intro h1 { font-size: 22pt; }
    .gallery { grid-template-columns: 1fr; padding: 0 20px 60px; }
+   .gallery .photo .caption { opacity: 1; }
   }
  </style>
 </head>
@@ -59,51 +62,63 @@
 <div class="gallery">
 
  <a href="SUMBAR%20-%202%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%202%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%202%20of%2024.webp" alt="Ngarai Sianok, mist in the canyon" loading="lazy">
+  <div class="caption">Ngarai Sianok, mist in the canyon</div>
  </a>
 
  <a href="SUMBAR%20-%203%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%203%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%203%20of%2024.webp" alt="Down into Sianok" loading="lazy">
+  <div class="caption">Down into Sianok</div>
  </a>
 
  <a href="SUMBAR%20-%204%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%204%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%204%20of%2024.webp" alt="Rice fields below the peak" loading="lazy">
+  <div class="caption">Rice fields below the peak</div>
  </a>
 
  <a href="SUMBAR%20-%205%20of%2012.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%205%20of%2012.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%205%20of%2012.webp" alt="Palms over the ripening rice" loading="lazy">
+  <div class="caption">Palms over the ripening rice</div>
  </a>
 
  <a href="SUMBAR%20-%205%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%205%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%205%20of%2024.webp" alt="Rice shoots and blue sky" loading="lazy">
+  <div class="caption">Rice shoots and blue sky</div>
  </a>
 
  <a href="SUMBAR%20-%208%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%208%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%208%20of%2024.webp" alt="The tiered falls" loading="lazy">
+  <div class="caption">The tiered falls</div>
  </a>
 
  <a href="SUMBAR%20-%209%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%209%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%209%20of%2024.webp" alt="At the base of the falls" loading="lazy">
+  <div class="caption">At the base of the falls</div>
  </a>
 
  <a href="SUMBAR%20-%2011%20of%2012.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%2011%20of%2012.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%2011%20of%2012.webp" alt="Lake houses under cloud" loading="lazy">
+  <div class="caption">Lake houses under cloud</div>
  </a>
 
  <a href="SUMBAR%20-%2012%20of%2012.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%2012%20of%2012.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%2012%20of%2012.webp" alt="Boats in the bay" loading="lazy">
+  <div class="caption">Boats in the bay</div>
  </a>
 
  <a href="SUMBAR%20-%2014%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%2014%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%2014%20of%2024.webp" alt="Terraces and a passing motorbike" loading="lazy">
+  <div class="caption">Terraces and a passing motorbike</div>
  </a>
 
  <a href="SUMBAR%20-%2021%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%2021%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%2021%20of%2024.webp" alt="The peaks above the fields" loading="lazy">
+  <div class="caption">The peaks above the fields</div>
  </a>
 
  <a href="SUMBAR%20-%2022%20of%2024.webp" class="photo" target="_blank">
-  <img src="SUMBAR%20-%2022%20of%2024.webp" alt="Sumbar 2025" loading="lazy">
+  <img src="SUMBAR%20-%2022%20of%2024.webp" alt="Coffee cherries, near ripe" loading="lazy">
+  <div class="caption">Coffee cherries, near ripe</div>
  </a>
 
 </div>
