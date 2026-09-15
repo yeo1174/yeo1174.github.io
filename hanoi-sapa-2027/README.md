@@ -1,5 +1,6 @@
 # Vietnam — Hanoi & Sapa Trip Overview
 
+**Page Title:** Hanoi & Sapa 2027 — Itinerary
 **Dates:** 5 - 14 March 2027
 **Travelers:** 2 Adults + 2 Children (Kayle 13, Kaylynn 9)
 **Route:** KL -> Hanoi -> Y Linh Ho (Pu Hmong) -> Sapa -> Tam Coc -> Hanoi -> KL
@@ -125,7 +126,7 @@ Caveats: Fansipan and Alpine Coaster assume one child under the height threshold
 | 22:00 | SP3 Laman Express -> Lao Cai (Deluxe 4-berth cabin) |
 | Sleep | On SP3 Laman Express (night train) |
 
-### Day 3 — Sun 7 Mar: Lao Cai -> Sapa Town -> Pu Hmong Eco Retreat (Y Linh Ho)
+### Day 3 — Sun 7 Mar: Lao Cai -> Sapa Town -> Pu Hmong (Y Linh Ho)
 
 | Time | Activity |
 |------|----------|
@@ -145,7 +146,7 @@ Bac Ha dropped (14 Sep 2026) — it added 4h23m of driving to the post-night-tra
 
 Optional evening: Sapa night market (~21 min drive each way from the retreat; Sunday is the liveliest night). Arrange the transfer through the retreat — Grab is unreliable in Sapa. Skip if the day has been long enough; the valley evening is the point of the stay.
 
-### Day 4 — Mon 8 Mar: Muong Hoa Valley Trek (Y Linh Ho -> Lao Chai -> Ta Van)
+### Day 4 — Mon 8 Mar: Muong Hoa Valley Trek (Y Linh Ho -> Ta Van)
 
 | Time | Activity |
 |------|----------|
