@@ -198,7 +198,26 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 - **Plan: 2 nights Sun 7 + Mon 8 Mar** (replaces Sapaxa Ta Phin stay -- Sapaxa booking to be cancelled)
 - **Photo:** n/a
 
----
+**Reviews snapshot (checked 2026-09-05) -- same property, multiple listing names:**
+- Google Maps ("Chapa Farmstay - Mountain Retreat"): 4.9/5, 188 reviews
+- Booking.com ("Pu Hmong Eco Retreat"): **9.6/10 Exceptional, 400 reviews** -- Staff 9.9 | Cleanliness 9.7 | Comfort 9.7 | Value 9.5 | Facilities 9.5 | Location 9.5 | Free WiFi 10.0
+- Agoda ("Chapa Farmstay Mountain Retreat"): 9.5/10 Exceptional, 413 reviews
+- TripAdvisor: 2 listings. Older "Chapa Farmstay - Mountain Retreat" (Lao Chai): 33 Excellent / 2 Very Good / 1 Average / 0 Poor / 1 Terrible (37 reviews). Newer "Pu Hmong Eco Retreat" listing: several 5/5-bubble reviews incl. recent (Mar 2026 solo traveller, Jan 2026 x2)
+- Hotels.com: 10/10 Exceptional; Expedia: 5/5 "friendly service, great view, extremely quiet"
+
+**What guests consistently praise:** valley/rice-terrace views from rooms & restaurant; peaceful, remote-feeling but only ~15-20 min from town; Black Hmong family hospitality (hosts Ly/Lee; kids well-behaved; "tearful goodbye"); home-cooked Hmong/Vietnamese meals; clean cosy bungalows; family flexible (early bag drop, late checkout, room upgrades); great base for Y Linh Ho > Lao Chai > Ta Van treks + easy access to bridge/river walks; taxis pass constantly; value vs 5-star hotels ("half the cost, 100x the experience")
+
+**Recurring criticisms (mostly 2023-2024 reviews):**
+- Wifi only at reception/lobby, none in rooms, not fast (multiple reviews)
+- Access road steep/rough/unrenovated (crumbling in places) -- motorbike recommended by one family; others fine with taxi
+- Mosquitoes at the restaurant, no repellent provided (Oct 2023 review)
+- Dinner: fixed set meal ~US$8/person criticised as pricey for quantity; limited breakfast/dinner menu ("eat out if staying 3+ days")
+- One review (late arrival): rooms cold/basic, hot water ran cold quickly, minimal in-room extras (no extra towels/blankets, no bedside lamp, small bin)
+- One Nov 2024 review: dining/reception felt noisy (children running around), had to wait for room -- expected more tranquil
+
+**Net:** overwhelming positive (9.5-9.6 across Booking/Agoda, 4.9 Google, 33/37 Excellent on older TA listing); gripes are old (2023-24) and about wifi coverage, access road and dinner set-price. Verify at booking if these matter: room wifi, dinner menu/price, hot water reliability.
+
+**March cold check (added 2026-09-05):** Sapa town March normals ~11-19°C (mean 14.4°C); Y Linh Ho valley sits lower (~1,200-1,300 m vs town 1,500 m+) so slightly milder by day, but valley floor near the river pools cold air at night -- expect ~8-13°C overnight typical, lower on cold snaps. Frost rare in March. Rustic wood/stone bungalows are NOT hotel-insulated: interiors track outdoor temps without heating. Review evidence: Oct 2023 + Nov 2024 guests reported "rooms cold and basic", short hot water ("cools after soaping"), basic linen, no extra blankets; but Booking Comfort 9.7/400 and glowing Jan 2026 (peak winter) stays suggest bedding usually sufficient or heating present -- in-room heater/electric blanket unverified. Ask property for family bungalow: heater or extra duvets + hot water reliability. Contact +84 393 195 298 / puhmongecoretreat.com / Booking message.
 
 ## 🎟️ Permits & Entry
 
@@ -239,6 +258,8 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 
 ### 🎪 Bac Ha Sunday Market — Special Feature
 
+**DROPPED from the plan 14 Sep 2026 — kept for reference only.** Reason: it added 4h23m of driving (Lao Cai → Bac Ha 1h37m, Bac Ha → Y Linh Ho 2h46m) to a day that begins with a 05:55 train arrival after a night on a sleeper train, pushing retreat check-in to ~16:30. Replaced by: direct charter Lao Cai → Sapa town (33.3 km, 1h01m), Sapa morning market + lunch (Sunday is the market's liveliest day), then Sapa → Y Linh Ho (5.8 km, 21 min), arriving ~13:25. Time saved: roughly 3 hours of driving plus a 3-hour earlier check-in. Bac Ha remains the largest ethnic market in northern Vietnam (4.3★, 2,258 reviews) if a future trip allows a dedicated day.
+
 | Detail | Info |
 |--------|------|
 | **What** | The biggest and most colourful ethnic market in all of North Vietnam |
@@ -276,6 +297,36 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 | **Atmosphere** | Relaxed, local vibe. Less touristy than Hanoi night market. |
 | **Cau May Walking Street** | Adjacent walking street open nightly if you miss the night market days |
 
+### Markets — clarification (added 14 Sep 2026)
+
+The market **in front of the Stone Church is the Love Market, not the night market** — different place, different day.
+
+| Market | Where | When |
+|--------|-------|------|
+| **Sapa Love Market** (Chợ tình) | Square **in front of the Stone Church** | **Saturday evening only** — performances from ~19:00, about an hour |
+| **Sapa Night Market** (Chợ đêm) | Luong Dinh Cua, by the lake — **1.2 km / 16 min walk** from the church | Google: **daily 18:30-23:30**; guide sites: **Fri-Sun** 16:00-22:00, often later. Busiest 20:00-22:00 |
+| **Sapa Market** (day/morning) | Luong Dinh Cua — **1.3 km / 18 min walk** | **Daily ~06:00-18:00**, busiest **06:00-10:00** |
+
+The same street hosts both the day market and the night market; the Love Market is the one at the church square. Walking distances verified via goplaces from Sa Pa Stone Church, 14 Sep 2026.
+
+**Impact on our dates (Tue 9 - Wed 10 Mar 2027):**
+- **Love Market: missed** — Saturday only, we are in Sapa Tue/Wed. Bac Ha's Sunday market (Day 3) covers the big ethnic-market experience instead.
+- **Morning market: our best fit** — Tue ~09:30-10:30 after arriving in town (inside the 06:00-10:00 busy window) or Wed ~07:00 before the Fansipan cable car. Weekdays are quiet per TripAdvisor: expect a modest working market, not a spectacle.
+- **Night market: midweek uncertain** — Google says nightly, three guide sites say Fri-Sun. It is a 16 min walk from TIME Homestay, so worth a try with a turn-back if shuttered. Ask TIME at check-in.
+
+### Sunday is the liveliest usable night (added 14 Sep 2026)
+
+Night-market crowds are thickest Fri-Sun (Saturday peaks, when the Love Market runs). Our only weekend-adjacent night is **Sun 7 Mar**, currently spent at Pu Hmong Eco Retreat (Y Linh Ho valley):
+
+| Route (drive) | Distance | Time |
+|---|---|---|
+| Pu Hmong → Sa Pa Stone Church | 5.5 km | 19 min |
+| Pu Hmong → Sa Pa Night Market | 6.6 km | 23 min |
+
+An evening run into town is feasible — taxi at ~12,000 VND/km ≈ RM 25 round trip — but it costs the retreat's home-cooked Hmong dinner and falls at the end of a 04:30-start day (Lao Cai 05:55 → Bac Ha market → valley check-in ~15:00). Grab is unreliable in Sapa; arrange any transfer through the retreat.
+
+**Assessment:** Sunday night is livelier than Tue/Wed, but the valley evening is why Pu Hmong was booked for two nights, and Bac Ha that morning already delivers the big market. Recommendation: keep the valley evening; treat the Tuesday night-market walk from TIME Homestay as the low-stakes try. Logged as an option, not actioned.
+
 ### Lao Cai Lunch Options (Station Square)
 
 | Restaurant | Rating | Address | Notes |
@@ -285,6 +336,9 @@ KL (KUL) ✈️ 3h40m → Hanoi (HAN)
 | **Rock Pizza Lao Cai** | 4.4 | 398 Nguyen Hue | Pizza option, 6am-10pm. 0378 222 111 |
 | **Vietemotion Lao Cai** | 4.4 | 067 Phan Dinh Phung | Vietnamese, 5am-9pm |
 | **Pho ga co Tom** | 4.8 | 289 Nguyen Hue | Chicken pho specialist, 5am-8pm. 0378 179 688 |
+| **Tùng Bò Restaurant** | 4.6 | 122 An Duong Vuong (town, ~1-1.5 km from station) | Beef-focused local spot (FB tungboquan). Opens 6am. **Breakfast pick arriving from Hanoi train** (added 2026-09-05, checked via goplaces). 0856 789 292 |
+
+**Arrival breakfast note:** Overnight Hanoi train arrives Lao Cai ~5-6AM. If you want hot sit-down food straight off the train: Bao Bao Quan (station square, 24h pho) or Tùng Bò (opens 6AM, ~10-min walk/drive). Then luggage storage -> bus/minivan to Sapa.
 
 ### Lao Cai Station Luggage Storage
 
@@ -745,3 +799,148 @@ All three located on the same road ~400-700m north of Tam Coc center, facing kar
 - G8 bus arrives Tam Coc at 07:40 -- check early check-in policy
 - Free bicycles for cycling to Bich Dong Pagoda and boat station
 - Book via Booking.com (check free cancellation)
+
+---
+
+## Tam Coc Resort Research — Nature Setting (added 13 Sep 2026)
+
+**Purpose:** Nature-setting resort options in Tam Coc for the Tam Coc leg (Thu 11 - Fri 12 Mar 2027), party = 2 adults + 2 children, 1 room. Confirms/reviews the current booking (Tam Cốc Valley Eco Resort).
+
+**How checked (13 Sep 2026):** Google ratings + coordinates via goplaces (Places API); ratings/prices via live Booking.com search with dates 11-13 Mar 2027, 2 adults + 2 children, USD; property facts from official sites.
+
+### CAVEAT — March 2027 inventory is not open yet
+Booking.com reports ~96% of Tam Coc properties unavailable for our dates. At ~18 months out, most properties have not loaded rates. "No availability" below means **not yet bookable, not sold out**. Re-check ~Feb 2026 (12-13 months out) or enquire direct.
+
+### Shortlist
+
+| Property | Google | Booking | Natural setting | Distance from Tam Coc pier | 2 nights, 2A+2C | Note |
+|----------|--------|---------|-----------------|---------------------------|-----------------|------|
+| **Tam Coc Garden Resort** | 4.8 (1,011) | 9.5 (690) — families 9.3 | 2.5 ha landscaped grounds among rice paddies, limestone karsts, lake; outdoor pool + jacuzzi, spa, yoga, free bikes, Maison Quê family house | 3.1 km / 10 min drive | Not bookable yet | Strongest pure "natural setting". Enquire direct: tamcocgarden.com / +84 378 253 555 |
+| **Emeralda Resort Tam Cốc** | 4.7 (1,658) | 8.7 (172) — location 9.7, families 9.7 | Own peninsula inside the Trang An/Tam Coc complex; river views, gardens | 0.3 km / 2 min drive (walkable) | Not bookable yet | Best resort + instant access to boat station; heated pool, spa, kids' club |
+| **Lalita Tam Coc Resort & Spa** (Google: Tam Coc Chic Villa & Resort) | 4.9 (1,564) | 9.2 (622) | Ringed by limestone walls, Thung Nham (bird sanctuary) side | 3.0 km / 7 min drive | ~US$149/night (~US$298) on nearby Mar dates | Highest-rated of the shortlist |
+| **Tam Coc Retreat Ninh Binh** | 4.8 (356) | 9.5 (853) | 1.2 ha tropical garden, 60-year-old trees, detached bungalows + villas | 4.9 km / 11 min drive | ~US$344 | Salt-ion pool with kids' area; restaurant |
+| **Aravinda Resort Ninh Binh** | 4.7 (712) | 7.9 (28) | Valley between Hoa Lu mountains; lotus lake, rice fields; 55-90 m² rooms/villas | 4.8 km / 11 min drive | Not bookable yet | Big Google/Booking rating gap — treat Booking score as thin-sample |
+| **Tam Cốc Valley Eco Resort** (BOOKED) | 5.0 (Google) | 9.6 (474) — location 9.6 | Lush garden oasis, most secluded of the in-town options | 0.9 km from Tam Coc Cave | ~US$236-309 (rate moves) | Highest Booking score of the shortlist; family deluxe = 2 queen beds |
+| **Ninh Binh Hidden Charm Hotel & Resort** | 4.4 (2,764) | — | Karst-facing 4-star, pool | 0.6 km / 2 min drive | Not bookable yet | Value alternative, close to pier |
+| **Tam Coc Rice Fields Resort** | 4.1 (383) | — | Rice fields | 4.3 km / 10 min drive | — | Weakest rating — skip |
+
+### Nearby nature resorts (same dates, 2A+2C)
+
+| Property | Distance | 2 nights |
+|----------|----------|----------|
+| THE GOAT Boutique Resort | 6.6 km | US$137 |
+| Trang An Ecolodge | 6.3 km | US$213 |
+| Trang An Ecorest Resort & Spa | 2.5 km | US$217 |
+| Cháy Mountain Retreat Ninh Bình | 2.4 km | US$230 |
+| Coco Island Resort Ninh Binh | 3.7 km | US$250 |
+| La Lua Resort Ninh Binh | 6.7 km | US$253 |
+| Bliss Tam Coc Resort Ninh Binh | 2.6 km | US$307 |
+| Jiva Hoa Lu Retreat | 5.8 km | US$752 (luxury) |
+
+### Verdict
+- **Resort + closest to the boat station:** Emeralda Resort Tam Cốc (300 m, kids' club, heated pool).
+- **Most "natural setting" (gardens, paddies, karst):** Tam Coc Garden Resort — book direct, it does not open cheap on OTAs.
+- **Keep current booking:** Tam Cốc Valley Eco Resort already scores best of the shortlist on Booking (9.6) and sits 0.9 km from the pier; US$236-309/2 nights is in line with Tam Coc 4-star resorts.
+- **Budget hedge:** Lalita (~US$298/2N, 9.2) or Hidden Charm.
+
+### Confirmed bookings (13 Sep 2026)
+
+**Tam Coc Valley Eco Resort — 1 room × 2 nights (Thu 11 - Fri 12 Mar)**, Agoda:
+
+| Line | VND | ≈ MYR | ≈ USD |
+|------|-----|-------|-------|
+| Room, 2 nights | 6,081,198 | 954.75 | 237.17 |
+| Taxes and fees | 942,372 | 147.95 | 36.75 |
+| Price now (taxes/fees included) | 7,023,570 | 1,102.70 | 273.92 |
+| **Actual charge (incl. 5% pay-later adjustment)** | **7,374,749** | **1,157.84** | **287.61** |
+
+All other booked nights:
+
+| Property | Dates | Basis | Cost |
+|----------|-------|-------|------|
+| Vietjet VJ906 + VJ905, KL ⇄ Hanoi | 5 Mar + 14 Mar | Deluxe1, 4 pax, 20 kg bags each | USD 940.46 ≈ RM 3,825.99 |
+| Travel insurance (family) | Booked 13 Sep 2026 | Transaction ETO007523, M-LINE, full payment | RM 109.88 |
+| Bella Premier Hotel & Rooftop Skybar, Hanoi | Fri 5 Mar, 1 night | Family suite city view, 1 room | VND 2,201,472 ≈ RM 345.63 (US$85.86) |
+| Bella Premier Hotel & Rooftop Skybar, Hanoi | Sat 13 Mar, 1 night | Family suite city view, 1 room | VND 2,201,472 ≈ RM 345.63 (US$85.86) |
+| Pu Hmong Eco Retreat, Y Linh Ho | Sun 7 - Mon 8 Mar, 2 nights | Family bungalow, 1 room | VND 5,980,800 ≈ RM 938.99 (US$233.25) |
+| TIME Restaurant & Homestay Sa Pa | Tue 9 - Wed 10 Mar, 2 nights | Family room | RM 659.08 (billed in MYR) |
+
+**Accommodation total, all 7 nights: VND 17,758,493 + RM 659.08 ≈ RM 3,447.17. Flights: USD 940.46 ≈ RM 3,825.99. Insurance: RM 109.88. Combined confirmed total: RM 7,383.04.**
+
+Booking notes:
+- **Tam Coc rate check (14 Sep 2026) — paying a reasonable price, confirmed.** Booking.com shows the identical **Deluxe Family Room** for 11-13 Mar 2027, 2 adults + 2 children, 40 m², 2 queen beds, breakfast included, free cancellation before 9 Mar 2027, pay at property: **US$397 struck through, US$309 actual** (~22% off, "1 left"). This booking: **US$273.92 pre-adjustment / US$287.61 effective** — **~7% below Booking**. Per night: paid US$143.81 vs Booking US$154.50. Market context for 2A+2C in Tam Coc (13 Sep 2026 pull): Trang An Ecorest US$217/2N, Cháy Mountain Retreat US$230, Coco Island US$250, La Lua US$253, Tam Coc Retreat US$344, Narci US$337 — this property is upper-middle on price but the highest-rated of the set (Booking 9.6 / 475 reviews, Google 5.0 / 230), which justifies the premium. The only recoverable amount is the 5% pay-later fee (~RM 55), not worth risking the last room. **Trip.com cross-check, 14 Sep 2026: same rate** — three independent platforms (Agoda paid, Booking, Trip.com) agree, so this is the going market rate for the room, not an OTA anomaly.
+- Flights: both legs paid 1 Jun 2026. Outbound VJ906 USD 417.74 (ref 3T6N9R), return VJ905 USD 522.72 (ref S5C5HJ); all charges shown in USD on the Vietjet e-ticket receipts. FX used: 1 USD = 4.06821 MYR (13 Sep 2026). Note the return leg costs ~25% more than the outbound, mainly the USD 64.00 fare vs USD 22.86 plus the departure levy.
+- **Travel insurance: NOT included in the air fare (checked 13 Sep 2026).** Neither receipt carries an insurance line. Both receipts itemise every component — airport tax, A1_DLX/Z1_DLX fare, 20 kg bag add-ons, PMT fee, admin fee ITL, fuel surcharge, airport security, management fee ITL — and none of them is insurance. Vietjet's official Fare Rules list Deluxe inclusions as carry-on 7 kg, checked 20 kg, seat selection and free date/route change only; the "Not Included (additional fee)" list covers 3-in-1 amenities. A Vietjet marketing page for Deluxe does claim "free Sky Care insurance", but the same fare-rules page states **"Insurance not apply for all Thai Vietjet (VZ) Fare & Flights"** — and both these receipts are issued by THAI VIETJET AIR JOINT STOCK COMPANY LIMITED (Thai Vietjet), so that promo does not apply here. Action taken: a separate family travel insurance policy was purchased on 13 Sep 2026 (transaction ETO007523, processed by M-LINE, full payment, RM 109.88 after RM 13.40 voucher and RM 10.72 referral discounts off RM 134.00). **Outstanding: the policy schedule itself has not been filed** — capture it with the trip documents and confirm it covers the trekking (Muong Hoa valley), cycling (Tam Coc) and Alpine Coaster activities, which standard policies often exclude, plus any altitude or motorcycle exclusions.
+- Bella Premier (both nights): separate bookings with identical totals. Fri room VND 1,906,047 + taxes VND 295,425; Sat room VND 1,905,976 + taxes VND 295,496. Payment collected by the property at check-in — no pay-later adjustment.
+- Pu Hmong: VND 5,437,376 room + VND 543,424 taxes = VND 5,980,800, ≈ US$117/night. Collected by the property per the cancellation policy. The earlier RM 1,120-1,410 estimate (from Booking "from US$131/night") was ~RM 310 too high.
+- TIME Homestay: Pay Later authorized for auto-charge to the card on file on 1 Mar 2027; free cancellation until 23:59 on 2 Mar 2027, non-refundable after. The RM 530 estimate was RM 129 short; Booking's listing did not match the family room being booked (8.9 rating, 118 reviews).
+- Tam Coc: pay nothing until 6 Mar 2027; the card is auto-charged then in the selected currency at that day's Bloomberg rate, so the MYR figure will move slightly. README budget originally said ~RM 270 for this booking — understated by ~4.3x. Cross-check: Booking.com showed the same dates at ~US$309 for a family room; this Agoda booking (US$288 after adjustment) came in below that.
+
+### Train: Hanoi → Lao Cai (SP3, Sat 6 Mar 2027, 22:00)
+
+Indicative prices supplied 14 Sep 2026 (Saturday-to-Sunday sailing, same weekday pattern as our date; per adult, taxes included):
+
+| Operator | Cabin | Depart → Arrive | Duration | Per adult | 4 berths | Operator rating |
+|----------|-------|-----------------|----------|-----------|----------|-----------------|
+| **Laman Express** (Train #SP3) | VIP Sleeper 4x | 22:00 → 05:55 | 7h55m | **MYR 187** | **MYR 748** | 4.4 (1,246 reviews) |
+| **Damitrans** | Cabin 4x | 22:00 → 06:00 | 8h | From MYR 147 | MYR 588 | 4.5 (13 reviews) |
+| **Chapa Express** | Deluxe 4-berth | 22:00 → 06:05 | ~8h | ~US$45 ≈ MYR 183 | ≈ RM 732 | 4.0/5 (sapanomad); TripAdvisor polarised |
+
+Both are 4-berth cabins, air-con, WC, snack, steward (Laman) / WiFi, and both are flagged "Bestseller Among Families". Laman showed "15+ trips booked last month", Damitrans "100+ trips booked last month".
+
+**Recommendation: Laman Express at RM 748.** The RM 160 saving on Damitrans is not worth it — 13 reviews is far too thin a track record on a night train with two children, where punctuality, cleanliness and berth condition matter. Laman's 1,246-review history is the reliability signal.
+
+**Chapa Express correction:** an earlier reminder had noted Chapa at "MYR 129/pax". That figure is not supported — Chapa's 2026 Deluxe 4-berth is **US$45 per person** (≈RM 183 ≈ RM 732 for four), essentially level with Laman. Chapa also carries a weaker review record (sapanomad 4.0/5, TripAdvisor thread titled "TERRIBLE DO NOT BOOK"). So Chapa is not the cheaper option it appeared to be, and the RM 129 in the old reminder should not be relied on.
+
+**Correction to earlier estimate:** the budget previously carried RM 810 for this line, derived from US$48/berth × 4 using a stale FX assumption (~4.22). At the verified rate of 1 USD = 4.06821 MYR, US$192 ≈ **RM 781**. The indicative per-adult price now supersedes both: **RM 748** for four berths.
+
+Notes:
+- Prices are per adult. Confirm whether Kaylynn (9) qualifies for a child fare with the operator at booking — if so the total drops below RM 748.
+- A private cabin requires all 4 berths booked (Laman FAQ), so there is no saving from a 3-berth booking.
+- Not bookable yet: SP3 inventory for 6 Mar 2027 typically opens ~2-3 months ahead (Dec 2026-Feb 2027). Set a reminder for December.
+
+
+### One open item
+Early check-in still matters: G8 bus lands at Tam Coc office 07:40 — confirm early check-in or bag drop with the resort.
+
+### Sources
+- Google Places (ratings, coordinates, phones, websites) — goplaces CLI, 13 Sep 2026
+- Booking.com live search, 11-13 Mar 2027, 2 adults + 2 children, USD — 13 Sep 2026
+- Official sites: tamcocgarden.com, tamcocretreat.com, aravinda-resort.com, lalitatamcocresort.com
+
+### Photo folders for new properties
+Sleep/ currently holds Sapaxa, TIME, Tingyuan. Add resort photos as they are confirmed.
+
+---
+
+## Budget Verification — remaining lines (13 Sep 2026)
+
+Checked each unbooked budget line against live sources. MYR/VND 6,369 (1 VND = 0.000157 MYR).
+
+| Line | README est. | Verified | Delta |
+|------|-------------|----------|-------|
+| SP3 Laman Express, 4-berth cabin | RM 700 | indicative **RM 187/adult × 4 = RM 748** (14 Sep 2026) | +48 |
+| Private car Lao Cai → Sapa town → Y Linh Ho | RM 300 | **Pu Hmong quoted US$40** for the transfer (14 Sep 2026); budgeted **US$80 ≈ RM 325** to allow for the Sapa town stop and waiting | +25 |
+| Pu Hmong Eco Retreat, 2 nights (family bungalow) | RM 600 | **CONFIRMED: VND 5,980,800 ≈ RM 939** (US$117/night) | +339 |
+| TIME Homestay Sapa, 2 nights (family room) | RM 220 | **CONFIRMED: RM 659.08** (billed in MYR, Pay Later) | +439 |
+| G8 night bus Sapa → Tam Coc, 4 pax | RM 265 | 2 double cabins × VND 860,000 = 1,720,000 ≈ **RM 270** | ✓ nil |
+| Fansipan cable car, 2A+2C | RM 490 | VND 850K adult ×3 + 550K child ≈ **RM 487** | ✓ nil |
+| Alpine Coaster, 2A+2C | RM 130 | VND 250K adult ×3 + 100K child ≈ **RM 133** | ✓ nil |
+
+Corrected unbooked total: **~RM 7,070** (was RM 5,030 before both correction rounds). **Superseded** — README.md now carries the live Budget section with confirmed bookings; see that for the current total.
+
+### Sources and detail
+- **G8 Open Tour** (official g8opentour.com, Ninh Binh–Sapa route): single cabin 2nd floor VND 560,000; single cabin 1st floor VND 610,000; **double cabin VND 860,000** (after a VND 40,000 promo). Four passengers = 2 double cabins = VND 1,720,000. The README estimate was already right — buy 2 doubles, not 4 singles (4 singles would be RM 350-380).
+- **Laman Express** — indicative price supplied 14 Sep 2026: **MYR 187 per adult** for the VIP Sleeper 4-berth cabin, taxes included (MYR 748 for four berths). This supersedes the sapanomad guide figure of US$48/berth (US$192 ≈ RM 781 at the verified 1 USD = 4.06821 MYR; the earlier RM 810 in this table used a stale ~4.22 assumption). **Damitrans Cabin 4x: from MYR 147/adult (RM 588 for four) — RM 160 cheaper but only 13 reviews vs Laman's 1,246.** Official site confirms Deluxe = 4 berths (2 lower + 2 upper) and that all 4 berths must be booked for a private cabin. Note `lamanexpress.vn` does not resolve — the live site is **lamanexpress.com**. Vietnam Railways/Laman inventory typically opens only ~2-3 months ahead, so SP3 for 6 Mar 2027 cannot be booked yet; plan for Dec 2026-Feb 2027.
+- **Pu Hmong Eco Retreat** (Booking.com, 2 adults + 2 children, 1 room): from **US$131.07/night**, 2 nights from US$262-336 depending on start date. The old RM 600 (~US$94 total) was based on a per-person or double-room figure, not the family unit. Rates are indicative — our exact dates are not open yet.
+- **TIME Homestay SaPa** (Booking.com, same occupancy): from **US$113.16/night**; 2 nights US$226.32. Old RM 220 assumed roughly US$26/night.
+- **Fansipan** (2026 tariff, sapatoursfromhanoi + sunparadiseland): round-trip cable car **VND 850,000 adult** (>1.4 m) Mon-Fri & Sun, **VND 900,000** Sat/holidays; **VND 550,000** child 1.0-1.4 m; under 1.0-1.1 m free. Extras not in budget: Muong Hoa funicular VND 200,000 round trip; Fansipan summit funicular VND 150,000 up / 120,000 down. The old README figure said VND 800K — the 2026 tariff is 850K, so the RM 490 line only holds if **Kayle (13) is over 1.4 m** (adult rate) and Kaylynn is under 1.4 m. If both girls are over 1.4 m, use 4 × 850K ≈ RM 534.
+- **Alpine Coaster** (Ban Mong, Sapa): VND 250,000 adult (over 135 cm), VND 100,000 child 90-135 cm; open 09:00-18:00, last ride 17:00. Same height caveat as above.
+- **Ninh Binh → Hanoi** (12Go, Gecko Routes): train soft seat from VND 114,000 (US$4.40); limousine bus US$8-10/person. For 4 that is ~RM 170-200, currently absorbed by the "Local transport + misc RM 400" line — tight once Grab/taxis in Hanoi and Sapa are added.
+
+### Takeaways
+1. Two lines were badly understated: **Pu Hmong** (~2.1x) and **TIME Homestay** (~2.4x), plus the Tam Coc booking corrected earlier (~4.3x). All three share the same cause — the old figures were per-person or double-room rates, not "sleeps 4".
+2. Ticket and bus lines (G8, Fansipan, Alpine Coaster) are accurate; G8 just needs the 2-double-cabin configuration.
+3. The private car was the last unpriced line and is now quoted — Pu Hmong quoted **US$40** for the Lao Cai → retreat transfer; the budget carries **US$80 (~RM 325)** to cover stopping in Sapa town en route (morning market + lunch) and waiting time. Confirm with the retreat in writing that the stop is included in the quoted price before the day.
+4. Bookings blocked until closer to the date: Laman Express SP3 (opens ~Dec 2026-Feb 2027), Pu Hmong and TIME for March 2027 (not open on Booking yet).
+

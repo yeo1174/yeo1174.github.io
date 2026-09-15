@@ -2,7 +2,7 @@
 
 **Dates:** 5 - 14 March 2027
 **Travelers:** 2 Adults + 2 Children (Kayle 13, Kaylynn 9)
-**Route:** KL -> Hanoi -> Bac Ha -> Y Linh Ho (Pu Hmong) -> Sapa -> Tam Coc -> Hanoi -> KL
+**Route:** KL -> Hanoi -> Y Linh Ho (Pu Hmong) -> Sapa -> Tam Coc -> Hanoi -> KL
 **Theme:** Culture, Nature & Relaxed Family Travel
 
 **Sapa Altitude:** 1,500m (4,921 ft) | **Season:** Spring (green rice terraces, 15-20C day, 10-14C night)
@@ -17,7 +17,7 @@ Kuala Lumpur (KUL)
     VJ906 12:30 -> 14:55 -- Vietjet Air (Deluxe1)
 Hanoi (HAN) --- Fri-Sat (2 days)
     SP3 Laman Express night train 22:00 (Sat) -> Lao Cai 05:55 (Sun)
-Lao Cai -> Bac Ha Market (Sun AM) -> Y Linh Ho valley
+Lao Cai -> Sapa town (morning market + lunch) -> Y Linh Ho valley
 Y Linh Ho (2 nights) --- Sun-Mon @ Pu Hmong Eco Retreat
     Muong Hoa trek (Mon AM): Y Linh Ho -> Lao Chai -> Ta Van
 Sapa town (2 nights) --- Tue-Wed @ TIME Homestay (late checkout Wed ~22:00)
@@ -43,24 +43,54 @@ Hanoi (last night) --- Sat
 
 ---
 
-## Budget Summary (Family of 4)
+## Budget
 
-| Item | Est. Cost |
-|------|----------|
-| KL-Hanoi return flights | BOOKED |
-| SP3 Laman Express (1 cabin, 4 pax) | ~RM 700 |
-| Private car: Lao Cai -> Bac Ha -> Pu Hmong (Y Linh Ho) | ~RM 300 |
-| Pu Hmong Eco Retreat, Y Linh Ho (2 nights) | ~RM 600 |
-| TIME Homestay (2 nights Tue-Wed, late checkout Wed) | ~RM 220 |
-| G8 night bus Sapa -> Tam Coc (4 pax) | ~RM 265 |
-| Tam Coc Valley Eco Resort (2 nights) | ~RM 270 |
-| Bella Premier (2 nights) | BOOKED |
-| Fansipan cable car (2 adults + 2 kids) | ~RM 490 |
-| Alpine Coaster (2 adults + 2 kids) | ~RM 130 |
-| Meals 10 days (4 pax) | ~RM 1,500 |
-| Local transport + misc | ~RM 400 |
-| Travel insurance | ~RM 150 |
-| Total (unbooked items) | ~RM 5,030 |
+**FX (13 Sep 2026, exchangerate-api):** 1 USD = 4.06821 MYR = 25,876 VND · 1 VND = 0.000157 MYR · MYR/VND ≈ 6,369
+
+### A. Booked and confirmed
+
+| # | Date | Item | Detail | Billed | ~MYR | Payment |
+|---|------|------|--------|--------|------|---------|
+| 1 | Fri 5 Mar + Sun 14 Mar | Flights, KL ⇄ Hanoi | Vietjet Deluxe1, 4 pax, 20kg bags: VJ906 USD 417.74 + VJ905 USD 522.72 | USD 940.46 | 3,825.99 | Paid 1 Jun 2026 |
+| 2 | Fri 5 Mar | Bella Premier Hotel & Rooftop Skybar, Hanoi | Family suite city view, 1 room × 1 night | VND 2,201,472 | 345.63 | Collected at check-in |
+| 3 | Sun 7 - Mon 8 Mar | Pu Hmong Eco Retreat, Y Linh Ho | Family bungalow, 1 room × 2 nights | VND 5,980,800 | 938.99 | Collected by property |
+| 4 | Tue 9 - Wed 10 Mar | TIME Restaurant & Homestay Sa Pa | Family room, 2 nights | MYR 659.08 | 659.08 | Auto-charge 1 Mar 2027 |
+| 5 | Thu 11 - Fri 12 Mar | Tam Coc Valley Eco Resort | 1 room × 2 nights (Agoda) | VND 7,374,749 | 1,157.84 | Auto-charge 6 Mar 2027 |
+| 6 | Sat 13 Mar | Bella Premier Hotel & Rooftop Skybar, Hanoi | Family suite city view, 1 room × 1 night | VND 2,201,472 | 345.63 | Collected at check-in |
+| 7 | Sun 13 Sep 2026 | Travel insurance (family) | Transaction ETO007523, M-LINE, per policy schedule | MYR 109.88 | 109.88 | Paid 13 Sep 2026 |
+| | | **Subtotal** | | **USD 940.46 + VND 17,758,493 + MYR 768.96** | **7,383.04** | |
+
+- Flights (both legs paid 1 Jun 2026, Vietjet Deluxe1, 4 pax incl. 20 kg bags each): **VJ906 USD 417.74** outbound KL→Hanoi (5 Mar 2027, ref 3T6N9R), **VJ905 USD 522.72** return Hanoi→KL (14 Mar 2027, ref S5C5HJ). Total **USD 940.46 ≈ RM 3,826** at 1 USD = 4.06821 MYR. Per passenger: airport tax USD 25 out / 6.90 back, fare USD 22.86 or 64.00, fuel surcharge USD 36.57, security USD 2 out / 1 back, admin and management fees USD 8.19 each, PMT USD 5.00, plus departure levy USD 1.60 and regulatory charges USD 0.23 on the return. Kaylynn (child) airport tax USD 12.50 out / 6.90 back. **No travel insurance is included in the fare** — neither receipt carries an insurance line (see Research.md for the check). A separate family policy was bought on 13 Sep 2026 for RM 109.88 (row 7).
+- Bella Premier: **both nights now confirmed** (Fri 5 Mar and Sat 13 Mar), each VND 2,201,472 — separate bookings, identical total.
+- **Tam Coc price check (14 Sep 2026):** Booking.com lists the same **Deluxe Family Room** (2 adults + 2 children, 40 m², 2 queen beds, breakfast included, free cancellation before 9 Mar 2027, pay at property) at **US$309 for 2 nights** (from US$397, 22% off, "1 left"). This Agoda booking is **US$273.92 before / US$287.61 after** the 5% pay-later adjustment — i.e. **~7% under** the Booking rate. Rate is reasonable; the only saving left would be the 5% pay-later fee (RM 55).
+- All 7 accommodation nights are now booked. Remaining unknowns: Laman Express, G8 bus, private car, tickets, meals, misc.
+
+### B. Still to book — estimates
+
+| Item | ~MYR | Basis |
+|------|------|-------|
+| SP3 Laman Express, VIP Sleeper 4-berth cabin | 748 | RM 187/adult × 4, indicative (taxes incl.) |
+| Private car: Lao Cai → Sapa town → Y Linh Ho (retreat transfer + en-route stop) | 325 | US$80 (retreat quoted US$40 base) |
+| G8 night bus Sapa → Tam Coc, 4 pax | 270 | 2 double cabins VND 860K |
+| Fansipan cable car, 2A+2C | 490 | VND 850K adult / 550K child |
+| Alpine Coaster, 2A+2C | 133 | VND 250K adult / 100K child |
+| Meals, 10 days, 4 pax | 1,500 | — |
+| Local transport + misc | 400 | includes Ninh Binh → Hanoi (~RM 190) |
+| **Subtotal (estimates)** | **~3,866** | |
+
+- Train options, all 4-berth and taxes included, per adult: **Laman Express RM 187** (RM 748 for four; 4.4★, 1,246 reviews) · **Chapa Express ≈ US$45 ≈ RM 183** (≈RM 732; 4.0/5 and a polarised TripAdvisor thread, so not the safe pick) · **Damitrans RM 147** (RM 588, but only 13 reviews). All depart 22:00; Laman arrives 05:55, Chapa 06:05, Damitrans 06:00. Recommendation stands: **Laman Express**.
+- Train prices are indicative (per adult, taxes included) and cannot be booked yet — Vietnam Railways inventory for 6 Mar 2027 opens roughly Dec 2026-Feb 2027.
+- **Reminder set: 5 Dec 2026** (3 months before departure) to book the SP3 night train.
+
+### C. Totals
+
+| | ~MYR |
+|---|------|
+| Booked and confirmed | 7,383 |
+| Still to book (estimates) | 3,866 |
+| **Grand total** | **~11,249** |
+
+Caveats: Fansipan and Alpine Coaster assume one child under the height threshold (1.4 m / 135 cm). If both girls exceed it, add ~RM 71. Estimates move once the remaining bookings are made.
 
 ---
 
@@ -95,22 +125,25 @@ Hanoi (last night) --- Sat
 | 22:00 | SP3 Laman Express -> Lao Cai (Deluxe 4-berth cabin) |
 | Sleep | On SP3 Laman Express (night train) |
 
-### Day 3 — Sun 7 Mar: Lao Cai -> Bac Ha Market -> Pu Hmong Eco Retreat (Y Linh Ho)
+### Day 3 — Sun 7 Mar: Lao Cai -> Sapa Town -> Pu Hmong Eco Retreat (Y Linh Ho)
 
 | Time | Activity |
 |------|----------|
 | 05:55 | Arrive Lao Cai station |
 | 06:00 | Pho breakfast at Bao Bao Quan (station square, 5.0) |
-| 07:00 | Private car: Lao Cai -> Bac Ha (1.5h) |
-| 08:30 | Bac Ha Sunday Market - biggest ethnic market in North Vietnam |
-| 10:30 | Drive back toward Lao Cai (1.5h) |
-| 12:00 | Lunch at HAINHI Restaurant (station square, 4.8) |
-| 13:30 | Continue via Sapa town, descend to Y Linh Ho valley (~1.5h) |
-| 15:00 | Check in Pu Hmong Eco Retreat (family bungalow) |
-| 15:30 | Walk Y Linh Ho village - Muong Hoa river, bridge, rice terraces |
-| 18:00 | Relax at retreat - garden, valley views |
+| 07:00 | Chartered car: Lao Cai -> Sapa town (33.3 km, ~1h) |
+| 08:00 | Sapa town — morning market (busiest 06:00-10:00; Sunday is its liveliest day), Stone Church, coffee |
+| 11:30 | Lunch in Sapa town |
+| 13:00 | Descend to Y Linh Ho valley (5.8 km, ~21 min) |
+| 13:25 | Check in Pu Hmong Eco Retreat (family bungalow; bag drop if room not ready) |
+| 14:00 | Walk Y Linh Ho village - Muong Hoa river, bridge, rice terraces |
+| 17:00 | Relax at retreat - garden, valley views |
 | 19:00 | Home-cooked Hmong dinner at retreat |
 | Sleep | Pu Hmong Eco Retreat, Y Linh Ho (Night 1 of 2) |
+
+Bac Ha dropped (14 Sep 2026) — it added 4h23m of driving to the post-night-train day. Revised: direct charter to Sapa town, morning market and lunch, then down to the valley.
+
+Optional evening: Sapa night market (~21 min drive each way from the retreat; Sunday is the liveliest night). Arrange the transfer through the retreat — Grab is unreliable in Sapa. Skip if the day has been long enough; the valley evening is the point of the stay.
 
 ### Day 4 — Mon 8 Mar: Muong Hoa Valley Trek (Y Linh Ho -> Lao Chai -> Ta Van)
 
@@ -210,31 +243,33 @@ Hanoi (last night) --- Sat
 
 | Night | Date | Location | Property | Status | Est. Cost |
 |-------|------|----------|----------|--------|-----------|
-| 1 | Fri 5 Mar | Hanoi | Bella Premier Hotel | BOOKED | Paid |
+| 1 | Fri 5 Mar | Hanoi | Bella Premier Hotel (family suite, city view) | Booked (Agoda) | VND 2,201,472 (~RM 346); pay at check-in |
 | - | Sat 6 Mar | SP3 Laman Express | Deluxe 4-berth cabin | To book | ~RM 700 |
-| 2 | Sun 7 Mar | Y Linh Ho | Pu Hmong Eco Retreat | To book | ~$60/night |
-| 3 | Mon 8 Mar | Y Linh Ho | Pu Hmong Eco Retreat | To book | ~$60/night |
-| 4 | Tue 9 Mar | Sapa | TIME Homestay | Rebook Tue-Wed | ~RM 220 (2N) |
+| 2 | Sun 7 Mar | Y Linh Ho | Pu Hmong Eco Retreat (family bungalow) | Booked | VND 5,980,800 (~RM 939) covers both nights |
+| 3 | Mon 8 Mar | Y Linh Ho | Pu Hmong Eco Retreat | Booked | -- same booking |
+| 4 | Tue 9 Mar | Sapa | TIME Homestay (family room) | Booked | RM 659.08 covers both nights; auto-charge 1 Mar 2027 |
 | - | Wed 10 Mar | Night bus | G8 VIP Cabin (Sapa -> Tam Coc) | To book | ~$15/person |
-| 5 | Thu 11 Mar | Tam Coc | Tam Coc Valley Eco Resort | Booked | TBC |
-| 6 | Fri 12 Mar | Tam Coc | Tam Coc Valley Eco Resort | Booked | TBC |
-| 7 | Sat 13 Mar | Hanoi | Bella Premier Hotel | BOOKED | Paid |
+| 5 | Thu 11 Mar | Tam Coc | Tam Coc Valley Eco Resort | Booked (Agoda) | VND 7,374,749 (~RM 1,158) covers both nights |
+| 6 | Fri 12 Mar | Tam Coc | Tam Coc Valley Eco Resort | Booked (Agoda) | -- same booking, 1 room x 2 nights |
+| 7 | Sat 13 Mar | Hanoi | Bella Premier Hotel (family suite, city view) | Booked (Agoda) | VND 2,201,472 (~RM 346); pay at check-in |
 
 ## Booking Checklist
 
 - [x] KL->HAN flights - VJ906 05/03 12:30 / VJ905 14/03 07:10
-- [x] Bella Premier Hotel, Hanoi (2 nights: Fri 5 Mar + Sat 13 Mar)
+- [x] Bella Premier Hotel, Hanoi - 2 separate bookings, each VND 2,201,472 (~RM 346), pay at check-in:
+  - Fri 5 Mar, family suite city view
+  - Sat 13 Mar, family suite city view
 - [ ] CANCEL Sapaxa Spring Garden Ecolodge (Sun 7 Mar) - Agoda app; check free-cancellation window
-- [ ] Pu Hmong Eco Retreat, Y Linh Ho (2 nights: Sun 7 + Mon 8 Mar, family bungalow) - Booking/Agoda, or direct +84 393 195 298
+- [x] Pu Hmong Eco Retreat, Y Linh Ho (2 nights: Sun 7 + Mon 8 Mar, family bungalow) - VND 5,980,800 (~RM 939), collected by property per cancellation policy
 - [ ] SP3 Laman Express Hanoi->Lao Cai (Deluxe 4-berth cabin, ~RM 700) -- book via 12GoAsia, Baolau, or lamanexpress.com
-- [ ] TIME Homestay - change booking to Tue 9 + Wed 10 Mar (2 nights, late checkout ~22:00; was Mon-Wed)
-- [ ] Private car: Lao Cai -> Bac Ha -> Pu Hmong / Y Linh Ho (full day Sun 7 Mar, ~$80-100 SUV)
+- [x] TIME Homestay - family room, Tue 9 + Wed 10 Mar (2 nights, late checkout ~22:00) - RM 659.08, Pay Later auto-charge 1 Mar 2027, free cancel before 23:59 Mar 2 2027
+- [ ] Private car: Lao Cai -> Sapa town -> Y Linh Ho (Sun 7 Mar) - retreat quoted **US$40** for the transfer; budgeted **US$80 (~RM 325)** to cover the Sapa town stop and waiting. Confirm in writing that the en-route stop is included.
 - [ ] Transfers: Pu Hmong -> Sapa town (Tue 9 AM); Ta Van -> retreat after Mon trek (arrange with retreat)
 - [ ] G8 SAPA OPEN TOUR night bus Sapa -> Tam Coc (Wed 10 Mar, 23:00, VIP Cabin, ~$15/person)
-- [x] Tam Coc Valley Eco Resort (2 nights: Thu 11 - Fri 12 Mar)
+- [x] Tam Coc Valley Eco Resort (2 nights: Thu 11 - Fri 12 Mar) - Agoda, 1 room x 2 nights: VND 7,023,570 + 5% pay-later adjustment = VND 7,374,749 (~RM 1,158); auto-charge 6 Mar 2027
 - [ ] Bus/train Ninh Binh -> Hanoi (Sat 13 Mar afternoon, ~$5-10/person)
-- [ ] Fansipan cable car tickets (Wed 10 Mar; weekday rate: VND 800K adult / 550K child)
-- [ ] Alpine Coaster tickets (Tue 9 Mar PM; ~VND 250K adult / 100K child; buy on-site, after 15:00 = shorter queues)
+- [ ] Fansipan cable car tickets (Wed 10 Mar, weekday rate: VND 850K adult >1.4m / 550K child 1.0-1.4m; Sat 900K)
+- [ ] Alpine Coaster tickets (Tue 9 Mar PM; ~VND 250K adult >135cm / 100K child 90-135cm; buy on-site, after 15:00 = shorter queues)
 - [ ] Travel insurance
 - [ ] Tourist SIM at Noi Bai Airport (Viettel/Mobifone, ~$3-5)
 - [ ] Vietnamese Dong cash (ATMs in Hanoi & Sapa)
