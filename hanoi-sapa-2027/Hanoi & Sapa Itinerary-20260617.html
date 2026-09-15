@@ -15,7 +15,7 @@
     .overview-item { background: #E9EFEB; border: 1px solid #B5C2B7; border-radius: 6px; padding: 10pt; }
     .overview-label { font-size: 8pt; color: #675C4D; margin-bottom: 4pt; font-weight: 600; }
     .overview-value { font-size: 10pt; color: #3E3228; font-weight: 600; }
-    .days-container { margin: 15pt auto 20pt auto; max-width: 90%; }
+    .days-container { margin: 15pt auto 20pt auto; width: 100%; }
     .day-card { border: 1px solid #90997F; border-radius: 8px; margin-bottom: 15pt; background: #FFFFFF; overflow: hidden; page-break-inside: avoid; }
     .day-header { background: linear-gradient(135deg, #93AC98 0%, #90997F 100%); padding: 8pt 15pt; display: flex; align-items: center; gap: 10pt; }
     .day-number { color: #FFF; font-family: 'Playfair Display', serif; font-size: 24pt; font-weight: 400; }
@@ -44,35 +44,15 @@
     <a href="index.html" class="back-link">&larr; Back to Hanoi &amp; Sapa Trip Overview</a>
   </div>
 
-  <h2>Trip Overview</h2>
-  <div class="overview-grid">
-    <div class="overview-item">
-      <div class="overview-label">Dates</div>
-      <div class="overview-value">5 - 14 March 2027</div>
-    </div>
-    <div class="overview-item">
-      <div class="overview-label">Travelers</div>
-      <div class="overview-value">2 Adults + 2 Children (Kayle 13, Kaylynn 9)</div>
-    </div>
-    <div class="overview-item">
-      <div class="overview-label">Route</div>
-      <div class="overview-value">Hanoi &rarr; Y Linh Ho (Pu Hmong) &rarr; Sapa &rarr; Tam Coc &rarr; Hanoi</div>
-    </div>
-    <div class="overview-item">
-      <div class="overview-label">Nights</div>
-      <div class="overview-value">7 hotel nights + 1 sleeper train + 1 night bus</div>
-    </div>
-  </div>
-
   <h2>Day-by-Day Itinerary</h2>
   <div class="days-container">
 
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 1</div>
-        
+        <span class="day-date">Fri, 5 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Fri 5 Mar: KL -> Hanoi</div>
+          <div class="day-title">KL -> Hanoi</div>
         </div>
       </div>
       <div class="day-activities">
@@ -137,9 +117,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 2</div>
-        
+        <span class="day-date">Sat, 6 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Sat 6 Mar: Hanoi Old Quarter -> Night Train</div>
+          <div class="day-title">Hanoi Old Quarter -> Night Train</div>
         </div>
       </div>
       <div class="day-activities">
@@ -225,9 +205,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 3</div>
-        
+        <span class="day-date">Sun, 7 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Sun 7 Mar: Lao Cai -> Sapa Town -> Pu Hmong Eco Retreat (Y Linh Ho)</div>
+          <div class="day-title">Lao Cai -> Sapa Town -> Pu Hmong (Y Linh Ho)</div>
         </div>
       </div>
       <div class="day-activities">
@@ -313,9 +293,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 4</div>
-        
+        <span class="day-date">Mon, 8 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Mon 8 Mar: Muong Hoa Valley Trek (Y Linh Ho -> Lao Chai -> Ta Van)</div>
+          <div class="day-title">Muong Hoa Valley Trek (Y Linh Ho -> Ta Van)</div>
         </div>
       </div>
       <div class="day-activities">
@@ -380,9 +360,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 5</div>
-        
+        <span class="day-date">Tue, 9 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Tue 9 Mar: Transfer to Sapa Town + Alpine Coaster</div>
+          <div class="day-title">Transfer to Sapa Town + Alpine Coaster</div>
         </div>
       </div>
       <div class="day-activities">
@@ -468,9 +448,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 6</div>
-        
+        <span class="day-date">Wed, 10 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Wed 10 Mar: Fansipan Cable Car -> G8 Night Bus</div>
+          <div class="day-title">Fansipan Cable Car -> G8 Night Bus</div>
         </div>
       </div>
       <div class="day-activities">
@@ -549,9 +529,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 7</div>
-        
+        <span class="day-date">Thu, 11 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Thu 11 Mar: Tam Coc Day 1</div>
+          <div class="day-title">Tam Coc Day 1</div>
         </div>
       </div>
       <div class="day-activities">
@@ -623,9 +603,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 8</div>
-        
+        <span class="day-date">Fri, 12 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Fri 12 Mar: Tam Coc Day 2</div>
+          <div class="day-title">Tam Coc Day 2</div>
         </div>
       </div>
       <div class="day-activities">
@@ -683,9 +663,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 9</div>
-        
+        <span class="day-date">Sat, 13 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Sat 13 Mar: Tam Coc -> Hanoi</div>
+          <div class="day-title">Tam Coc -> Hanoi</div>
         </div>
       </div>
       <div class="day-activities">
@@ -750,9 +730,9 @@
     <div class="day-card">
       <div class="day-header">
         <div class="day-number">Day 10</div>
-        
+        <span class="day-date">Sun, 14 Mar</span>
         <div class="day-title-area">
-          <div class="day-title">Sun 14 Mar: Hanoi -> KL</div>
+          <div class="day-title">Hanoi -> KL</div>
         </div>
       </div>
       <div class="day-activities">
